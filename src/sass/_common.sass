@@ -40,7 +40,11 @@ body
 
 .container
 	+container
+	+gutter
 	//transition: all 0.3s
+	&_default
+		padding-left: 0
+		padding-right: 0
 
 
 /* Helpers
@@ -92,19 +96,21 @@ img
 		font-size: 0
 		padding-top: 23px
 		padding-bottom: 19px
-	&__container
-		+gutter
-	&__logo
+	&__col
 		+span(3 no-gutters)
 		display: inline-block
 		float: none
+		vertical-align: middle
+		&:nth-child(2),
+		&:nth-child(3)
+			text-align: center
+		&:nth-child(4)
+			text-align: right
+	&__logo
+		display: inline-block
 		vertical-align: middle
 	&__phone
-		text-align: center
-		+span(3 no-gutters)
 		display: inline-block
-		float: none
-		vertical-align: middle
 		&-text
 			display: inline-block
 			margin-left: 15px
@@ -118,11 +124,7 @@ img
 			color: #ffb238
 			vertical-align: middle
 	&__mail
-		text-align: center
-		+span(3)
 		display: inline-block
-		float: none
-		vertical-align: middle
 		&-text
 			display: inline-block
 			margin-left: 15px
@@ -137,13 +139,17 @@ img
 			color: #ffb238
 			vertical-align: middle
 	&__button
-		+span(3 no-gutters)
-		display: inline-block
-		float: none
 		text-align: right
-		vertical-align: middle
 	&__footer
 		background-color: #ff7b38
+	&_form &__col
+		&:nth-child(1)
+			+pre(2)
+		&:nth-child(2),
+		&:nth-child(3)
+			text-align: left
+		&:nth-child(4)
+			display: none
 	
 .btn
 	display: inline-block
@@ -161,6 +167,12 @@ img
 		&:hover
 			background-color: $orange
 			border-color: $orange
+	&_lg
+		padding-top: 14px
+		padding-bottom: 12px
+		font-size: 16px
+		text-transform: uppercase
+		border-radius: 26px
 
 .logo
 	font-size: 0
@@ -219,50 +231,100 @@ img
 /* ===================================
 	 Main
 	 =================================== */
+.scrolling
+	cursor: pointer
+	position: fixed
+	z-index: 10
+	left: 10px
+	bottom: 10px
+	+r(639)
+		display: none
+.section
+	padding-top: 30px
+	padding-bottom: 30px
+	+r(639)
+		padding-top: 20px
+		padding-bottom: 20px
+	&_hr
+		border-top: 1px solid #e2e2e2
+
+.title
+	&_h2
+		+museo-b
+		font-size: 40px
+		color: $black
+		line-height: 65px
+		text-transform: uppercase
+		+r(639)
+			font-size: 35px
+			line-height: 45px
 
 /* ===================================
 	 Blog
 	 =================================== */
 .blog
-	&__container
-		+gutter
 	&__start
 		position: relative
-		&-img
-			width: 100%
-		&-overlay
+		height: 668px
+		max-height: calc(100vh - 167px)
+		padding-top: 40px
+		padding-bottom: 45px
+		background: url('../img/content/blog-img.jpg') center center no-repeat
+		background-size: cover
+		+r(1199)
+			height: 420px
+			max-height: none
+		+r(1023)
+			padding-top: 20px
+			height: 320px
+		+r(479)
+			height: auto
+		&:before
+			content: ''
+			pointer-events: none
+			z-index: 0
 			position: absolute
 			left: 0
 			top: 0
 			right: 0
 			bottom: 0
-			padding-top: 40px
 			background-color: rgba(63, 33, 32, .7)
+		&-container
+			position: relative
 		&-link
 			font-size: 13px
 			color: #ffffff
 			line-height: 26px
 			text-decoration: underline
 		&-title
-			margin-top: 30px
+			margin-top: 25px
 			+museo-b
 			font-size: 40px
 			color: #ffffff
 			line-height: 65px
 			text-transform: uppercase
-	&__content
-		padding-top: 30px
-		padding-bottom: 30px
+			+r(767)
+				margin-top: 10px
+				font-size: 35px
+				line-height: 45px
 	&__text
 		margin-bottom: 20px
+		+pre(1)
+		+post(1)
 		+gutter
 		color: $dimgrey
 		font-size: 14px
 		line-height: 26px
+		+r(1023)
+			+pre(0)
+			+post(0)
 		&_center
 			margin-bottom: 25px
 			+pre(2)
-			+post(2)
+			+post(3)
+			+r(1023)
+				+pre(0)
+				+post(0)
 		&_letter
 			&::first-letter
 				float: left
@@ -273,6 +335,14 @@ img
 				line-height: 1
 				text-transform: uppercase
 				vertical-align: bottom
+				+r(1023)
+					float: none
+					margin-right: 0
+					font-size: inherit
+					color: inherit
+					line-height: inherit
+					text-transform: inherit
+					vertical-align: inherit
 	&__quote
 		position: relative
 		margin-bottom: 30px
@@ -284,6 +354,11 @@ img
 		font-weight: 700
 		line-height: 28px
 		font-style: italic
+		+r(1023)
+			+pre(2)
+			+post(0)
+		+r(767)
+			font-size: 16px
 		.icon
 			position: absolute
 			top: -8px
@@ -295,21 +370,274 @@ img
 			left: -40px
 			width: 36px
 			height: 28px
-			background: url('../img/svg/quote.svg') center center no-repeat
+			background: url('../img/png/quote.png') no-repeat center
+			background-size: 100%
+			+r(1023)
+				top: 3px
 	&__title
 		margin-top: -5px
 		margin-bottom: 20px
+		+pre(1)
+		+post(1)
 		+gutter
 		+museo-b
 		font-size: 30px
 		color: $black
 		line-height: 45px
 		text-transform: uppercase
+		+r(1023)
+			+pre(0)
+			+post(0)
+		+r(767)
+			margin-bottom: 10px
+			font-size: 25px
+			line-height: 35px
 	&__list
 		+prefix(2)
 		+suffix(2)
 		+pre(-1 * gutter())
 		+post(-1 * gutter())
+		+r(1023)
+			+gutter()
+			+pre(0)
+			+post(0)
+	&__bg
+		position: relative
+		background: url('../img/content/blog-img-2.jpg') center center no-repeat
+		background-size: cover
+		&:before
+			content: ''
+			pointer-events: none
+			position: absolute
+			z-index: 0
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(248, 248, 248, 0.8)
+		&-container
+			position: relative
+			height: 333px
+			+vertical
+			white-space: normal
+			+r(1023)
+				height: 220px
+		&-inner
+			margin-top: 45px
+			display: inline-block
+			width: 100%
+			vertical-align: middle
+			+r(767)
+				margin-top: 0
+		&-text
+			+pre(3)
+			+post(2.5)
+			+gutter()
+			font-size: 18px
+			color: $black
+			line-height: 28px
+			font-style: italic
+			+r(1023)
+				+pre(2)
+				+post(2)
+			+r(767)
+				+pre(0)
+				+post(0)
+				font-size: 16px
+		&-author
+			margin-top: 30px
+			+post(2)
+			+gutter
+			font-size: 18px
+			color: $black
+			line-height: 28px
+			text-align: right
+			+r(767)
+				margin-top: 5px
+				font-size: 16px
+	&__table-title
+		+pre(1)
+		margin-bottom: 25px
+		+gutter
+		+museo-b
+		font-size: 25px
+		color: $black
+		line-height: 35px
+		text-transform: uppercase
+		+r(1023)
+			+pre(0)
+			padding-left: 0
+			padding-right: 0
+		+r(767)
+			margin-bottom: 15px
+			font-size: 20px
+			line-height: 30px
+	&__table
+		overflow-y: auto
+		+pre(1)
+		+gutter()
+		+r(1023)
+			+pre(0)
+			padding-left: 0
+			padding-right: 0
+	&__recommend
+		margin-top: 30px
+		+pre(-1 * gutter())
+		+post(-1 * gutter())
+		+r(639)
+			margin-top: 20px
+	&__recommend .block__item
+		&:last-child
+			+r(1023)
+				display: none
+			+r(479)
+				display: block
+		
+.portfolio
+	&__cards
+		margin-top: 90px
+		+r(1023)
+			margin-top: 70px
+		+r(767)
+			margin-top: 20px
+	
+.load
+	font-size: 0
+	text-align: center
+	&__icon
+		display: inline-block
+		width: 39px
+		height: 39px
+		background-color: #ffffff
+		border: 6px solid #ffba00
+		border-radius: 50%
+	
+.cards
+	margin-left: -10px
+	margin-right: -10px
+	+pie-clearfix
+	&__item
+		+span(6)
+		margin-bottom: 40px
+		+suffix(20px)
+		+r(767)
+			+span(full)
+			margin-bottom: 20px
+		&:nth-child(odd)
+			margin-top: -60px
+			+r(1023)
+				margin-top: -40px
+			+r(767)
+				margin-top: 0
+	&__in
+		overflow: hidden
+		+ratio(560,342)
+		box-shadow: none
+		transition: all 0.2s
+	&__image
+		+ratio-in
+		z-index: 1
+		background-position: center center
+		background-size: cover
+	&__overlay
+		+ratio-in
+		z-index: 2
+		background-color: rgba(246, 246, 246, .8)
+		transition: all 0.2s
+	&__text
+		position: absolute
+		left: 40px
+		bottom: 35px
+		+r(1023)
+			left: 20px
+			bottom: 15px
+		+r(767)
+			left: 15px
+	&__topic
+		font-size: 14px
+		color: #434242
+		line-height: 20px
+		transition: all 0.2s
+	&__desc
+		margin-top: 10px
+		+museo
+		font-size: 25px
+		color: $black
+		line-height: 35px
+		text-transform: uppercase
+		transition: all 0.2s
+		+r(1023)
+			font-size: 20px
+			line-height: 30px
+	&__site
+		display: block
+	&__item:hover &__in
+		box-shadow: 10px 10px 0#ff7b38
+	&__item:hover &__overlay
+		background-color: rgba(52, 52, 52, .8)
+	&__item:hover &__topic,
+	&__item:hover &__desc
+		color: $white
+
+.block
+	+pie-clearfix
+	font-size: 0
+	&__item
+		overflow: hidden
+		display: block
+		margin-bottom: 2*gutter()
+		height: 210px
+		+span(4)
+		+r(1023)
+			+span(6)
+		+r(479)
+			+span(full)
+			margin-bottom: gutter()
+		&_width
+			+span(8)
+			+r(1023)
+				+span(6)
+			+r(479)
+				+span(full)
+	&__row_left-2 &__item + &__item
+		+span(4)
+	&__in
+		overflow: hidden
+		height: 100%
+		position: relative
+	&__image
+		+ratio-in
+		z-index: 1
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+	&__overlay
+		+ratio-in
+		z-index: 2
+		background-color: rgba(63, 33, 32, .7)
+		transition: all 0.2s
+	&__text
+		position: absolute
+		left: 30px
+		right: 30px
+		bottom: 25px
+		+museo
+		font-size: 20px
+		color: $white
+		line-height: 30px
+		text-transform: uppercase
+	&__item_height
+		height: 440px
+		+r(479)
+			height: 210px
+	&__item_width,
+	&__item_medium
+		height: 350px
+		+r(767)
+			height: 210px
+	&__item:hover &__overlay,
+	&__item.is-active &__overlay
+		background-color: rgba(255, 123, 56, .7)
 			
 .list
 	font-size: 14px
@@ -319,17 +647,1059 @@ img
 		position: relative
 		+prefix(gutter())
 		+suffix(gutter())
+		& + &
+			margin-top: 20px
+	&_mark &__item
 		&:before
 			content: ''
 			position: absolute
 			left: 0
-			top: 0
+			top: 6px
 			width: 11px
 			height: 12px
-			background: url('../img/svg/done.svg') center center no-repeat
+			background: url('../img/png/done.png') no-repeat center
+			background-size: 100%
+	&_numeric
+		list-style-type: decimal
+		color: #ff7b38
+		+pre(0)
+		+post(0)
+	&_numeric &__item
+		+gutter(0)
+		&-text
+			color: $dimgrey
+		
+.table
+	display: table
+	width: 100%
+	min-width: 1018px
+	table-layout: auto
+	&__thead
+		display: table-header-group
+		background-color: #ffba00
+		font-size: 18px
+		color: $black
+		line-height: 28px
+	&__thead &__td
+		padding-top: 17px
+		padding-bottom: 16px
+	&__tbody
+		display: table-row-group
+		font-size: 14px
+		color: $dimgrey
+		line-height: 26px
+	&__tbody &__td
+		padding-top: 14px
+		padding-bottom: 13px
+	&__tr
+		display: table-row
+	&__tbody &__tr
+		&:nth-child(even)
+			background-color: #e2e2e2
+	&__td
+		display: table-cell
+		text-align: left
+		padding-left: 30px
+		
+.socials
+	text-align: center
+	font-size: 0
+	&__title
+		display: inline-block
+		margin-right: 12px
+		font-size: 14px
+		color: $dimgrey
+		line-height: 26px
+		vertical-align: middle
+	&__list
+		display: inline-block
+		vertical-align: middle
+	&__item
+		display: inline-block
 		& + &
+			margin-left: 6px
+	& + .title
+		margin-top: 35px
+		
+
+/* ===================================
+	 Form
+	 =================================== */
+.feedback
+	background-color: #ff8400
+	&__title
+		margin-bottom: 25px
+		margin-left: auto
+		margin-right: auto
+		max-width: 661px
+		+museo-b
+		font-size: 30px
+		color: $white
+		line-height: 1.5
+		text-align: center
+		text-transform: uppercase
+		+r(767)
+			margin-bottom: 15px
+			font-size: 25px
+			line-height: 35px
+	&__subtitle
+		margin-bottom: 30px
+		margin-left: auto
+		margin-right: auto
+		max-width: 661px
+		font-size: 20px
+		color: $white
+		line-height: 1.5
+		text-align: center
+		+r(767)
+			margin-bottom: 20px
+			font-size: 14px
+			line-height: 24px
+	&__form
+		margin-left: auto
+		margin-right: auto
+		max-width: 661px
+		
+.form
+	padding: 40px
+	background-color: #ffffff
+	+r(767)
+		padding: 20px 10px 30px
+	&__field
+		+pie-clearfix
+		& + &
+			margin-top: 25px
+			+r(767)
+				margin-top: 20px
+		&_submit
+			text-align: center
+	&__desc
+		margin-bottom: 10px
+		font-size: 16px
+		color: #515151
+		line-height: 1.5
+		+r(767)
+			margin-bottom: 8px
+		&_lg
+			text-transform: uppercase
+			+r(767)
+				text-transform: none
+	&__input
+		width: 100%
+		padding: 0 20px
+		height: 48px
+		font-size: 16px
+		color: #787d7c
+		line-height: 48px
+		border: 2px solid #c5ccca
+		+r(767)
+			height: 40px
+			line-height: 40px
+	&__select-style
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			z-index: 1
+			right: 22px
+			top: 50%
+			margin-top: -2px
+			+arr(9,5,#ff8400,b)
+	&__select
+		appearance: none
+		padding: 0 53px 0 20px
+		width: 100%
+		height: 48px
+		font-size: 16px
+		color: #787d7c
+		line-height: 48px
+		border: 2px solid #c5ccca
+		border-radius: 0
+		background-color: transparent
+		+r(767)
+			height: 40px
+			line-height: 40px
+	&__radio
+		display: none
+		&-label
+			cursor: pointer
+			position: relative
+			display: inline-block
+			padding-left: 24px
+			font-size: 16px
+			color: #787d7c
+			line-height: 24px
+			&:before
+				content: ''
+				position: absolute
+				z-index: 1
+				left: 0
+				top: 3px
+				width: 12px
+				height: 12px
+				border: 2px solid #ff8400
+				border-radius: 50%
+		&:checked + &-label
+			&:after
+				content: ''
+				position: absolute
+				z-index: 2
+				left: 5px
+				top: 8px
+				width: 6px
+				height: 6px
+				border-radius: 50%
+				background-color: #ff8400
+	&__row
+		+pie-clearfix
+	&__col
+		float: left
+		margin-right: 35px
+	&__file
+		display: none
+		&-label
+			cursor: pointer
+			+museo
+			font-size: 16px
+			color: #ff8400
+			line-height: 24px
+			font-weight: bold
+		&-text
+			margin-left: 8px
+			display: inline-block
+			color: $black
+			text-decoration: underline
+			font-weight: normal
+		&-name
+			font-size: 14px
+			color: #787d7c
+			line-height: 20px
+	&__area
+		display: block
+		padding: 10px 20px
+		width: 100%
+		height: 260px
+		font-size: 16px
+		color: #787d7c
+		line-height: 24px
+		resize: none
+		border: 2px solid #c5ccca
+		+r(767)
+			height: 245px
+
+/* ===================================
+	 About
+	 =================================== */
+.about
+	&__image
+		position: relative
+		height: 446px
+		background-position: center center
+		background-size: cover
+		+r(767)
+			height: 324px
+		&:after
+			content: ''
+			+ratio-in
+			z-index: 0
+			background-color: rgba(246, 246, 246, .7)
+	&__desc
+		position: absolute
+		left: 25px
+		right: 45px
+		bottom: 20px
+		text-transform: uppercase
+	&__title
+		position: relative
+		margin-top: -240px
+		margin-bottom: 25px
+		+pre(2)
+		+post(3)
+		+gutter
+		text-transform: uppercase
+		+r(1023)
+			+pre(1)
+			+post(1)
+		+r(767)
+			+pre(0)
+			margin-bottom: -40px
+		&-lg
+			position: relative
+			z-index: 1
+			margin-top: -160px
+			+museo-b
+			font-size: 35px
+			color: $black
+			line-height: 50px
+			+r(767)
+				margin-top: 0
+				font-size: 25px
+				line-height: 35px
+		&-md
+			position: relative
+			z-index: 1
+			+museo
+			font-size: 30px
+			color: $black
+			line-height: 50px
+			+r(767)
+				font-size: 20px
+				line-height: 35px
+	&__count
+		position: relative
+		left: -10px
+		+museo-b
+		font-size: 350px
+		color: $white
+		line-height: 1
+	&__row
+		+pie-clearfix
+	&__col
+		+span(6 no-gutters)
+		padding-right: 55px
+		+r(1023)
+			+span(full no-gutters)
+			padding-right: 0
+		&:nth-child(even)
+			padding-left: 10px
+			padding-right: 45px
+			+r(1023)
+				padding-left: 0
+				padding-right: 0
+	&__text
+		margin-bottom: 40px
+		+r(1023)
+			margin-bottom: 25px
+		+r(767)
+			margin-bottom: 20px
+	&__info
+		position: absolute
+		z-index: 10
+		top: 0
+		right: 50%
+		margin-right: -590px
+		+museo
+		font-size: 16px
+		color: #555555
+		line-height: 1
+		+r(1199)
+			right: 10px
+			margin-right: 0
+		+r(767)
+			pointer-events: none
+			margin-top: 52px
+			left: 70px
+			right: 70px
+			text-align: center
+	.slick-prev
+		position: absolute
+		z-index: 1
+		left: 50%
+		top: 0
+		margin-left: -590px
+		+r(1199)
+			left: 10px
+			margin-left: 0
+		+r(767)
+			margin-top: -10px
+	.slick-next
+		position: absolute
+		z-index: 1
+		right: 50%
+		top: 0
+		margin-right: -590px
+		+r(1199)
+			right: 10px
+			margin-right: 0
+		+r(767)
+			margin-top: -10px
+	.slick-arrow.slick-disabled
+		opacity: 0.3
+		
+/* ===================================
+	 Contacts
+	 =================================== */
+.contacts
+	position: relative
+	&__map
+		margin-top: 0
+		height: 860px
+		max-height: 85vh
+		+r(767)
+			max-height: 50vh
+	&__desc
+		position: absolute
+		z-index: 1
+		top: 35px
+		left: 50%
+		margin-left: -590px
+		+pie-clearfix
+		+r(1199)
+			left: 10px
+			margin-left: 0
+		+r(767)
+			position: relative
+			top: 0
+			left: 0
+			padding-top: 15px
+			padding-bottom: 15px
+			+gutter
+			background-color: #ffffff
+	&__info
+		margin-top: 25px
+		padding: 25px 130px 25px 30px
+		font-size: 16px
+		color: $black
+		line-height: 24px
+		background-color: #ffffff
+		+r(767)
+			margin-top: 5px
+			padding: 0
+		&-title
+			color: #5e5e5e
+			line-height: 28px
+		&-text
+			&:last-child
+				text-decoration: underline
+		&-text + &-title
 			margin-top: 20px
-	
+			+r(767)
+				margin-top: 15px
+			
+/* ===================================
+	 Reviews
+	 =================================== */
+.reviews
+	margin-top: 20px
+	+r(1023)
+		margin-top: 15px
+		background-color: #f6f6f6
+	&__item
+		overflow: hidden
+		display: table
+		width: 100%
+		min-height: 354px
+		background-color: #f6f6f6
+		transition: all 0.2s
+		& + &
+			margin-top: 30px
+			+r(1023)
+				margin-top: 0
+		&:hover
+			box-shadow: 10px 10px 0#ff7b38
+	&__col
+		position: relative
+		padding-right: 10px
+		height: 354px
+		display: table-cell
+		min-height: 100%
+		width: 50%
+		vertical-align: top
+		+r(1023)
+			height: auto
+		& + &
+			padding: 20px 30px 25px 20px
+			&:before
+				content: ''
+				position: absolute
+				z-index: 1
+				left: -25px
+				top: 50%
+				margin-top: -15px
+				+arr(15,30,#f6f6f6,l)
+				+r(1023)
+					content: none
+					display: none
+	&__item:nth-child(even) &__col
+		padding: 20px 20px 25px 30px
+		&:before
+			content: ''
+			position: absolute
+			z-index: 1
+			right: -25px
+			top: 50%
+			margin-top: -15px
+			+arr(15,30,#f6f6f6,r)
+			+r(1023)
+				content: none
+				display: none
+	&__item:nth-child(even) &__col + &__col
+		padding: 0 0 0 10px
+		&:before
+			content: none
+			display: none
+	&__item:nth-child(odd) &__col
+		+r(1023)
+			display: table-header-group
+	&__item:nth-child(odd) &__col + &__col
+		+r(1023)
+			display: table-footer-group
+	&__item:nth-child(even) &__col
+		+r(1023)
+			display: table-footer-group
+	&__item:nth-child(even) &__col + &__col
+		+r(1023)
+			display: table-header-group
+	&__image
+		position: relative
+		height: 100%
+		background-position: center center
+		background-size: cover
+		+r(1023)
+			height: 203px
+		&:before
+			content: ''
+			pointer-events: none
+			+ratio-in
+			background-color: rgba(246,246,246,0.8)
+			transition: all 0.2s
+	&__item:hover &__image
+		&:before
+			background-color: rgba(52, 52, 52, .8)
+			+r(639)
+				background-color: rgba(246,246,246,0.8)
+	&__watch
+		position: absolute
+		z-index: 1
+		left: 0
+		bottom: 0
+		padding: 11px 20px 10px
+		+museo-b
+		font-size: 14px
+		color: #ffffff
+		line-height: 20px
+		text-transform: uppercase
+		background-color: #ffba00
+		+r(1023)
+			float: left
+			position: relative
+			margin-top: -41px
+			font-size: 13px
+	&__scan
+		position: absolute
+		z-index: 1
+		right: 10px
+		bottom: 0
+		padding: 11px 20px 10px
+		+museo-b
+		font-size: 14px
+		color: #ffffff
+		line-height: 20px
+		text-transform: uppercase
+		background-color: #a1a1a1
+		cursor: pointer
+		+r(1023)
+			float: right
+			position: relative
+			margin-top: -41px
+			font-size: 13px
+			right: 0
+	&__item:nth-child(even) &__watch
+		left: 10px
+		+r(1023)
+			left: 0
+	&__item:nth-child(even) &__scan
+		right: 0
+	&__title
+		margin-bottom: 25px
+		+museo
+		font-size: 25px
+		color: $black
+		line-height: 35px
+		text-transform: uppercase
+		+r(1023)
+			margin-top: 15px
+			font-size: 20px
+			line-height: 30px
+			margin-bottom: 10px
+			padding-left: 10px
+			padding-right: 10px
+	&__text
+		margin-bottom: 25px
+		font-size: 14px
+		color: $dimgrey
+		line-height: 26px
+		font-style: italic
+		+r(1023)
+			padding-left: 10px
+			padding-right: 10px
+		+r(1023)
+			margin-bottom: 15px
+	&__info
+		border-top: 1px solid #e2e2e2
+		padding-top: 25px
+		font-size: 0
+		+pie-clearfix
+		+r(1023)
+			padding: 15px 10px 20px
+		+r(639)
+			overflow: hidden
+			margin-left: -40px
+			padding-bottom: 0
+	&__column
+		+span(1 of 3 no-gutter)
+		&:last-child
+			text-align: right
+			+r(639)
+				text-align: left
+		+r(639)
+			display: inline-block
+			margin-left: 40px
+			margin-bottom: 20px
+			float: none
+			width: auto
+			vertical-align: top
+	&__name
+		font-size: 16px
+		color: $dimgrey
+		font-weight: 700
+		line-height: 26px
+	&__vacancy
+		font-size: 14px
+		color: $dimgrey
+		font-weight: 400
+	&__inc
+		font-size: 14px
+		color: $dimgrey
+		font-weight: 400
+		line-height: 26px
+	&__site
+		font-size: 14px
+		color: #292929
+		font-weight: 400
+		text-decoration: underline
+		
+.navigations
+	display: none
+	margin-top: 20px
+	+pie-clearfix
+	+r(1023)
+		display: block
+	.slick-prev
+		float: left
+	.slick-next
+		float: right
+	.slick-arrow.slick-disabled
+		opacity: 0.3
+	&__info
+		+museo
+		font-size: 16px
+		color: #555555
+		line-height: 20px
+		text-align: center
+		
+
+/* ===================================
+	 Portfolio Inner
+	 =================================== */
+.promotion
+	padding-top: 20px
+	position: relative
+	+r(767)
+		padding-top: 0
+	&__row
+		+pie-clearfix
+	&__prev
+		margin-bottom: 30px
+		display: inline-block
+		font-size: 0
+		+r(767)
+			margin-bottom: 15px
+		.icon
+			font-size: 17px
+	&__topic
+		margin-bottom: 25px
+		+pre(1)
+		+gutter
+		font-size: 14px
+		color: #5e5e5e
+		font-weight: 400
+		line-height: 20px
+		+r(1023)
+			margin-bottom: 15px
+		+r(767)
+			+pre(0)
+			padding-left: 0
+			padding-right: 0
+	&__title
+		margin-bottom: 90px
+		+pre(1)
+		+gutter
+		+museo-b
+		font-size: 50px
+		color: $black
+		line-height: 65px
+		text-transform: uppercase
+		word-break: break-all
+		+r(1023)
+			font-size: 25px
+			line-height: 35px
+		+r(767)
+			margin-bottom: 40px
+			+pre(0)
+			padding-left: 0
+			padding-right: 0
+	&__project
+		+pre(2.25)
+		+post(3)
+		+r(1199)
+			+pre(1)
+		+r(1023)
+			+post(2)
+		+r(767)
+			+pre(0)
+			+post(0)
+	&__img
+		position: absolute
+		z-index: -2
+		top: 20px
+		bottom: 110px
+		right: 0
+		width: 65%
+		background-position: center center
+		background-size: cover
+		+r(1199)
+			bottom: 150px
+		+r(767)
+			width: 80%
+		&:before
+			content: ''
+			+ratio-in
+			z-index: -1
+			background-color: rgba(246,246,246,.8)
+
+.project
+	padding: 30px 15px 30px 35px
+	border: 7px solid rgba(255, 132, 0, 0.8)
+	+r(767)
+		padding-left: 15px
+		padding-right: 0
+	&__title
+		margin-bottom: 20px
+		+museo-b
+		font-size: 30px
+		color: $black
+		line-height: 45px
+		text-transform: uppercase
+		+r(1023)
+			font-size: 20px
+			line-height: 30px
+	&__list
+		font-size: 15px
+		
+.solution
+	+pie-clearfix
+	&__col
+		+pre(1)
+		+span(5)
+		+r(1023)
+			+span(11)
+		+r(767)
+			+pre(0)
+			+span(12)
+			padding-left: 0
+			padding-right: 0
+		& + &
+			+r(1023)
+				margin-top: 40px
+	&__title
+		position: relative
+		display: inline-block
+		margin-bottom: 20px
+		+museo-b
+		font-size: 30px
+		color: $black
+		line-height: 45px
+		text-transform: uppercase
+		+r(1023)
+			margin-bottom: 15px
+		+r(767)
+			font-size: 25px
+			line-height: 35px
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			margin-top: -4px
+			width: 50vw
+			right: 100%
+			margin-right: 30px
+			height: 8px
+			background-color: #ffba00
+			+r(1023)
+				right: auto
+				left: 100%
+				margin-right: 0
+				margin-left: 20px
+				width: 100vw
+	&__col:nth-child(even) &__title
+		&:before
+			right: auto
+			left: 100%
+			margin-left: 30px
+			margin-right: 0
+			background-color: #ff7b38
+	&__text
+		padding-right: 25px
+		color: $dimgrey
+		+r(767)
+			padding-right: 10px
+		
+.process
+	position: relative
+	background-color: #f6f6f6
+	&__item
+		position: relative
+	&__img
+		+ratio-in
+		z-index: 1
+		background-position: center center
+		background-size: cover
+		&:before
+			content: ''
+			+ratio-in
+			z-index: 1
+			background-color: rgba(246, 246, 246, .85)
+	&__container
+		position: relative
+		z-index: 2
+		padding-bottom: 110px
+	&__title
+		+pre(1)
+		+gutter
+	&__text
+		margin-bottom: 30px
+		padding-right: 25px
+		font-size: 13px
+		color: #5e5e5e
+		font-weight: 400
+		line-height: 28px
+		&:last-child
+			margin-bottom: 0
+	&__col
+		margin-top: 10px
+		+pre(1)
+		+span(5)
+		&:nth-child(even)
+			margin-top: 170px
+			+pre(0)
+			+span(6)
+	&__nav
+		position: absolute
+		z-index: 3
+		left: 0
+		right: 0
+		bottom: 30px
+		+pie-clearfix
+		.slick-prev
+			position: relative
+			float: left
+			left: 50%
+			margin-left: -590px
+			+r(1199)
+				left: 10px
+				margin-left: 0
+		.slick-next
+			position: relative
+			float: right
+			right: 50%
+			margin-right: -590px
+			+r(1199)
+				right: 10px
+				margin-right: 0
+		.slick-arrow.slick-disabled
+			opacity: 0.3
+	&__info
+		margin-top: 0
+		+museo
+		font-size: 16px
+		color: #555555
+		line-height: 20px
+		text-align: center
+		
+.results
+	background-color: #f6f6f6
+	&__col
+		+pre(1)
+		+span(8)
+		+gutter
+		&:nth-child(even)
+			+pre(0)
+			+span(3)
+	&__title
+		margin-bottom: 10px
+	&__text
+		margin-bottom: 20px
+		padding-right: 15px
+		font-size: 14px
+		line-height: 26px
+		font-weight: 400
+		color: $dimgrey
+		&_orange
+			font-size: 16px
+			color: #ff7b38
+			font-weight: 700
+	&__subtitle
+		margin-top: 40px
+		margin-bottom: 25px
+		font-size: 25px
+		color: $dimgrey
+		font-weight: 700
+		line-height: 35px
+		&-orange
+			color: #ff7b38
+	&__graph
+		margin-left: -35px
+		max-width: 100%
+		height: auto
+	&__doc
+		position: relative
+		margin-top: 70px
+		cursor: pointer
+		display: block
+		&:before
+			content: ''
+			+ratio-in
+			z-index: 1
+			background-color: rgba(246, 246, 246, .7)
+			transition: all 0.2s
+		&:after
+			content: ''
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%,-50%)
+			width: 46px
+			height: 46px
+			background: url('../img/png/add.png') center center no-repeat
+			background-size: 100% 100%
+			z-index: 2
+		&:hover
+			&:before
+				background-color: transparent
+	&__img
+		width: 100%
+		height: auto
+		
+.review
+	padding-bottom: 40px
+	&__title
+		+pre(1)
+		+gutter
+		margin-bottom: 20px
+	&__row
+		+pie-clearfix
+	&__col
+		+pre(1)
+		+span(2)
+		&:nth-child(even)
+			+pre(0)
+			+span(9)
+	&__cert
+		width: 100%
+		height: auto
+	&__user
+		display: table
+		width: 100%
+		margin-bottom: 25px
+	&__avatar
+		overflow: hidden
+		display: table-cell
+		width: 150px
+		height: 150px
+		border-radius: 50%
+	&__img
+		width: 100%
+		height: auto
+	&__info
+		display: table-cell
+		padding-left: 20px
+		color: $dimgrey
+		font-weight: 400
+		vertical-align: middle
+	&__name
+		font-size: 16px
+		font-weight: 700
+		line-height: 26px
+	&__vacancy
+		font-size: 14px
+		line-height: 22px
+	&__inc
+		font-size: 14px
+		line-height: 34px
+	&__site
+		font-size: 14px
+		color: #292929
+		line-height: 26px
+	&__text
+		font-size: 16px
+		color: $dimgrey
+		font-style: italic
+		line-height: 30px
+
+.inform
+	padding-top: 15px
+	border-top: 3px solid #f6f6f6
+	&__item
+		+pie-clearfix
+	&__el
+		position: relative
+		+pre(1)
+		+span(3.4 no-gutters)
+		left: 10px
+		&:before
+			content: ''
+			+ratio-in
+			pointer-events: none
+			z-index: 0
+			background-color: rgba(246, 246, 246, .8)
+			transition: all 0.2s
+		&:hover
+			&:before
+				background-color: rgba(52,52,52,.8)
+		& + &
+			+pre(0)
+			float: right
+			left: 0
+	&__img
+		width: 100%
+		height: auto
+	&__text
+		position: absolute
+		z-index: 1
+		left: 25px
+		bottom: 20px
+	&__topic
+		margin-bottom: 10px
+		font-size: 14px
+		color: #434242
+		line-height: 20px
+		transition: all 0.2s
+	&__title
+		+museo
+		font-size: 20px
+		color: $black
+		line-height: 30px
+		text-transform: uppercase
+		transition: all 0.2s
+	&__el:hover &__topic,
+	&__el:hover &__title
+		color: #ffffff
+	.slick-prev
+		position: absolute
+		+pre(1)
+		z-index: 10
+		top: 50%
+		margin-top: -12px
+		left: -11px
+	.slick-next
+		position: absolute
+		z-index: 10
+		top: 50%
+		margin-top: -12px
+		right: -20px
+	.slick-arrow.slick-disabled
+		opacity: 0.3
 
 /* ===================================
 	 Other Styles

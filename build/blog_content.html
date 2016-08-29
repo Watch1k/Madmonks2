@@ -19,17 +19,20 @@
   <div class="wrapper">
     <header class="header">
       <div class="header__top">
-        <div class="header__container container">
-          <!-- begin logo-->
-          <div class="header__logo logo">
-            <a href="index.html" class="logo__link">
-              <div class="logo__img"><svg class="icon icon-logo"><use xlink:href="img/sprite.svg#icon-logo"></use></svg></div>
-              <div class="logo__text"><svg class="icon icon-logo-text"><use xlink:href="img/sprite.svg#icon-logo-text"></use></svg></div>
-            </a>
+        <div class="container">
+          <div class="header__col">
+            <!-- begin logo-->
+            <div class="header__logo logo">
+              <a href="index.html" class="logo__link">
+                <div class="logo__img"><svg class="icon icon-logo"><use xlink:href="img/sprite.svg#icon-logo"></use></svg></div>
+                <div class="logo__text"><svg class="icon icon-logo-text"><use xlink:href="img/sprite.svg#icon-logo-text"></use></svg></div>
+              </a>
+            </div>
+            <!-- end logo-->
           </div>
-          <!-- end logo--><a href="tel:+79091222545" class="header__phone"><svg class="icon icon-phone"><use xlink:href="img/sprite.svg#icon-phone"></use></svg><span class="header__phone-text">+7 909 122-25-45</span></a>
-          <a href="mailto:manager@madmonks.ru" class="header__mail"><svg class="icon icon-mail"><use xlink:href="img/sprite.svg#icon-mail"></use></svg><span class="header__mail-text">manager@madmonks.ru</span></a>
-          <div class="header__button"><button type="button" class="header__btn btn btn_yellow">оставить заявку</button></div>
+          <div class="header__col"><a href="tel:+79091222545" class="header__phone"><svg class="icon icon-phone"><use xlink:href="img/sprite.svg#icon-phone"></use></svg><span class="header__phone-text">+7 909 122-25-45</span></a></div>
+          <div class="header__col"><a href="mailto:manager@madmonks.ru" class="header__mail"><svg class="icon icon-mail"><use xlink:href="img/sprite.svg#icon-mail"></use></svg><span class="header__mail-text">manager@madmonks.ru</span></a></div>
+          <div class="header__col"><a href="#" class="header__btn btn btn_yellow">оставить заявку</a></div>
         </div>
       </div>
       <div class="header__footer">
@@ -66,14 +69,12 @@
     <main class="main">
       <!--begin blog-->
       <div class="blog">
-        <div class="blog__start"><img src="img/content/blog-img.jpg" alt="img" class="blog__start-img">
-          <div class="blog__start-overlay">
-            <div class="blog__container container"><a href="#" class="blog__start-link">Блоги</a>
-              <div class="blog__start-title">вот и наступило горячее время летних заказов</div>
-            </div>
+        <div class="blog__start">
+          <div class="container"><a href="#" class="blog__start-link">Блоги</a>
+            <div class="blog__start-title">вот и наступило горячее время летних заказов</div>
           </div>
         </div>
-        <div class="blog__content blog__container container">
+        <div class="container container_default section">
           <p class="blog__text blog__text_letter blog__text_center">Сегодняшний выпуск будет о том, когда и как следует перенаправлять трафик на другие страницы, каким образом снизить коэффициент отказов в различных нишах, чтобы ранжироваться в поиске выше. Например, для досок объявлений (даже очень успешных)
             хорошо работает создание категорий. Мы берем трафик, который попадает на конкретное объявление — обычно это трафик высокоотказной. Группируем этот трафик, создаем страницы и на них уже больше объявлений. Такие страницы получают гораздо меньшее
             количество отказов. Если этой логики нельзя придерживаться на вашем сайте, то нужно работать непосредственно с самой страницей. То есть либо мы создаем категории, либо поднимаем кликабельность.</p>
@@ -87,7 +88,7 @@
             будет много контента, тем лучше.</p>
           <p class="blog__text">Если вы посмотрите на выдачу, вы увидите, что в основном ранжируются категории, в которых контент уходит на второй план, а на первый план выводятся фотографии, за счет которых улучшаются показатели отказов. Соответственно, есть некоторые фишки,
             которые можно использовать для контентных проектов — их используют очень крупные ресурсы (например, медицинские или англоязычные порталы).</p>
-          <ul class="blog__list list">
+          <ul class="blog__list list list_mark">
             <li class="list__item">Для мобильной выдачи, для самых популярных статей мы часто используем пагинацию. Берем статью, разбиваем ее на какие-то категории — и ее нельзя просто так прочитать. Ее нужно, грубо говоря, листать. Таким образом улучшаются поведенческие факторы
               этой страницы. Это такой, может быть, метод на грани, но фактически за него не будет никаких санкций.</li>
             <li class="list__item">Если это десктопная версия страницы, она должна быть в основном посвящена фотографиям, картинкам. Это, например, перечень каких-то причесок (очень много такого графического контента). Очень хорошо будет работать отдельный pop-up в окне — когда
@@ -96,8 +97,139 @@
               подбирал тот человек, который разбирается в этой теме. Как правило, это тоже вроде бы неочевидный метод, но качество фотографий и их количество тоже очень влияют.</li>
           </ul>
         </div>
+        <div class="blog__bg">
+          <div class="blog__bg-container container">
+            <div class="blog__bg-inner">
+              <div class="blog__bg-text">Если вы что-то делаете, вы должны сжечь себя целиком, как хороший костер, который не оставляет за собой никаких следов.</div>
+              <div class="blog__bg-author">Д.Т.Судзуки</div>
+            </div>
+          </div>
+        </div>
+        <div class="container section">
+          <ul class="blog__list list list_numeric">
+            <li class="list__item">
+              <p class="list__item-text">Если у вас какой-то каталог, например, с детскими именами, или подобный тип контента, очень хорошо работают различные инструменты, такие как «Добавить», «Wishlist». Что-то, чем вы можете управлять на самом сайте, каким-то образом сохранять
+                контент или добавлять его в Избранное и т.д.</p>
+            </li>
+            <li class="list__item">
+              <p class="list__item-text">Различные всплывающие pop-up, например, предложение подписаться на блог. Достаточно сильно влияет на отказы, но хорошо монетизируется. В определенный момент нужно находить компромиссы и решать: расти или зарабатывать.</p>
+            </li>
+            <li class="list__item">
+              <p class="list__item-text">Добавление уникальных инструментов. Таких как отзывы, фото, галлереи фотографий, алгоритм работы («до» и «после») Подойдет для сайта услуг. Это достаточно сложная тема для SEO-специалистов, потому что обычно они не задумываются о таких вещах
+                и не могут точно сказать, что качественно может улучшить страницу вашего сайта, так как очень часто не знают продукта.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="container section">
+          <h3 class="blog__table-title">заголовок h3 25px size</h3>
+          <div class="blog__table">
+            <!--begin table-->
+            <div class="table">
+              <div class="table__thead">
+                <div class="table__tr">
+                  <div class="table__td">Заголовок 1</div>
+                  <div class="table__td">Заголовок 2</div>
+                  <div class="table__td">Заголовок 3</div>
+                  <div class="table__td">Заголовок 4</div>
+                  <div class="table__td">Заголовок 5</div>
+                </div>
+              </div>
+              <div class="table__tbody">
+                <div class="table__tr">
+                  <div class="table__td">Текст о чем то</div>
+                  <div class="table__td">Бывает и такое тоже</div>
+                  <div class="table__td">Цифра три тут есть</div>
+                  <div class="table__td">Четыре гуся за столом</div>
+                  <div class="table__td">Пятеро и жвачка</div>
+                </div>
+                <div class="table__tr">
+                  <div class="table__td">Текст о чем то</div>
+                  <div class="table__td">Бывает и такое тоже</div>
+                  <div class="table__td">Цифра три тут есть</div>
+                  <div class="table__td">Четыре гуся за столом</div>
+                  <div class="table__td">Пятеро и жвачка</div>
+                </div>
+                <div class="table__tr">
+                  <div class="table__td">Текст о чем то</div>
+                  <div class="table__td">Бывает и такое тоже</div>
+                  <div class="table__td">Цифра три тут есть</div>
+                  <div class="table__td">Четыре гуся за столом</div>
+                  <div class="table__td">Пятеро и жвачка</div>
+                </div>
+                <div class="table__tr">
+                  <div class="table__td">Текст о чем то</div>
+                  <div class="table__td">Бывает и такое тоже</div>
+                  <div class="table__td">Цифра три тут есть</div>
+                  <div class="table__td">Четыре гуся за столом</div>
+                  <div class="table__td">Пятеро и жвачка</div>
+                </div>
+                <div class="table__tr">
+                  <div class="table__td">Текст о чем то</div>
+                  <div class="table__td">Бывает и такое тоже</div>
+                  <div class="table__td">Цифра три тут есть</div>
+                  <div class="table__td">Четыре гуся за столом</div>
+                  <div class="table__td">Пятеро и жвачка</div>
+                </div>
+                <div class="table__tr">
+                  <div class="table__td">Текст о чем то</div>
+                  <div class="table__td">Бывает и такое тоже</div>
+                  <div class="table__td">Цифра три тут есть</div>
+                  <div class="table__td">Четыре гуся за столом</div>
+                  <div class="table__td">Пятеро и жвачка</div>
+                </div>
+              </div>
+            </div>
+            <!--end table-->
+          </div>
+        </div>
+        <div class="container container_hr">
+          <div class="section section_hr">
+            <!--begin socials-->
+            <div class="socials">
+              <div class="socials__title">Поделиться:</div>
+              <div class="socials__list"><a href="#" class="socials__item"><svg class="icon icon-vk"><use xlink:href="img/sprite.svg#icon-vk"></use></svg></a><a href="#" class="socials__item"><svg class="icon icon-tw"><use xlink:href="img/sprite.svg#icon-tw"></use></svg></a>
+                <a
+                  href="#" class="socials__item"><svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg></a><a href="#" class="socials__item"><svg class="icon icon-od"><use xlink:href="img/sprite.svg#icon-od"></use></svg></a>
+                  <a href="#" class="socials__item"><svg class="icon icon-yt"><use xlink:href="img/sprite.svg#icon-yt"></use></svg></a>
+              </div>
+            </div>
+            <!--end socials-->
+            <div class="title title_h2">рекомендуем глянуть</div>
+            <!--begin block-->
+            <div class="blog__recommend block">
+              <a href="#" class="block__item">
+                <div class="block__in">
+                  <div style="background-image: url(img/content/recommend-1.jpg)" class="block__image"></div>
+                  <div class="block__overlay">
+                    <div class="block__text">время ускользает сквозь пальцы словно песок</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="block__item">
+                <div class="block__in">
+                  <div style="background-image: url(img/content/recommend-2.jpg)" class="block__image"></div>
+                  <div class="block__overlay">
+                    <div class="block__text">летняя пора</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="block__item">
+                <div class="block__in">
+                  <div style="background-image: url(img/content/recommend-3.jpg)" class="block__image"></div>
+                  <div class="block__overlay">
+                    <div class="block__text">ранний подъем и поехали</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!--end block-->
+          </div>
+        </div>
       </div>
       <!--end blog-->
+      <!--begin top-->
+      <div class="scrolling js-to-top"><svg class="icon icon-top-original"><use xlink:href="img/sprite.svg#icon-top-original"></use></svg></div>
+      <!--end top-->
     </main>
   </div>
   <!--block footToggle-->

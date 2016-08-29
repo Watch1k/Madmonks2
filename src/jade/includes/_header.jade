@@ -1,22 +1,25 @@
 header.header
 	.header__top
-		.header__container.container
-			// begin logo
-			.header__logo.logo
-				a.logo__link(href="index.html")
-					.logo__img
-						+i('logo')
-					.logo__text
-						+i('logo-text')
-			// end logo
-			a.header__phone(href='tel:+79091222545')
-				+i('phone')
-				span.header__phone-text +7 909 122-25-45
-			a.header__mail(href='mailto:manager@madmonks.ru')
-				+i('mail')
-				span.header__mail-text manager@madmonks.ru
-			.header__button
-				button.header__btn.btn.btn_yellow(type='button') оставить заявку
+		.container
+			.header__col
+				// begin logo
+				.header__logo.logo
+					a.logo__link(href="index.html")
+						.logo__img
+							+i('logo')
+						.logo__text
+							+i('logo-text')
+				// end logo
+			.header__col
+				a.header__phone(href='tel:+79091222545')
+					+i('phone')
+					span.header__phone-text +7 909 122-25-45
+			.header__col
+				a.header__mail(href='mailto:manager@madmonks.ru')
+					+i('mail')
+					span.header__mail-text manager@madmonks.ru
+			.header__col
+				a.header__btn.btn.btn_yellow(href='#') оставить заявку
 	.header__footer
 		.header__container.container
 			//begin menu

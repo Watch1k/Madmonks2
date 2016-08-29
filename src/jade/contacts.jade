@@ -1,0 +1,45 @@
+extend includes/_layout
+block title
+	title Contacts
+block content
+	//begin contacts
+	.contacts
+		.contacts__desc
+			.contacts__title.title.title_h2 контакты
+			.contacts__info
+				.contacts__info-title Адрес:
+				.contacts__info-text 115230, Россия, г. Москва, <br>Каширский проезд, д.13, стр.4
+				.contacts__info-title Телефон:
+				a.contacts__info-text(href='tel:+79091222545') +7 909 122-25-45
+				.contacts__info-title Эл. адрес:
+				a.contacts__info-text(href='mailto:manager@madmonks.ru') manager@madmonks.ru
+		#map.contacts__map
+	//end contacts
+append js
+	script(src="https://maps.googleapis.com/maps/api/js")
+	script.
+		function initMap() {
+			var myLatLng = {
+				lat: 55.655729,
+				lng: 37.629142
+			};
+			var mapProp = {
+				center: myLatLng,
+				zoom: 17,
+				scrollwheel: false,
+				draggable: true,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var styles = [{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}];
+			var map = new google.maps.Map(document.getElementById("map"), mapProp);
+			var image = 'img/png/logo.png';
+			map.setOptions({styles: styles});
+			var marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: 'Madmonks',
+				icon: image
+			});
+		}
+
+		google.maps.event.addDomListener(window, 'load', initMap);

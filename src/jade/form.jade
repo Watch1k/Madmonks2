@@ -1,0 +1,72 @@
+extend includes/_layout_form
+block title
+	title Form
+block content
+	//begin feedback
+	.feedback
+		.container.section
+			.feedback__title мы поможем вам с продвижением вашего товара или услуги
+			.feedback__subtitle Заполните форму ниже и мы свяжемся с вами
+			//begin form
+			form.feedback__form.form(action='#')
+				.form__field
+					.form__desc Ссылка на ваш сайт
+					input.form__input(type='text' placeholder='')
+				.form__field
+					.form__desc Имя
+					input.form__input(type='text' placeholder='')
+				.form__field
+					.form__desc Название компании
+					input.form__input(type='text' placeholder='')
+				.form__field
+					.form__desc Эл. адрес
+					input.form__input(type='text' placeholder='')
+				.form__field
+					.form__desc Телефон
+					input.form__input(type='text' placeholder='')
+				.form__field
+					.form__desc.form__desc_lg Каков ваш прогнозируемый бюджет для этого проекта
+					.form__select-style
+						select.form__select
+							option(value='15000 - 25000 руб. / мес.') 15000 - 25000 руб. / мес.
+							option(value='15000 - 25000 руб. / мес.') 25000 - 35000 руб. / мес.
+							option(value='15000 - 25000 руб. / мес.') 35000 - 45000 руб. / мес.
+				.form__field
+					.form__desc.form__desc_lg Работали ли вы с агентствами/фрилансерами ранее?
+					.form__row
+						.form__col
+							.form__row
+								input.form__radio(type='radio' name='experience' id='radio1')
+								label.form__radio-label(for='radio1') Да
+						.form__col
+							.form__row
+								input.form__radio(type='radio' name='experience' id='radio2')
+								label.form__radio-label(for='radio2') Нет
+				.form__field
+					.form__desc.form__desc_lg Что вас не устроило?
+					.form__row
+						.form__col
+							.form__row
+								input.form__radio(type='radio' name='wrong' id='radio3')
+								label.form__radio-label(for='radio3') Нет результатов
+							.form__row
+								input.form__radio(type='radio' name='wrong' id='radio4')
+								label.form__radio-label(for='radio4') Текучка кадров
+						.form__col
+							.form__row
+								input.form__radio(type='radio' name='wrong' id='radio5')
+								label.form__radio-label(for='radio5') Не занимаются сайтом
+							.form__row
+								input.form__radio(type='radio' name='wrong' id='radio6')
+								label.form__radio-label(for='radio6') Дорого
+				.form__field
+					input.form__file.js-upload(type='file' id='file1')
+					label.form__file-label(for='file1') +
+						.form__file-text Приложить файл
+				.form__field
+					.form__desc.form__desc_lg Ваши идеи (по желанию):
+					textarea.form__area
+				.form__field.form__field_submit
+					button.form__submit.btn.btn_yellow.btn_lg(type='submit') отправить заявку
+			//end form
+	//end feedback
