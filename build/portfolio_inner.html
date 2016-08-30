@@ -17,9 +17,16 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
-      <div class="header__top">
+    <header class="header js-head">
+      <div class="header__top js-header">
         <div class="container">
+          <!--begin hamburger-->
+          <div class="hamburger hamburger_spin js-hamburger">
+            <div class="hamburger__box">
+              <div class="hamburger__inner"></div>
+            </div>
+          </div>
+          <!--end hamburger-->
           <div class="header__col">
             <!-- begin logo-->
             <div class="header__logo logo">
@@ -35,38 +42,32 @@
           <div class="header__col"><a href="#" class="header__btn btn btn_yellow">оставить заявку</a></div>
         </div>
       </div>
-      <div class="header__footer">
-        <div class="header__container container">
-          <!--begin menu-->
-          <nav class="menu js-menu"><a data-index="1" href="#" class="menu__link">Мы</a><a data-index="2" href="#" class="menu__link menu__link_parent js-menu-parent">Продвижение сайтов</a><a data-index="3" href="#" class="menu__link menu__link_parent js-menu-parent">Отраслевые решения</a>
-            <a
-              data-index="4" href="#" class="menu__link">Другие услуги</a><a data-index="5" href="#" class="menu__link">Портфолио</a><a data-index="7" href="#" class="menu__link">Контакты</a><a data-index="8" href="#" class="menu__link is-active">Блог</a></nav>
-          <!--end menu-->
-          <!--//begin menus-->
-          <!--.menus.js-menus(data-child='2')-->
-          <!--	a.menus__link(href='#') Продвижение интернет-магазинов-->
-          <!--	a.menus__link(href='#') Продвижение сайтов строительных компаний-->
-          <!--	a.menus__link(href='#') Продвижение сайтов мебельных компаний-->
-          <!--	a.menus__link(href='#') Продвижение сайтов промышленных и производственных компаний-->
-          <!--//end menus-->
-          <!--//begin menus-->
-          <!--.menus.js-menus(data-child='3')-->
-          <!--	a.menus__link(href='#') Отраслевые решения 1-->
-          <!--	a.menus__link(href='#') Отраслевые сайтов решения test 2-->
-          <!--	a.menus__link(href='#') Отраслевые решения 3-->
-          <!--	a.menus__link(href='#') Продвижение Отраслевые решения 4-->
-          <!--	a.menus__link(href='#') Сайтов промышленных Отраслевые решения 5-->
-          <!--	a.menus__link(href='#') Отраслевые решения 6-->
-          <!--	a.menus__link(href='#') Отраслевые решения 7-->
-          <!--	a.menus__link(href='#') сайтов мебельных Отраслевые решения 8-->
-          <!--	a.menus__link(href='#') Отраслевые решения 10-->
-          <!--	a.menus__link(href='#') Сайтов Отраслевые решения 11-->
-          <!--	a.menus__link(href='#') Отраслевые решения 12-->
-          <!--//end menus-->
+      <div class="header__footer side js-side"><button class="side__back js-side-back">← Вернуться назад</button>
+        <div class="side__inner js-side-inner">
+          <div class="header__container container">
+            <!--begin menu-->
+            <nav class="menu js-menu"><a data-index="1" href="#" class="menu__link">Мы</a><a data-index="2" href="#" class="menu__link menu__link_parent js-menu-parent">Продвижение сайтов</a><a data-index="3" href="#" class="menu__link menu__link_parent js-menu-parent">Отраслевые решения</a>
+              <a
+                data-index="4" href="#" class="menu__link">Другие услуги</a><a data-index="5" href="#" class="menu__link">Портфолио</a><a data-index="7" href="#" class="menu__link">Контакты</a><a data-index="8" href="#" class="menu__link is-active">Блог</a></nav>
+            <!--end menu-->
+            <!--begin menus-->
+            <div data-child="2" class="menus js-menus"><a href="#" class="menus__link">Продвижение интернет-магазинов</a><a href="#" class="menus__link">Продвижение сайтов строительных компаний</a><a href="#" class="menus__link">Продвижение сайтов мебельных компаний</a><a href="#" class="menus__link">Продвижение сайтов промышленных и производственных компаний</a></div>
+            <!--end menus-->
+            <!--begin menus-->
+            <div data-child="3" class="menus js-menus"><a href="#" class="menus__link">Отраслевые решения 1</a><a href="#" class="menus__link">Отраслевые сайтов решения test 2</a><a href="#" class="menus__link">Отраслевые решения 3</a><a href="#" class="menus__link">Продвижение Отраслевые решения 4</a>
+              <a
+                href="#" class="menus__link">Сайтов промышленных Отраслевые решения 5</a><a href="#" class="menus__link">Отраслевые решения 6</a><a href="#" class="menus__link">Отраслевые решения 7</a><a href="#" class="menus__link">сайтов мебельных Отраслевые решения 8</a><a href="#"
+                  class="menus__link">Отраслевые решения 10</a><a href="#" class="menus__link">Сайтов Отраслевые решения 11</a><a href="#" class="menus__link">Отраслевые решения 12</a></div>
+            <!--end menus-->
+          </div>
+        </div><a href="#" class="side__btn btn">оставить заявку</a>
+        <!--begin cont-->
+        <div class="side__cont cont"><a href="tel:+79091222545" class="cont__link"><svg class="icon icon-phone"><use xlink:href="img/sprite.svg#icon-phone"></use></svg><span class="cont__link-text">+7 909 122-25-45</span></a>
+          <a href="mailto:manager@madmonks.ru" class="cont__link cont__link_mail"><svg class="icon icon-mail"><use xlink:href="img/sprite.svg#icon-mail"></use></svg><span class="cont__link-text">manager@madmonks.ru</span></a>
         </div>
       </div>
     </header>
-    <main class="main">
+    <main class="main js-main">
       <div class="container section">
         <!--begin promotion-->
         <div class="promotion">
@@ -200,7 +201,9 @@
             <div class="results__text">На момент составления кейса (ноябрь 2015г.) в ТОП-1 ПС Яндекс сайт находится по следующим запросам: дома из velox, дома велокс, дома из велокса, велокс цена дома, велокс цена, технология велокс цена, дома велокс отзывы, технология velox отзывы,
               технология велокс отзывы, проект дома по технологии velox, велокс проекты домов, проекты домов из велокса, velox проекты домов, несъемная опалубка velox цена, опалубка велокс купить, velox опалубка цена, несъемная опалубка velox купить,
               несъемная опалубка velox, несъемная опалубка velox велокс, несъемная опалубка велокс цена.</div>
-            <div class="results__subtitle">Рост трафика на&nbsp;<span class="results__subtitle-orange">400 %</span></div><img src="img/content/graph-1.png" alt="image" class="results__graph"></div>
+            <div class="results__subtitle">Рост трафика на&nbsp;<span class="results__subtitle-orange">400 %</span></div>
+            <div class="results__image"><img src="img/content/graph-1.png" alt="image" class="results__graph"></div>
+          </div>
           <div class="results__col">
             <a href="img/content/doc-1.jpg" title="MadMonks Document" class="results__doc js-img-popup"><img src="img/content/doc-1.jpg" alt="image" class="results__img"></a>
           </div>
@@ -278,21 +281,14 @@
       <!--end inform-->
     </main>
   </div>
-  <!--block footToggle-->
-  <!--  -var footToggle = ''-->
-  <!--footer.footer-->
-  <!--  .wrap-->
-  <!--    span.copyright &copy; Template-->
-  <!--    nav-->
-  <!--      .foot-nav-->
-  <!--        ul-->
-  <!--          each value in footMenu-->
-  <!--            if footToggle === value-->
-  <!--              li.is-active-->
-  <!--                a(href='#')= value-->
-  <!--            else-->
-  <!--              li-->
-  <!--                a(href='#')= value-->
+  <footer class="footer js-footer">
+    <div class="footer__container container"><span class="footer__copy">&copy; 2016, MadMonks</span>
+      <nav class="footer-nav"><a href="#" class="footer-nav__link"><svg class="icon icon-vk-original"><use xlink:href="img/sprite.svg#icon-vk-original"></use></svg></a><a href="#" class="footer-nav__link"><svg class="icon icon-tw-original"><use xlink:href="img/sprite.svg#icon-tw-original"></use></svg></a>
+        <a
+          href="#" class="footer-nav__link"><svg class="icon icon-fb-original"><use xlink:href="img/sprite.svg#icon-fb-original"></use></svg></a>
+      </nav>
+    </div>
+  </footer>
   <script src="js/app.js"></script>
 </body>
 
