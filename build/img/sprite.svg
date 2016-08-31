@@ -13,6 +13,22 @@
         <clipPath id="a" transform="translate(-60 -60.87)">
             <path fill="none" d="M60 60h378.96v380.88H60z"/>
         </clipPath>
+    
+        <clipPath id="a" transform="translate(-603 -322)">
+            <path fill="none" d="M603 322h73.92v78H603z"/>
+        </clipPath>
+    
+        <clipPath id="a" transform="translate(-600 -325)">
+            <path fill="none" d="M600 325h79.92v71H600z"/>
+        </clipPath>
+    
+        <clipPath id="a" transform="translate(-600 -325)">
+            <path fill="none" d="M600 325h79.92v71H600z"/>
+        </clipPath>
+    
+        <clipPath id="a" transform="translate(-452.5 -458.5)">
+            <path fill="none" d="M453 459h92.88v83.99H453z"/>
+        </clipPath>
     </defs><symbol id="icon-arrow-left" viewBox="0 0 14 21">
     <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAVBAMAAACEd8K6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEUAAADyaSTyaSTyaSTyaSTyaSTyaSTyaSTyaSTyaSTyaSTyaSTyaSTyaSTyaSQAAADvlsMGAAAADnRSTlMAQBDPIDDvYFCPn7/fr83Wcl4AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAbUlEQVQI12NgAAFGMMnAZGcApp3fPQFRrHnvCkB027sMEMX+7lkAiJ73zgREcb17rADW824BiMv87iVYb9y7DQxI0iDlRgwQ7W/A2hnq3qUyQIx/1gBmhL17DqZZ7CD2MSi/ewpxzz2Ie4DuAwAETiIkJ6/wsQAAAABJRU5ErkJggg==" width="14" height="21"/>
 </symbol><symbol id="icon-arrow-next" viewBox="0 0 23 17">
@@ -271,6 +287,75 @@
     </g>
 </symbol><symbol id="icon-prev" viewBox="0 0 23 17">
     <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAARBAMAAADEXSqOAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUAAAD/ezj/ezj/ezj/ezj/ezj/ezj/ezj/ezj/ezj/ezj/ezj/ezj/ezgAAACjbDOqAAAADXRSTlMAMO9QgGCfcI8Qz9+/9Ibi6QAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABhSURBVAjXY2BgYGDUNWCAA6G7DnA2691rCInauw1wNtvdq3A2Z+4lhPZZdxUROtbehYMGBgT77gWG2LsqLlBggGoL0P5MBIdR99YEBE/q7koEh3PtbQEGJHsdkMzogcoAAFbDK/AuiituAAAAAElFTkSuQmCC" width="23" height="17"/>
+</symbol><symbol id="icon-service-1" viewBox="0 0 73.6 77.07">
+    
+    <title>
+        service-1
+    </title>
+    <g clip-path="url(#a)">
+        <path d="M73.6 16.35l-9.38-8.18L54.84 0l-9.38 8.18-9.38 8.18h10.26C42.88 37.58 23.27 54.09.96 50.58a.78.78 0 0 0-.41 1.5c27.77 9.67 59.77-6.22 64.4-35.73h8.65zm0 0"/>
+    </g>
+    <path d="M52.8 43.78a49.8 49.8 0 0 1-9.6 6.93v26.37h9.6v-33.3zm0 0"/>
+    <path d="M28.8 77.07h9.6v-24a52.5 52.5 0 0 1-9.6 3v21zm0 0"/>
+    <path d="M57.6 77.07h9.6V18.75H67a46.23 46.23 0 0 1-9.35 19.87v38.45zm0 0"/>
+    <path d="M9.6 56.74A53.21 53.21 0 0 1 0 54.42v22.65h9.6V56.74zm0 0"/>
+    <path d="M14.4 77.07H24V56.91a55.3 55.3 0 0 1-6.67.41c-1 0-2 0-2.93-.09v19.85zm0 0"/>
+</symbol><symbol id="icon-service-2" viewBox="0 0 80 70.4">
+    
+    <title>
+        service-2
+    </title>
+    <g clip-path="url(#a)">
+        <path d="M75.2 0H4.8A4.8 4.8 0 0 0 0 4.8v60.8a4.8 4.8 0 0 0 4.8 4.8h70.4a4.8 4.8 0 0 0 4.8-4.8V4.8A4.8 4.8 0 0 0 75.2 0zm-12 3.2A3.2 3.2 0 1 1 60 6.4a3.2 3.2 0 0 1 3.2-3.2zm-8.8 0a3.2 3.2 0 1 1-3.2 3.2 3.21 3.21 0 0 1 3.2-3.2zm20.8 62.4H4.8V12.8h70.4v52.8zM72 9.6a3.2 3.2 0 1 1 3.2-3.2A3.2 3.2 0 0 1 72 9.6zm0 0"/>
+    </g>
+    <path d="M38.33 21.39a13.49 13.49 0 0 1 3.35 0v9.24a24.91 24.91 0 0 0-3.37 0c.05-3.09 0-6.18 0-9.26zm0 0"/>
+    <path d="M26.32 24.38c1-.43 2-.87 3-1.25 1.22 2.85 2.4 5.71 3.57 8.59-1.08.31-2.07.86-3.12 1.23-1.12-2.87-2.4-5.69-3.49-8.57zm0 0"/>
+    <path d="M47.09 31.7q1.74-4.29 3.56-8.55c1 .36 2 .8 3 1.23-1.09 2.88-2.36 5.7-3.5 8.57-1-.39-2-.89-3.1-1.25zm0 0"/>
+    <path d="M16.43 31.91a11.38 11.38 0 0 1 2.34-2.41c2.13 2.24 4.41 4.32 6.5 6.59a30.65 30.65 0 0 0-2.38 2.31c-2.13-2.18-4.32-4.32-6.46-6.49zm0 0"/>
+    <path d="M61.23 29.56a9 9 0 0 1 2.35 2.34c-2.14 2.18-4.32 4.33-6.48 6.5-.75-.83-1.56-1.59-2.36-2.37 2.16-2.16 4.31-4.33 6.49-6.47zm0 0"/>
+    <path d="M11.26 39.45c2.89 1.07 5.69 2.36 8.56 3.49-.35 1.06-.92 2-1.23 3.12-2.86-1.18-5.73-2.36-8.59-3.56.39-1 .82-2 1.26-3zm0 0"/>
+    <path d="M60.19 42.94c2.87-1.12 5.68-2.41 8.57-3.49.45 1 .87 2 1.24 3q-4.27 1.81-8.57 3.56c-.33-1.08-.88-2.06-1.24-3.12zm0 0"/>
+    <path d="M40.71 51.82a4 4 0 1 0 3.16 4l6.6-10.25zm0 0"/>
+</symbol><symbol id="icon-service-3" viewBox="0 0 76.71 76.48">
+    <title>
+        service-3
+    </title>
+    <path d="M76.71 58.41c-.31-.24-39.63-21.79-40-21.94l21.94 40V58.42h18zm0 0"/>
+    <path d="M39 47.2a13.62 13.62 0 1 1 8.36-8.58l4.27 2.34a18.42 18.42 0 1 0-10.3 10.5zm0 0"/>
+    <path d="M46.7 61.32a29.62 29.62 0 1 1 14.77-14.95l4.22 2.32A34.42 34.42 0 1 0 49 65.53zm0 0"/>
+</symbol><symbol id="icon-service-4" viewBox="0 0 80 70.4">
+    
+    <title>
+        service-4
+    </title>
+    <path d="M70 31.49c-.43-1.56-4.42-1.7-6-1.16l-17.53 5.83-20.29-8.1L24 30.34l8.68 10.42c-5.6 1.93-15.84 5.51-17.71 6.13-1.6.53 10.35 2.23 13.09 1.77 0 0 21.05-6.87 30.36-10l7.18-2.39c1.6-.53 4.86-3.12 4.39-4.82zm0 0"/>
+    <g clip-path="url(#a)">
+        <path d="M11.63 39.48L10 41l4.31 5 6.25-2.2zm0 0"/>
+        <path d="M75.2 0H4.8A4.8 4.8 0 0 0 0 4.8v60.8a4.8 4.8 0 0 0 4.8 4.8h70.4a4.8 4.8 0 0 0 4.8-4.8V4.8A4.8 4.8 0 0 0 75.2 0zm-12 3.2A3.2 3.2 0 1 1 60 6.4a3.2 3.2 0 0 1 3.2-3.2zm-8.8 0a3.2 3.2 0 1 1-3.2 3.2 3.21 3.21 0 0 1 3.2-3.2zm20.8 62.4H4.8V12.8h70.4v52.8zM72 9.6a3.2 3.2 0 1 1 3.2-3.2A3.2 3.2 0 0 1 72 9.6zm0 0"/>
+    </g>
+</symbol><symbol id="icon-service-5" viewBox="0 0 80 80">
+    <title>
+        service-5
+    </title>
+    <path d="M40 80a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm0-75.2A35.2 35.2 0 1 0 75.2 40 35.24 35.24 0 0 0 40 4.8zm0 0"/>
+    <path d="M40 16a24 24 0 1 0 24 24 24 24 0 0 0-24-24zm1.44 45.07v-3.79h-2.88v3.79a21.15 21.15 0 0 1-19.63-19.63h3.79v-2.88h-3.79a21.15 21.15 0 0 1 19.63-19.62v3.79h2.88v-3.79a21.15 21.15 0 0 1 19.62 19.62h-3.79v2.88h3.79a21.15 21.15 0 0 1-19.62 19.63zm0 0"/>
+    <path d="M29.94 44.57a19.48 19.48 0 0 1 4.73-2.11l.69-.25a6.24 6.24 0 0 0 .92-.38 1.15 1.15 0 0 0 0-.15 14.19 14.19 0 0 1-2.2-7.42 5.59 5.59 0 0 1 2-4.72 4.3 4.3 0 0 0-1.93-.39c-1.91 0-3.46.76-3.46 3.5a9.49 9.49 0 0 0 1.7 5.34v.3a1.1 1.1 0 0 1-.42.75 5.38 5.38 0 0 1-.94.39 16 16 0 0 0-3.86 1.62 3.65 3.65 0 0 0-1.25 1.88 6.79 6.79 0 0 0-.32 2.37h3.6a1.45 1.45 0 0 1 .73-.71zm0 0"/>
+    <path d="M52.83 41.05a16.22 16.22 0 0 0-3.86-1.63A5.37 5.37 0 0 1 48 39a1.07 1.07 0 0 1-.42-.75 3 3 0 0 1-.05-.45 9.63 9.63 0 0 0 1.59-5.2c0-2.74-1.55-3.5-3.46-3.5a4.23 4.23 0 0 0-2 .4 5.61 5.61 0 0 1 1.94 4.71 14.21 14.21 0 0 1-2.09 7.25.4.4 0 0 1 0 .07 1.79 1.79 0 0 0 .08.27 6.55 6.55 0 0 0 1 .41l.55.18a20.12 20.12 0 0 1 4.85 2.22 1.26 1.26 0 0 1 .7.67h3.64a6.79 6.79 0 0 0-.32-2.37 3.62 3.62 0 0 0-1.25-1.86zm0 0"/>
+    <path d="M49.43 45.48a21.53 21.53 0 0 0-5.15-2.18 6.73 6.73 0 0 1-1.25-.54 1.42 1.42 0 0 1-.56-1 5.31 5.31 0 0 1-.07-.6 12.81 12.81 0 0 0 2.13-6.94c0-3.65-2.06-4.67-4.61-4.67s-4.61 1-4.61 4.67a12.67 12.67 0 0 0 2.27 7.13c0 .14 0 .27-.05.41a1.45 1.45 0 0 1-.55 1 7.17 7.17 0 0 1-1.25.52 21.37 21.37 0 0 0-5.15 2.16 4.8 4.8 0 0 0-1.67 2.48 10.09 10.09 0 0 0-.42 3.12h23a10.2 10.2 0 0 0-.42-3.12 4.71 4.71 0 0 0-1.67-2.43zm0 0"/>
+</symbol><symbol id="icon-service-6" viewBox="0 0 93.88 84.99">
+    
+    <title>
+        service-6
+    </title>
+    <g clip-path="url(#a)">
+        <path d="M2.5 30.24a2.5 2.5 0 0 1-1.91-4.11L21.87.89A2.51 2.51 0 0 1 23.78 0h46.17a2.5 2.5 0 0 1 1.91.89l21.28 25.24a2.5 2.5 0 0 1-1.91 4.11H2.5zm83.35-5L68.79 5H24.94L7.87 25.24h78z"/>
+        <path d="M91.23 29.74H2.5a2 2 0 0 1-1.53-3.29L22.25 1.21A2 2 0 0 1 23.78.5h46.17a2 2 0 0 1 1.53.71l21.28 25.24a2 2 0 0 1-1.53 3.29zm-84.43-4h80.13L69.02 4.5H24.71zm0 0"/>
+        <path fill="none" d="M0 0h93.88v84.99H0z"/>
+    </g>
+    <path d="M.26 28.97l3.83-3.22 42.78 50.79 42.77-50.79 3.83 3.22-46.6 55.33L.26 28.97z"/>
+    <path d="M46.87 83.5L.97 29l3.06-2.58 42.84 50.87 42.84-50.87L92.77 29zm0 0"/>
+    <path d="M46.87 82.92a2.5 2.5 0 0 1-2.36-1.67L25.93 28.56a2.49 2.49 0 0 1 .35-2.31L44.85 1.01a2.5 2.5 0 0 1 4 0L67.5 26.26a2.5 2.5 0 0 1 .34 2.31L49.26 81.26a2.5 2.5 0 0 1-2.39 1.66zm0-10l15.78-44.75L46.87 6.73 31.09 28.17z"/>
+    <path d="M46.87 82.42a2 2 0 0 1-1.89-1.33L26.4 28.4a2 2 0 0 1 .28-1.85L45.25 1.31a2 2 0 0 1 3.22 0l18.58 25.24a2 2 0 0 1 .27 1.85L48.74 81.09a2 2 0 0 1-1.88 1.33zM30.5 28.07l16.34 46.34 16.34-46.34-16.34-22.2zm0 0"/>
 </symbol><symbol id="icon-top-original" viewBox="0 0 96 60">
     <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAA8CAMAAACuCk+GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAZlBMVEUAAAD0ejz0ejz0ejz0ejz0ejz0ejz0ejz0ejz0ejz0ejz0ejz0ejz0ejz0ejz0ejw/IB4/IB4/IB4/IB4/IB4/IB4/IB4/IB4/IB4/IB4/IB4/IB4/IB4/IB4/IB70ejw/IB4AAAAUObscAAAAH3RSTlMAEECAv9+vcCCP78+fYDBQQCAwEIC/j+9gr8/fcFCf0dK77wAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAMRSURBVFjDrVhZgqsgEFTBLW4Yw2iWl3D/Uz5owBUTEOsj6gxW0UXTgEHggDCScHnHGhHCnxFxkmansmf55bNGkYandR5/jLiUp0iE5USJAfEkgfz5K21OUtVTTKjQRtUe3LPux9XajQwp5cqLv1D0xn8qidKbH+2NZYb9FCT/5du8Sr0UoH/F91SMwKb0EH9uwR8ENSgcqR6RFT9XAB/dp1woptPFJsurY8OAxGuNVdPyiEmhsDZxCBYfCMDa2Mo9BAjAvpKJhC4QQo11ZarcMqOZlXC7cUscE2Oq4KKG/5w7dSAauhRitFyJditsWJXF2MqBn3vKRwDl49KHjUFEybwbxypYoxeQbfzZauU9VsA4j5TYFIF02jcUwqb4+IJeFwYFHVneAHHotbkKwetFF8svS+MRAF+yenaYub+BF7USGUfFC1AAY/VQn8+v1qtqCudsflUA4a7yyfofIUC3iwPLhQ0KlTe1YbUgpOW/V3IN5hcOcdMRQBcQ+ZdOtiay2YRUdTwfvZrA2I3/UkYFH2OsgyeBP84EN4wEcOmHrhftBsaGJQn0XEWSfhHgb8KrUoDfLgX4jeCWKksIgWy87Arc2YPd1VMn/kEEuW51FT+UPW+MXdcCGLyvTaV/JsA5B/CIsgd5MfZPCLzAdmilVOQbJoHIlEMqeCHwYs+gFx5Ji+56DID7TXjPX0Hwx9izOyjA/SFU8FLWU6os0gIwypz5LS8uAtqiVkl10rA36+dj8KT03UJMPXsbJ8JPAe46FR0fYAzIUwrwMeCDMPr+ZHTQqpssimZVzyCgM+iu0/RPp+ltFLgJ8gcfq+08uCidcE+ghTEUcbQg8LgFG4EW7CGbPEJqzSl8T4p7iNUMzu230U6I9AxuTFP5BOAxe2K/s+4O0qlIp4Z67Q04G6r0l6ex077NSM5ivn1uLM+TrvzTNqg8WSED/ll9sPhm4AK5zV10WH31KM/IVvV9bGWIUvgklZ9RdRrvnECmD2cxPo7xBGDa5jbzg5wfsHmbGKbnSOAvydKUvhr49xfbyAMG8v/hXJE/7iBOpgAAAABJRU5ErkJggg==" width="96" height="60"/>
 </symbol><symbol id="icon-tw-original" viewBox="0 0 13 12">

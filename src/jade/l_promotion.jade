@@ -1,0 +1,206 @@
+extend includes/_layout
+block title
+	title Land Promotion
+block content
+	//begin screen
+	.screen.section
+		.screen__cover(style='background-image: url(img/video/land.jpg)')
+		.screen__block
+			.screen__block-title быстрее пули в топ.
+			.screnn__block-subtitle Кто лучше нас сделаю работу? да никто! Мы лучшие в своем деле. <br>Мы сеошники!
+		.screen__content.container
+			.screen__title.title.title_h2.title_white продвижение сайтов
+	//end screen
+
+	//begin presentation
+	.presentation.container.section
+		.presentation__col
+			img.presentation__img(src='img/content/presentation-2.jpg' alt='image')
+		.presentation__col.presentation__center
+			p.presentation__text Итак, дорогие предприниматели, менеджеры и маркетологи. Начнем с пары эпичных и громких строк, которые должны присутствовать на любом серьезном сайте: Наша команда любит свою работу, и переживает за результаты работы с клиентами. Мы не делаем халтуру. Мы верим в прозрачность и не боимся её. Также мы верим в адекватное ценообразование, которое позволяет удовлетворить потребности практически каждого бизнеса. Вы сможете найти любое решение, которое соответствует вашим потребностям и бюджету.
+			p.presentation__text Сейчас мы не будем вдаваться в подробности и основы SEO, а сразу расскажем задачи, которые решает поисковая оптимизация. Полетели!
+	//end presentation
+
+	//begin seo
+	.seo
+		.seo__container.container.section
+			.seo__title.title.title_h2.title_white цели и задачи seo
+			.seo__text Поисковая оптимизация возникла одновременно с появлением поисковиков в начале 1990-х годов. Тогда поисковые машины ориентировались в основном на контент размещенный на страницах веб-ресурсов, ключевые слова в мета-тегах, и еще некоторые внутренние факторы. Это привело к тому, что владельцы сайтов легко могли изменять свой сайт под поисковики так, что он занимал первые места в рейтинге. Таким образом, на первых местах начали появляться сайты недостойные внимания, и большинство поисковых систем пришли в упадок.
+			.seo__row
+				.seo__col
+					.seo__col-title Основные задачи:
+					.seo__list.list.list_mark
+						.list__item Поиск и охват потенциальной аудитории
+						.list__item Улучшение видимости сайта в поисковых системах
+						.list__item Увеличение притока посетителей на сайт
+						.list__item Улучшение сайта, как для пользователей, так и для поисковых систем
+				.seo__col
+					.seo__col-title Косвенные задачи:
+					.seo__list.list.list_mark
+						.list__item Рост обращений от покупателей
+						.list__item Продвижение бренда в сети Интернет
+						.list__item Доверие к компании
+	//end seo
+
+	//begin kpi
+	.kpi.section.container
+		.kpi__title.title.title_h2 Продвижение по различным KPI
+		.kpi__row
+			.kpi__col
+				.kpi__text В Москве существует сумасшедшее количество агентств, оказывающие услуги по продвижению и оптимизации сайтов. Тарифы и предложения у большинства схожи, но в SEO-отрасли существуют уже устоявшиеся показатели эффективности (KPI).
+				p.kpi__text Мы предлагаем - продвижение по позициям, по трафику, по целевым действиям, новых сайтов, региональные, белое SEO.
+			.kpi__col
+				p.kpi__quote KPI (Key Performance Indicator) – это показатель достижения успеха в определенной деятельности или в достижении определенных целей. Можно сказать, что KPI – это количественно измеримый индикатор фактически достигнутых результатов.
+	//end kpi
+
+	//begin whom
+	.whom.whom_promotion.js-bg-container
+		.whom__bg.whom__bg_1.js-bg
+		.whom__bg.whom__bg_2.js-bg
+		.whom__bg.whom__bg_3.js-bg
+		.whom__bg.whom__bg_4.js-bg
+		.whom__bg.whom__bg_5.js-bg
+		.whom__bg.whom__bg_6.js-bg
+		.whom__bg.whom__bg_7.js-bg
+		.whom__bg.whom__bg_8.js-bg
+		.whom__bg.whom__bg_9.js-bg
+		.whom__bg.whom__bg_10.js-bg
+		.whom__bg.whom__bg_11.js-bg
+		.whom__container.container.section
+			.whom__title.title.title_h2.title_white услуги
+			.paging.js-slider-info
+			ul.for.for_promotion.js-bg-list
+				li.for__item
+					.for__img
+						+i('service-1')
+					.for__text
+						.for__title Продвижение по позициям
+						.for__hidden.js-for-hidden
+							.for__desc Самый устоявшийся и "устаревший" показатель оценки результатов. НО, как бы это смешно не звучало, позиции, являются основным и самым популярным KPI. Что бы не происходило в работе Поисковых Систем, позиции никуда не денутся.
+							//a.for__btn(href='#') Подробнее
+				li.for__item
+					.for__img
+						+i('service-2')
+					.for__text
+						.for__title Продвижение по трафику
+						.for__hidden.js-for-hidden
+							.for__desc Одна из основных целей продвижения - увеличение посещаемости сайта. Всё логично - чем больше оптимизировано страниц на сайте, тем больше посещаемость.
+							//a.for__btn(href='#') Подробнее
+				li.for__item
+					.for__img
+						+i('service-3')
+					.for__text
+						.for__title Оплата целевых действий
+						.for__hidden.js-for-hidden
+							.for__desc Мы определяемся с совершенными целями, действиями пользователей (заявки/лиды, просмотры определенных страниц, телефонным звонками и т.д.) на сайте и берем за это деньги. Или отнимаем.
+							//a.for__btn(href='#') Подробнее
+				li.for__item
+					.for__img
+						+i('service-4')
+					.for__text
+						.for__title Продвижение новых сайтов
+						.for__hidden.js-for-hidden
+							.for__desc Работы предстоит много. Вложений в развитие сайта много. Порой долго. Но, нужно же когда-нибудь начинать?
+							//a.for__btn(href='#') Подробнее
+				li.for__item
+					.for__img
+						+i('service-5')
+					.for__text
+						.for__title Продвижение региональных сайтов
+						.for__hidden.js-for-hidden
+							.for__desc Москва и другие города – разные планеты. С радостью захватим ТОП в вашем регионе
+							//a.for__btn(href='#') Подробнее
+				li.for__item
+					.for__img
+						+i('service-6')
+					.for__text
+						.for__title Белое SEO (White Hat Seo)
+						.for__hidden.js-for-hidden
+							.for__desc Что за хрень, спросите вы? До этого было черное SEO?  - Нет. Главное отличие - продвижение без единой покупки обратных ссылок. Но удовольствие дорогое.
+							//a.for__btn(href='#') Подробнее
+			.whom__navigations.navigations.navigations_white.js-navigations
+				.navigations__info.js-navigations-info
+	//end whom
+
+	//begin starter
+	.starter.container.section
+		.starter__title.title.title_h2 главное начать
+		.starter__row
+			.starter__col
+				p.starter__text Наша команда работает в digital и непосредственно в SEO с 2009 года. Мы специализируемся на 1ой поисковой системе России – Яндекс. Почему? Ответ прост -  большая аудитория пользователей Яндекса по сравнению с другими поисковыми системами, больше потенциальных посетителей на ваш ресурс, больше потенциальных клиентов, больше потенциальных продаж вашего продукта.
+				p.starter__text Да, на рынке существуют компании и специалисты, которые работают с момента основания самого Яндекса. По идее должен давить авторитет – грандиозный опыт прошлых лет, стопицот продвинутых проектов и т.д.
+			.starter__col
+				p.starter__text Мы не будем рассказывать, как специалисты продвигали сайты до 2009 года, т.к. эта информация не столь актуальна сейчас. Мы пережили времена глобальных изменений алгоритмов – переспам и переоптимизация, разные виды накруток, коммерческость сайта, «басни» Яндекса, что ссылки отключены, то включены, Минусински и прочая нечесть.
+				p.starter__text Нынешний тренд ведения интернет рекламы – performance marketing, где компании окучивают все каналы продаж – SEO, контекстная реклама, SMM, e-mail рассылки и прочее. Да, круто, но где гарантии, что в этих компаниях сидит грамотный отдел поисковой оптимизации? Да и не каждому бизнесу нужно это, не говоря о стоимости услуг за данный комплекс работ.
+	//end starter
+
+	//begin review
+	.review.review_promotion
+		.container.section
+			.review__title.title.title_h2 отзыв клиента
+			.review__row
+				.review__col
+					img.review__cert(src='img/content/review-1.jpg' alt='image')
+				.review__col
+					.review__user
+						.review__avatar
+							img.review__img(src='img/content/avatar.jpg' alt='image')
+						.review__info
+							.review__name Елена Букреева
+							.review__vacancy Маркетолог
+							.review__inc ООО "ВелоксСтройКонсалтинг"
+							a.review__site(href='#') veloxstroyconsulting.ru
+					.review__text «Мы очень довольны работой менеджера – получаем подробные отчеты, консультации по всем возникающим вопросам, видим, как быстро выполняются поставленные задачи. Результат нас устраивает. В ТОПе почти 80% целевых запросов, во много раз с момента старта продвижения увеличился трафик из поисковых систем, сайт приносит доход! Все просто супер, рекомендуем!»
+	//end review
+
+	//begin pf
+	.pf
+		.pf__container.container.section
+			.pf__h2.title.title_h2 портфолио
+			.pf__slider.js-pf-slider
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/pf-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Недвижимость
+							.pf__title продвижениЕ сайта <br>cian.ru
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/inform-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Спорт
+							.pf__title продвижениЕ сайта <br>spotbox.ru
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/inform-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Недвижимость
+							.pf__title продвижениЕ сайта <br>cian.ru
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/inform-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Спорт
+							.pf__title продвижениЕ сайта <br>spotbox.ru
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/inform-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Недвижимость
+							.pf__title продвижениЕ сайта <br>cian.ru
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/inform-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Спорт
+							.pf__title продвижениЕ сайта <br>spotbox.ru
+			.pf__navigations.navigations.js-navigations
+				.navigations__info.js-navigations-info
+	//end pf
+
+	//begin request
+	.request
+		.container.section
+			a.request__btn.btn.btn_transparent(href='#') оставить заявку
+	//end request
+

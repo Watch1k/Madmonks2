@@ -60,6 +60,16 @@ body
 
 /* Helpers
 	----------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	margin-top: 0
+	margin-bottom: 0
+	font-weight: normal
+
 button
 	background-color: transparent
 
@@ -1812,6 +1822,8 @@ video
 		color: #555555
 		line-height: 20px
 		text-align: center
+	&_white &__info
+		color: #ffffff
 		
 
 /* ===================================
@@ -2165,6 +2177,8 @@ video
 		background-color: #f6f6f6
 	&_solution
 		background-color: transparent
+	&_promotion
+		background-color: #f6f6f6
 	&__title
 		+pre(1)
 		+gutter
@@ -2174,7 +2188,8 @@ video
 			+span(9)
 			padding-left: 0
 			padding-right: 0
-	&_solution &__title
+	&_solution &__title,
+	&_promotion &__title
 		+pre(0)
 		padding-left: 0
 		padding-right: 0
@@ -2195,7 +2210,8 @@ video
 				+span(8)
 				padding-left: 0
 				padding-right: 20px
-	&_solution &__col
+	&_solution &__col,
+	&_promotion &__col
 		+pre(0)
 	&__cert
 		width: 100%
@@ -2355,6 +2371,32 @@ video
 	height: 668px
 	+r(639)
 		max-height: 518px
+	&__block
+		position: absolute
+		z-index: 1
+		bottom: 0
+		right: 50%
+		margin-right: -590px
+		padding: 50px
+		width: 580px
+		color: #ffffff
+		background-color: #f26924
+		+r(1199)
+			right: 0
+			margin-right: 0
+			width: 50%
+		+r(1023)
+			width: 100%
+		+r(639)
+			padding: 30px 10px
+		&-title
+			+museo-b
+			font-size: 35px
+			line-height: 50px
+			text-transform: uppercase
+		&-subtitle
+			+museo
+			font-size: 30px
 	&__cover
 		+ratio-in
 		z-index: 1
@@ -2397,15 +2439,15 @@ video
 		+span(5)
 		display: table-cell
 		float: none
+		vertical-align: middle
 		& + &
 			+span(7)
 			display: table-cell
 			float: none
-			vertical-align: middle
 		&:nth-child(1)
 			+r(767)
 				display: none
-		&:nth-child
+		&:nth-child(2)
 			+span(full)
 			padding-left: 0
 			padding-right: 0
@@ -2545,12 +2587,17 @@ video
 		right: 0
 		bottom: 0
 		background-color: rgba(255, 255, 255, .8)
+	&_promotion
+		&:before
+			background-color: rgba(55, 55, 55, .8)
 	&__container
 		position: relative
 		z-index: 1
 		padding-bottom: 200px
 		+r(1023)
 			padding-bottom: 0
+	&_promotion &__container
+		padding-bottom: 130px
 	&__bg
 		display: none
 		position: absolute
@@ -2600,6 +2647,9 @@ video
 			z-index: 0
 			pointer-events: none
 			background-color: rgba(255,255,255,.8)
+	&_promotion &__bg
+		&:before
+			background-color: rgba(55,55,55,.8)
 	&__title
 		position: relative
 		z-index: 1
@@ -2649,6 +2699,17 @@ video
 			padding-bottom: 20px
 		&:focus
 			outline: none
+	&_promotion &__item
+		+span(4 no-gutters)
+		float: none
+		display: inline-block
+		+pre(0)
+		padding-left: 30px
+		padding-right: 15px
+		+r(1023)
+			padding-bottom: 20px
+		&:focus
+			outline: none
 	&__img
 		position: relative
 		margin-bottom: 18px
@@ -2665,6 +2726,10 @@ video
 			color: $orange
 			vertical-align: middle
 			transition: all 0.3s
+	&_promotion &__img
+		background-color: $orange
+		.icon
+			color: #ffffff
 	&__item:nth-child(6) &__img
 		.icon
 			font-size: 35px
@@ -2682,6 +2747,15 @@ video
 			color: $white
 			+r(1023)
 				color: $orange
+	&_promotion &__item.is-active &__img,
+	&_promotion &__item:hover &__img
+		background-color: transparent
+		+r(1023)
+			background-color: $orange
+		.icon
+			color: $orange
+			+r(1023)
+				color: #ffffff
 	&__title
 		+museo
 		color: $grey-text
@@ -2689,12 +2763,19 @@ video
 		line-height: 24px
 	&_4 &__title
 		padding-right: 35px
+	&_promotion &__title
+		color: #ffffff
+	&_promotion &__item.is-active &__title
+		color: $grey-text
+		+r(1023)
+			color: #ffffff
 	&__hidden
 		position: absolute
 		padding: 0 30px 30px
 		left: 0
 		right: 0
 		top: 100%
+		margin-top: -1px
 		overflow: hidden
 		display: none
 		background-color: #ffffff
@@ -2712,6 +2793,9 @@ video
 		color: #6b6b6b
 		font-weight: 400
 		line-height: 26px
+	&_promotion &__desc
+		+r(1023)
+			color: #ffffff
 	&__btn
 		position: relative
 		font-family: 'PT Sans', $default-fonts
@@ -2835,7 +2919,34 @@ video
 		+r(374)
 			display: block
 
-
+/* Starter
+	----------------------------------- */
+.starter
+	font-size: 13px
+	color: #5e5e5e
+	line-height: 28px
+	padding-bottom: 40px
+	&__title
+		margin-bottom: 15px
+	&__row
+		+pie-clearfix
+	&__col
+		+span(6 no-gutters)
+		padding-right: 30px
+		+r(767)
+			+span(full no-gutters)
+			padding-right: 0
+		& + &
+			padding-right: 0
+			padding-left: 10px
+			+r(767)
+				+span(full no-gutters)
+					padding-left: 0
+	&__text
+		& + &
+			margin-top: 30px
+			+r(767)
+				margin-top: 15px
 
 /* ===================================
 	 Other Styles
