@@ -296,7 +296,7 @@ $(document).ready(function () {
 
   (function () {
     if ($(window).width() >= 1024) {
-      $('.js-bg-list li').hover(function () {
+      $('.js-bg-list li').on('mouseenter', function () {
         if (!$(this).hasClass('is-active')) {
           $('.js-bg-list li').removeClass('is-active');
           var index = $(this).index();
@@ -306,15 +306,17 @@ $(document).ready(function () {
           });
           $('.js-bg').eq(index).css('z-index', '1').fadeIn();
         }
-      }, function () {
+      });
+      $('.js-bg-list li').on('mouseleave', function () {
         $(this).removeClass('is-active').css('z-index', '1');
         $('.js-for-hidden').hide();
       });
 
-      $('.js-bg-list li').on('tap', function () {
+      $('.js-bg-list li').on('tap', function (event) {
+        event.preventDefault();
+        $('.js-bg-list li').removeClass('is-active').css('z-index', '1');
+        $('.js-for-hidden').hide();
         if (!$(this).hasClass('is-active')) {
-          $('.js-bg-list li').removeClass('is-active').css('z-index', '1');
-          $('.js-for-hidden').hide();
           var index = $(this).index();
           $(this).css('z-index', '2').addClass('is-active').find('.js-for-hidden').show();
           $('.js-bg').fadeOut(function () {
@@ -324,6 +326,96 @@ $(document).ready(function () {
         }
       });
 
+    }
+  })();
+
+  (function () {
+    var slider = $('.js-pf-slider');
+
+    if (slider.length) {
+      slider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        if ($(window).width() < 640) {
+          var i = (currentSlide ? currentSlide : 0) + 1,
+            info = slider.siblings('.js-navigations').find('.js-navigations-info');
+          info.text(i + ' из ' + slick.slideCount);
+        } else {
+          var i = Math.round(((currentSlide ? currentSlide : 0) + 1) / 2),
+            info = slider.siblings('.js-navigations').find('.js-navigations-info');
+          info.text(i + ' из ' + Math.round(slick.slideCount / 2));
+        }
+      });
+
+      slider.slick({
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arrow-left"></use></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arrow-right"></use></svg></button>',
+        responsive: [
+          {
+            breakpoint: 639,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+
+      var prev = slider.find('.slick-prev'),
+        next = slider.find('.slick-next'),
+        nav = slider.siblings('.js-navigations');
+
+      nav.prepend(next);
+      nav.prepend(prev);
+    }
+  })();
+
+  (function () {
+    if ($(window).width() < 1024) {
+      var slider = $('.js-bg-list');
+      slider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        if ($(window).width() < 640) {
+          var i = (currentSlide ? currentSlide : 0) + 1,
+            info = slider.siblings('.js-navigations').find('.js-navigations-info');
+          info.text(i + ' из ' + slick.slideCount);
+        } else {
+          var i = Math.round(((currentSlide ? currentSlide : 0) + 1) / 2),
+            info = slider.siblings('.js-navigations').find('.js-navigations-info');
+          info.text(i + ' из ' + Math.round(slick.slideCount / 2));
+        }
+      });
+
+      if ($(window).width() < 640) {
+        slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+          $('.js-bg').eq(currentSlide).css('z-index', '0').fadeOut();
+          $('.js-bg').eq(nextSlide).css('z-index', '1').fadeIn();
+        });
+      }
+
+      slider.slick({
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-arrow-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arrow-left"></use></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arrow-right"></use></svg></button>',
+        responsive: [
+          {
+            breakpoint: 639,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+
+      var prev = slider.find('.slick-prev'),
+        next = slider.find('.slick-next'),
+        nav = slider.siblings('.js-navigations');
+
+      nav.prepend(next);
+      nav.prepend(prev);
     }
   })();
 

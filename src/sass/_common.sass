@@ -91,6 +91,10 @@ img
 
 .cfx
 	+pie-clearfix
+	
+video
+	+r(1024)
+		display: none
 
 // *
 // 	+selection
@@ -271,6 +275,7 @@ img
 	----------------------------------- */
 .header
 	&.is-scroll
+		pointer-events: none
 		transform: translateY(0)
 		transition: transform 0.5s
 		.logo__img
@@ -289,10 +294,12 @@ img
 				right: 0
 				margin-right: 0
 	&.is-scroll &__top
+		pointer-events: auto
 		padding-top: 10px
 		padding-bottom: 10px
 		background-color: #ff7b38
 	&.is-scroll &__footer
+		pointer-events: auto
 		z-index: 0
 		transform: translateY(-60px)
 		pointer-events: none
@@ -338,6 +345,18 @@ img
 		font-size: 16px
 		text-transform: uppercase
 		border-radius: 26px
+	&_transparent
+		padding-top: 21px
+		padding-bottom: 20px
+		+museo-b
+		font-size: 20px
+		line-height: 30px
+		text-transform: uppercase
+		border: 4px solid #ffffff
+		border-radius: 40px
+		transition: all 0.2s
+		&:hover
+			background-color: $orange
 
 .logo
 	font-size: 0
@@ -2144,6 +2163,8 @@ img
 	padding-bottom: 40px
 	+r(767)
 		background-color: #f6f6f6
+	&_solution
+		background-color: transparent
 	&__title
 		+pre(1)
 		+gutter
@@ -2153,6 +2174,10 @@ img
 			+span(9)
 			padding-left: 0
 			padding-right: 0
+	&_solution &__title
+		+pre(0)
+		padding-left: 0
+		padding-right: 0
 	&__row
 		+pie-clearfix
 	&__col
@@ -2170,6 +2195,8 @@ img
 				+span(8)
 				padding-left: 0
 				padding-right: 20px
+	&_solution &__col
+		+pre(0)
 	&__cert
 		width: 100%
 		height: auto
@@ -2213,6 +2240,7 @@ img
 	&__inc
 		font-size: 14px
 		line-height: 34px
+		white-space: nowrap
 	&__site
 		display: inline-block
 		font-size: 14px
@@ -2325,6 +2353,8 @@ img
 	overflow: hidden
 	position: relative
 	height: 668px
+	+r(639)
+		max-height: 518px
 	&__cover
 		+ratio-in
 		z-index: 1
@@ -2351,6 +2381,9 @@ img
 		z-index: 2
 	&__title
 		color: #ffffff
+		+r(639)
+			font-size: 40px
+			line-height: 45px
 
 /* Presentation
 	----------------------------------- */
@@ -2369,17 +2402,30 @@ img
 			display: table-cell
 			float: none
 			vertical-align: middle
+		&:nth-child(1)
+			+r(767)
+				display: none
+		&:nth-child
+			+span(full)
+			padding-left: 0
+			padding-right: 0
+	&__img
+		width: 100%
+		height: auto
 	&__text
 		font-size: 13px
 		color: #5e5e5e
 		line-height: 28px
 		& + &
 			margin-top: 20px
-		
+			+r(767)
+				margin-top: 10px
+
 /* SEO
 	----------------------------------- */
 .seo
 	position: relative
+	padding-bottom: 20px
 	color: #ffffff
 	background: url('../img/content/seo-bg.jpg') center center no-repeat
 	background-size: cover
@@ -2401,41 +2447,64 @@ img
 		+pie-clearfix
 	&__col
 		+span(5.75 no-gutters)
+		+r(767)
+			+span(full no-gutters)
+		& + &
+			+r(1023)
+				+pre(0.5)
+			+r(767)
+				margin-top: 20px
+				+pre(0)
 		&-title
+			+museo-b
 			margin-bottom: 15px
 			font-size: 30px
 			line-height: 45px
 			text-transform: uppercase
+			+r(1023)
+				font-size: 25px
+				line-height: 40px
 	&__list
 		font-size: 13px
 		color: #ffffff
 		.list__item
 			& + &
 				margin-top: 15px
+				+r(1023)
+					margin-top: 10px
 		
 /* KPI
 	----------------------------------- */
 .kpi
-	padding-top: 10px
-	padding-bottom: 20px
+	padding-top: 20px
+	padding-bottom: 40px
 	&__title
 		margin-bottom: 10px
 	&__row
 		+pie-clearfix
 	&__col
 		+span(6 no-gutters)
+		+r(767)
+			+span(full no-gutters)
 		& + &
 			+span(5.2 no-gutters)
 			padding-left: 10px
+			+r(767)
+				margin-top: 20px
+				+span(full no-gutters)
+				padding-left: 0
 	&__text
 		padding-right: 30px
 		font-size: 13px
 		color: #5e5e5e
 		line-height: 28px
+		+r(767)
+			line-height: 26px
 		& + &
 			margin-top: 20px
 	&__quote
 		position: relative
+		margin-top: 10px
 		padding: 20px 0
 		font-size: 13px
 		color: #5e5e5e
@@ -2465,6 +2534,8 @@ img
 	background: transparent url('../img/bg/bg_0.jpg') center center no-repeat
 	background-size: cover
 	transform: translateZ(0)
+	+r(1023)
+		padding-bottom: 40px
 	&:before
 		content: ''
 		position: absolute
@@ -2532,6 +2603,8 @@ img
 	&__title
 		position: relative
 		z-index: 1
+		+r(1023)
+			margin-bottom: 10px
 
 .for
 	font-size: 0
@@ -2568,7 +2641,14 @@ img
 		padding-right: 15px
 		float: none
 		display: inline-block
-		vertical-align: top
+		+r(1199)
+			+span(4 no-gutters)
+			float: none
+			display: inline-block
+		+r(1023)
+			padding-bottom: 20px
+		&:focus
+			outline: none
 	&__img
 		position: relative
 		margin-bottom: 18px
@@ -2682,29 +2762,80 @@ img
 	+r(1023)
 		display: block
 
-.inform
-	position: relative
-	z-index: 2
-	background: #fff url('../img/inform_bg.jpg') center center no-repeat
-	background-size: cover
-	transform: translateZ(0)
-	+r(1023)
-		padding-top: 40px
-	+r(767)
-		padding-top: 0
-	&__quote
-		+r(1023)
-			top: 30px
-	&:before
-		content: ''
+/* PF
+	----------------------------------- */
+.pf
+	border-top: 3px solid #f6f6f6
+	padding-bottom: 20px
+	&__h2
+		margin-bottom: 10px
+	&__slider
+		margin-left: -20px
+		margin-right: -20px
+	&__item
+		margin-left: 20px
+		margin-right: 20px
+		+pie-clearfix
+	&__el
+		position: relative
+		display: block
+		&:before
+			content: ''
+			+ratio-in
+			pointer-events: none
+			z-index: 0
+			background-color: rgba(246, 246, 246, .8)
+			transition: all 0.2s
+		&:hover
+			&:before
+				background-color: rgba(52,52,52,.8)
+	&__img
+		width: 100%
+		height: auto
+	&__text
 		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		background-color: rgba(53, 53, 53, .9)
-		z-index: 0
+		z-index: 1
+		left: 35px
+		bottom: 30px
+		+r(639)
+			left: 20px
+			bottom: 15px
+	&__topic
+		margin-bottom: 10px
+		font-size: 14px
+		color: #434242
+		line-height: 20px
+		transition: all 0.2s
+	&__title
+		+museo
+		font-size: 25px
+		color: $black
+		line-height: 35px
+		text-transform: uppercase
+		transition: all 0.2s
+		+r(639)
+			font-size: 20px
+			line-height: 35px
+	&__el:hover &__topic,
+	&__el:hover &__title
+		color: #ffffff
+	&__navigations
+		margin-top: 30px
+		display: block
 		
+/* Request
+	----------------------------------- */
+.request
+	padding: 0 30px
+	text-align: center
+	background-color: #ffba00
+	+r(374)
+		padding: 0 10px
+	&__btn
+		+r(374)
+			display: block
+
+
 
 /* ===================================
 	 Other Styles
