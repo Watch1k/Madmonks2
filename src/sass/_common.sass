@@ -308,6 +308,7 @@ video
 		padding-top: 10px
 		padding-bottom: 10px
 		background-color: #ff7b38
+		transform: translate3d(0,0,0)
 	&.is-scroll &__footer
 		pointer-events: auto
 		z-index: 0
@@ -335,7 +336,7 @@ video
 		
 .btn
 	display: inline-block
-	padding: 12px 35px 11px
+	padding: 13px 35px 10px
 	+museo-b
 	font-size: 13px
 	color: #ffffff
@@ -367,6 +368,38 @@ video
 		transition: all 0.2s
 		&:hover
 			background-color: $orange
+	&_white
+		position: relative
+		z-index: 1
+		overflow: hidden
+		text-transform: uppercase
+		border-color: #ffffff
+		transition: all 0.2s
+		&:hover
+			color: $orange
+			background-color: #ffffff
+		
+.btn-more
+	position: relative
+	display: inline-block
+	+museo
+	font-size: 16px
+	color: $black
+	line-height: 18px
+	border-bottom: 1px dotted $black
+	&:before
+		content: '\2193'
+		font-family: Arial, sans-serif
+		position: absolute
+		font-size: 14px
+		color: $black
+		line-height: 1
+		right: -13px
+		bottom: 2px
+	&.is-active
+		&:before
+			bottom: 0
+			transform: rotate(-180deg)
 
 .logo
 	font-size: 0
@@ -827,10 +860,12 @@ video
 		&-container
 			position: relative
 		&-link
-			font-size: 13px
+			font-size: 14px
 			color: #ffffff
 			line-height: 26px
 			text-decoration: underline
+			&:hover
+				text-decoration: underline
 		&-title
 			margin-top: 25px
 			+museo-b
@@ -1203,6 +1238,61 @@ video
 		+gutter(0)
 		&-text
 			color: $dimgrey
+		
+.accordion
+	+pie-clearfix
+	&__item
+		position: relative
+		display: block
+		border: 2px solid #ffffff
+		font-size: 15px
+		color: #ffffff
+		line-height: 26px
+		& + &
+			margin-top: 20px
+		&:before
+			content: '+'
+			position: absolute
+			top: 15px
+			right: 25px
+			font-family: 'PT Sans', $default-fonts
+			width: 13px
+			height: 13px
+			font-size: 23px
+			color: $orange
+			line-height: 1
+		&.is-active
+			&:before
+				content: '\2013'
+				top: 13px
+				right: 27px
+	&__visible
+		overflow: hidden
+		position: relative
+		z-index: 2
+		cursor: pointer
+		padding: 14px 65px 9px 20px
+		&:before
+			content: ''
+			position: absolute
+			z-index: 1
+			bottom: -7px
+			left: 45px
+			transition: all 0.2s
+			+arr(7,7,#ffffff,bl)
+	&__hidden
+		position: relative
+		z-index: 1
+		display: none
+		padding: 19px 65px 10px 20px
+		color: #5e5e5e
+		line-height: 26px
+		font-style: italic
+		background-color: #ffffff
+	&__item.is-active &__visible
+		&:before
+			bottom: 0
+		
 		
 .table
 	display: table
@@ -2360,7 +2450,7 @@ video
 		opacity: 0.3
 		
 /* ===================================
-	 Landing Solution
+	 Landing #2
 	 =================================== */
 
 /* Screen
@@ -2947,8 +3037,287 @@ video
 			margin-top: 30px
 			+r(767)
 				margin-top: 15px
+		
+/* ===================================
+	 Ladnding #1
+	 =================================== */
+
+/* Screen
+	----------------------------------- */
+.screen
+	&__link
+		font-size: 14px
+		color: #ffffff
+		line-height: 26px
+		text-decoration: underline
+		&:hover
+			text-decoration: underline
+	&__link + &__title
+		margin-top: 15px
+	&__center
+		margin-top: 130px
+		+pie-clearfix
+		&-text
+			margin-top: 15px
+			+pre(2)
+			+span(7)
+			+post(3)
+			font-size: 13px
+			color: #ffffff
+			line-height: 28px
+	&__controls
+		position: absolute
+		right: 50%
+		margin-right: -590px
+		bottom: 40px
+		+r(1199)
+			right: 10px
+			margin-left: 0
+		&-btn
+			& + &
+				margin-left: 20px
+
+/* Result
+	----------------------------------- */
+.result
+	&__list
+		margin-top: 20px
+		font-size: 13px
+	&__desc
+		margin-top: 25px
+		font-size: 13px
+		color: #5e5e5e
+		line-height: 28px
+		
+/* FAQ
+	----------------------------------- */
+.faq
+	padding-bottom: 20px
+	position: relative
+	color: #ffffff
+	background: url('../img/content/faq-bg.jpg') top center no-repeat
+	background-size: cover
+	&:before
+		content: ''
+		+ratio-in
+		pointer-events: none
+		z-index: 0
+		background-color: rgba(55, 55, 55, .95)
+	&__container
+		position: relative
+		z-index: 1
+	&__accordion
+		margin-top: 20px
+		
+/* Report
+	----------------------------------- */
+.report
+	padding-bottom: 20px
+	&__section
+		position: relative
+	&__list
+		position: relative
+		margin-top: 50px
+		+pie-clearfix
+		&-image
+			display: none
+			pointer-events: none
+			position: absolute
+			z-index: 1
+			left: 40%
+			top: -15px
+			transform: translate3d(0,0,0)
+		&-img
+			width: auto
+			height: auto
+		&-item
+			pointer-events: none
+			display: block
+			padding-right: 10px
+			width: 40%
+			cursor: pointer
+			& + &
+				margin-top: 20px
+		&-inner
+			pointer-events: auto
+			display: table
+		&-icon
+			display: table-cell
+			width: 60px
+			height: 60px
+			text-align: center
+			border-radius: 50%
+			border: 3px solid $orange
+			transition: all 0.2s
+			+vertical
+			.icon
+				font-size: 26px
+				color: $orange
+				transition: all 0.2s
+		&-text
+			position: relative
+			z-index: 2
+			display: table-cell
+			padding-left: 15px
+			vertical-align: middle
+			font-size: 16px
+			color: $grey-text
+			line-height: 22px
+			&:before
+				content: ''
+				position: absolute
+				z-index: 1
+				left: 100%
+				top: 50%
+				margin-top: -2px
+				margin-left: 20px
+				height: 5px
+				width: 0
+				background-color: #ff8400
+				transition: all 0.2s
+		&-item.is-active &-text
+			&:before
+				width: calc(440px - 100%)
+		&-item:hover &-icon,
+		&-item.is-active &-icon
+			background-color: $orange
+			.icon
+				color: #ffffff
+
+/* Rates
+	----------------------------------- */
+.rates
+	background-color: #ebebeb
+	&__table
+		margin-top: 20px
+		margin-bottom: 20px
+	&__desc
+		margin-top: 25px
+		margin-left: 12%
+		margin-right: 12%
+		font-size: 14px
+		color: #5e5e5e
+		font-style: italic
+		text-align: center
+	&__controls
+		margin-top: 20px
+		font-size: 0
+		&-col
+			display: inline-block
+			font-size: 0
+			width: 25%
+			text-align: center
+	&__btn
+		display: inline-block
+		padding-top: 17px
+		padding-bottom: 14px
+		font-size: 15px
+		color: $black
+		line-height: 25px
+		text-transform: uppercase
+		border-radius: 31px
+		border: 3px solid #ff7b38
+		transition: all 0.2s
+		&:hover
+			color: #ffffff
+	&__controls-col:nth-child(1) &__btn
+		border-color: #ff7b38
+		&:hover
+			background-color: #ff7b38
+	&__controls-col:nth-child(2) &__btn
+		border-color: #ff971f
+		&:hover
+			background-color: #ff971f
+	&__controls-col:nth-child(3) &__btn
+		border-color: #ffba00
+		&:hover
+			background-color: #ffba00
+	&__controls-col:nth-child(4) &__btn
+		border-color: #4bba70
+		&:hover
+			background-color: #4bba70
+		
+.tables
+	table-layout: fixed
+	width: 100%
+	+museo
+	font-size: 16px
+	color: #545454
+	line-height: 24px
+	text-align: center
+	&__tr
+		&_header
+			font-size: 18px
+			color: #ffffff
+	&__tr.is-last ~ &__tr
+		display: none
+	&__td
+		padding-top: 20px
+		padding-bottom: 20px
+		&_title
+			+museo-b
+			font-size: 15px
+			color: $black
+			text-transform: uppercase
+			background-color: #ffffff
+	&__tr_header &__td
+		&:nth-child(1)
+			background-color: #ff7b38
+		&:nth-child(2)
+			background-color: #ff971f
+		&:nth-child(3)
+			background-color: #ffba00
+		&:nth-child(4)
+			background-color: #4bba70
+	&__tr_title &__td
+		padding-top: 14px
+		padding-bottom: 13px
+	&__tr_content &__td
+		padding-top: 14px
+		padding-bottom: 13px
+		&:nth-child(odd)
+			background-color: #dfdfdf
+		&:nth-child(even)
+			background-color: #e5e5e5
+		&:last-child
+			font-variant: small-caps
+	&__rate
+		+museo-b
+		text-transform: uppercase
+	&__tooltip
+		position: relative
+		top: -1px
+		display: inline-block
+		margin-left: 4px
+		cursor: pointer
+		vertical-align: top
+		font-size: 0
+		.icon
+			font-size: 13px
+			color: #ffba00
+			vertical-align: top
+	&__mark
+		font-size: 0
+		vertical-align: middle
+		.icon
+			font-size: 16px
+			color: #ff7b38
+	&__minus
+		display: inline-block
+		width: 17px
+		height: 3px
+		background: #7b7b7b
+		vertical-align: middle
 
 /* ===================================
 	 Other Styles
 	 =================================== */
-
+.jBox-Tooltip .jBox-container, .jBox-Mouse .jBox-container
+	border-radius: 0 !important
+.jBox-content
+	padding: 12px 15px !important
+	font-family: 'PT Sans', $default-fonts
+	font-size: 13px
+	color: #5e5e5e
+	line-height: 18px
+	font-weight: 400

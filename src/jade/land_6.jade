@@ -1,0 +1,354 @@
+extend includes/_layout
+block title
+	title Land 6
+block content
+	//begin screen
+	.screen.section
+		.screen__cover(style='background-image: url(img/content/land-6.jpg)')
+		.screen__content.container
+			a.screen__link(href='#') Продвижение сайтов
+			.screen__title.title.title_h2.title_white белое продвижение
+			.screen__center
+				p.screen__center-text Позиции ключевых фраз - самый проверенный способ отслеживать результаты оптимизации и продвижения сайта. Цель - нахождение запроса на первой странице поиска. Мы дадим рекомендации и откорректируем список ключевых фраз, а при необходимости поможем собрать его.
+				p.screen__center-text Мы рекомендуем продвижение по запросам, как универсальный способ оптимизации сайтов любых тематик. Простой и понятный, как валенок.
+		.screen__controls
+			a.screen__controls-btn.btn.btn_white.js-nav(href='rates') тарифы и цены
+			a.screen__controls-btn.btn.btn_white.js-nav(href='report') формат отчетности
+	//end screen
+
+	//begin result
+	.result.section.container
+		.title.title_h2 результат при белом продвижении
+		ul.result__list.list.list_mark
+			li.list__item Не закупаем ссылки. НИ ОДНОЙ. ВООБЩЕ.
+			li.list__item Вкладываемся в развитие интересного контента.
+			li.list__item Разрабатываем стратегии привлечения обратных ссылок.
+			li.list__item Нет рисков попасть под санкции за покупку SEO-ссылок.
+			li.list__item Развитие сайта. Аналогично другим тарифам.
+			li.list__item Будем любить и заботься о вашем сайте, как о своём.
+		p.result__desc Также, мы постараемся открыто и доступно отразить в тарифах, что входит в процесс работы и стоимость услуги.
+	//end result
+
+	//begin rates
+	.rates#rates
+		.container.section
+			.title.title_h2 тарифы
+			//begin tables
+			table.rates__table.tables.js-tables
+				//begin row
+				tr.tables__tr.tables__tr_header
+					td.tables__td(colspan='1')
+						.tables__rate Тариф 1
+						.tables__cost 35 000 руб.
+					td.tables__td(colspan='1')
+						.tables__rate Тариф 2
+						.tables__cost 65 000 руб.
+					td.tables__td(colspan='1')
+						.tables__rate Тариф 3
+						.tables__cost 85 000 руб.
+					td.tables__td(colspan='1')
+						.tables__rate Тариф 4
+						.tables__cost Цена по запросу
+				//begin row
+				tr.tables__tr.tables__tr_title
+					td.tables__td.tables__td_title(colspan='4') Количество ключевых фраз
+						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+							+i('question')
+				//begin row
+				tr.tables__tr.tables__tr_content
+					td.tables__td(colspan='1') 100
+					td.tables__td(colspan='1') 150
+					td.tables__td(colspan='1') 250
+					td.tables__td(colspan='1') По запросу
+				//begin row
+				tr.tables__tr.tables__tr_title
+					td.tables__td.tables__td_title(colspan='4') анализ ключевых фраз
+						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+							+i('question')
+				//begin row
+				tr.tables__tr.tables__tr_content
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1') По запросу
+				//begin row
+				tr.tables__tr.tables__tr_title
+					td.tables__td.tables__td_title(colspan='4') комплексный аудит сайта
+						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+							+i('question')
+				//begin row
+				tr.tables__tr.tables__tr_content
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1') По запросу
+				//begin row
+				tr.tables__tr.tables__tr_title
+					td.tables__td.tables__td_title(colspan='4') Составление и заполнение META (title+description)
+						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+							+i('question')
+				//begin row
+				tr.tables__tr.tables__tr_content
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1') По запросу
+				//begin row
+				tr.tables__tr.tables__tr_title
+					td.tables__td.tables__td_title(colspan='4') Оптимизация файла Robots.txt
+						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+							+i('question')
+				//begin row
+				tr.tables__tr.tables__tr_content
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1') По запросу
+				//begin row
+				tr.tables__tr.tables__tr_title
+					td.tables__td.tables__td_title(colspan='4') Ежеквартальное написание нового контента (копирайтинг)
+						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+							+i('question')
+				//begin row
+				tr.tables__tr.tables__tr_content
+					td.tables__td(colspan='1') 10000 символов без пробелов
+					td.tables__td(colspan='1') 15000 символов без пробелов
+					td.tables__td(colspan='1') 25000 символов без пробелов
+					td.tables__td(colspan='1') По запросу
+				//begin row
+				tr.tables__tr.tables__tr_title
+					td.tables__td.tables__td_title(colspan='4') Отслеживание звонков (Call Tracking)
+						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+							+i('question')
+				//begin row
+				tr.tables__tr.tables__tr_content.is-last.js-tables-last
+					td.tables__td(colspan='1')
+						span.tables__minus
+					td.tables__td(colspan='1')
+						span.tables__minus
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1') По запросу
+				//begin row
+				tr.tables__tr.tables__tr_title
+					td.tables__td.tables__td_title(colspan='4') Ежеквартальное написание нового контента (копирайтинг)
+						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+							+i('question')
+				//begin row
+				tr.tables__tr.tables__tr_content
+					td.tables__td(colspan='1') 10000 символов без пробелов
+					td.tables__td(colspan='1') 15000 символов без пробелов
+					td.tables__td(colspan='1') 25000 символов без пробелов
+					td.tables__td(colspan='1') По запросу
+				//begin row
+				tr.tables__tr.tables__tr_title
+					td.tables__td.tables__td_title(colspan='4') Отслеживание звонков (Call Tracking)
+						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+							+i('question')
+				//begin row
+				tr.tables__tr.tables__tr_content
+					td.tables__td(colspan='1')
+						span.tables__minus
+					td.tables__td(colspan='1')
+						span.tables__minus
+					td.tables__td(colspan='1')
+						span.tables__mark
+							+i('mark')
+					td.tables__td(colspan='1') По запросу
+			//end tables
+			.text-center
+				button.btn-more.js-tables-more(type='button') Развернуть всю таблицу
+			.rates__controls
+				.rates__controls-col
+					button.rates__btn.btn(type='button') выбрать тариф 1
+				.rates__controls-col
+					button.rates__btn.btn(type='button') выбрать тариф 2
+				.rates__controls-col
+					button.rates__btn.btn(type='button') выбрать тариф 3
+				.rates__controls-col
+					button.rates__btn.btn(type='button') выбрать инд. тариф
+			.rates__desc Также мы дополнительно взимаем премию за нахождение конкурентных ключевых слов (ВЧ) в ТОП-10. Пример таких слов – строительство домов, ландшафтный дизайн, установка  видеонаблюдения, стоматология и т.д.
+	//end rates
+
+	//begin report
+	.report#report
+		.container.section
+			.title.title_h2 формат отчетности
+			.report__list.js-report-list
+				.report__list-item.js-report-item
+					.report__list-inner
+						.report__list-icon
+							+i('report-stats')
+						.report__list-text Статистика <br>по позициям
+					.report__list-image.js-report-image
+						img.report__list-img(src='img/content/report-4.png')
+				.report__list-item.js-report-item
+					.report__list-inner
+						.report__list-icon
+							+i('report-loop')
+						.report__list-text Статистика по посещаемости <br>из Поисковых Систем
+					.report__list-image.js-report-image
+						img.report__list-img(src='img/content/report-2.png')
+				.report__list-item.js-report-item
+					.report__list-inner
+						.report__list-icon
+							+i('report-phone')
+						.report__list-text Статистика по звонкам <br>(Call Tracking)
+					.report__list-image.js-report-image
+						img.report__list-img(src='img/content/report-1.png')
+				.report__list-item.js-report-item
+					.report__list-inner
+						.report__list-icon
+							+i('report-ruler')
+						.report__list-text Общий отчет ключевых <br>параметров из Яндекс Метрики
+					.report__list-image.js-report-image
+						img.report__list-img(src='img/content/report-4.png')
+				.report__list-item.js-report-item
+					.report__list-inner
+						.report__list-icon
+							+i('report-dynamic')
+						.report__list-text График динамики <br>ссылочной массы
+					.report__list-image.js-report-image
+						img.report__list-img(src='img/content/report-2.png')
+				.report__list-item.js-report-item
+					.report__list-inner
+						.report__list-icon
+							+i('report-calendar')
+						.report__list-text Проделанная и <br>планируемая работа
+					.report__list-image.js-report-image
+						img.report__list-img(src='img/content/report-1.png')
+	//end report
+
+	//begin faq
+	.faq
+		.faq__container.container.section
+			.title.title_h2.title_white вопрос/ответ
+			ul.faq__accordion.accordion
+				li.accordion__item
+					.accordion__visible.js-accordion-title Нам не нужно продвигать 100 запросов. Мы хотим только один – «пластиковые окна», а остальное нам не нужно
+					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может. Зависит не только от качества проделанных работ, деталей (качество сайта, скорость выполнения рекомендаций, возраст сайта, УТП и т.д.) но и от самой работы Поисковых Систем. Отвечать за третью сторону в наших взаимоотношениях очень сложно. Но своё экспертное мнение мы обязательно озвучим.
+				li.accordion__item
+					.accordion__visible.js-accordion-title Через сколько вы продвинете запросы в ТОП?
+					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
+				li.accordion__item
+					.accordion__visible.js-accordion-title Какие гарантии вы даете?
+					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
+				li.accordion__item
+					.accordion__visible.js-accordion-title Сколько лет вы на рыке и чем вы можете похвастаться?
+					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
+				li.accordion__item
+					.accordion__visible.js-accordion-title Какие условия оплаты? И сколько размер предоплаты?
+					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
+				li.accordion__item
+					.accordion__visible.js-accordion-title Какие минимальные сроки продвижения товара по 1 запросу?
+					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
+				li.accordion__item
+					.accordion__visible.js-accordion-title Готовы ли вы к долгосрочному сотрудничеству?
+					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
+	//end faq
+
+	//begin starter
+	.starter.container.section
+		.starter__title.title.title_h2 главное начать
+		.starter__row
+			.starter__col
+				p.starter__text Наша команда работает в digital и непосредственно в SEO с 2009 года. Мы специализируемся на 1ой поисковой системе России – Яндекс. Почему? Ответ прост -  большая аудитория пользователей Яндекса по сравнению с другими поисковыми системами, больше потенциальных посетителей на ваш ресурс, больше потенциальных клиентов, больше потенциальных продаж вашего продукта.
+				p.starter__text Да, на рынке существуют компании и специалисты, которые работают с момента основания самого Яндекса. По идее должен давить авторитет – грандиозный опыт прошлых лет, стопицот продвинутых проектов и т.д.
+			.starter__col
+				p.starter__text Мы не будем рассказывать, как специалисты продвигали сайты до 2009 года, т.к. эта информация не столь актуальна сейчас. Мы пережили времена глобальных изменений алгоритмов – переспам и переоптимизация, разные виды накруток, коммерческость сайта, «басни» Яндекса, что ссылки отключены, то включены, Минусински и прочая нечесть.
+				p.starter__text Нынешний тренд ведения интернет рекламы – performance marketing, где компании окучивают все каналы продаж – SEO, контекстная реклама, SMM, e-mail рассылки и прочее. Да, круто, но где гарантии, что в этих компаниях сидит грамотный отдел поисковой оптимизации? Да и не каждому бизнесу нужно это, не говоря о стоимости услуг за данный комплекс работ.
+	//end starter
+
+	//begin review
+	.review.review_solution.container.section
+		.review__title.title.title_h2 отзыв клиента
+		.review__row
+			.review__col
+				img.review__cert(src='img/content/review-1.jpg' alt='image')
+			.review__col
+				.review__user
+					.review__avatar
+						img.review__img(src='img/content/avatar.jpg' alt='image')
+					.review__info
+						.review__name Елена Букреева
+						.review__vacancy Маркетолог
+						.review__inc ООО "ВелоксСтройКонсалтинг"
+						a.review__site(href='#') veloxstroyconsulting.ru
+				.review__text «Мы очень довольны работой менеджера – получаем подробные отчеты, консультации по всем возникающим вопросам, видим, как быстро выполняются поставленные задачи. Результат нас устраивает. В ТОПе почти 80% целевых запросов, во много раз с момента старта продвижения увеличился трафик из поисковых систем, сайт приносит доход! Все просто супер, рекомендуем!»
+	//end review
+
+	//begin pf
+	.pf
+		.pf__container.container.section
+			.pf__h2.title.title_h2 портфолио
+			.pf__slider.js-pf-slider
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/pf-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Недвижимость
+							.pf__title продвижениЕ сайта <br>cian.ru
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/inform-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Спорт
+							.pf__title продвижениЕ сайта <br>spotbox.ru
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/inform-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Недвижимость
+							.pf__title продвижениЕ сайта <br>cian.ru
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/inform-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Спорт
+							.pf__title продвижениЕ сайта <br>spotbox.ru
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/inform-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Недвижимость
+							.pf__title продвижениЕ сайта <br>cian.ru
+				.pf__item
+					a.pf__el(href='#')
+						img.pf__img(src='img/content/inform-1.jpg' alt='image')
+						.pf__text
+							.pf__topic Спорт
+							.pf__title продвижениЕ сайта <br>spotbox.ru
+			.pf__navigations.navigations.js-navigations
+				.navigations__info.js-navigations-info
+	//end pf
+
+	//begin request
+	.request
+		.container.section
+			a.request__btn.btn.btn_transparent(href='#') оставить заявку
+	//end request

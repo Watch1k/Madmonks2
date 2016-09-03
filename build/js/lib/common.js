@@ -4,6 +4,15 @@ $(document).ready(function () {
   //for IE9
   svg4everybody();
 
+	(function () {
+		var options = {
+			maxWidth: 420,
+			pointer: 'left: 5'
+		};
+
+		$('.tooltip').jBox('Tooltip', options);
+	})();
+
   // Clear placeholder
   (function () {
     var el = $('input, textarea');
@@ -418,5 +427,78 @@ $(document).ready(function () {
       nav.prepend(prev);
     }
   })();
+
+	(function() {
+		var allButtons = $('.js-accordion-title'),
+			allPanels = $('.js-accordion-inner');
+
+		allButtons.click(function() {
+			if (!$(this).parent().hasClass('is-active')) {
+				allPanels.slideUp();
+				allButtons.parent().removeClass('is-active');
+				$(this).parent().addClass('is-active').children().last().slideDown();
+				return false;
+			} else {
+				$(this).parent().removeClass('is-active').children().last().slideUp();
+			}
+		});
+	})();
+
+
+	(function () {
+    var container = $('.js-report-list'),
+	    imgContainer = $('.js-report-image'),
+	    item = $('.js-report-item'),
+	    minHeight = container.outerHeight(),
+	    currentHeight = 0;
+
+		//init first item
+	  item.eq(0).addClass('is-active').find(imgContainer).show();
+
+	  imgContainer.each(function () {
+		  currentHeight = $(this).find('img').prop('naturalHeight');
+		  if (minHeight < currentHeight) {
+		  	minHeight = currentHeight;
+		  }
+	  });
+	  container.css('height', minHeight);
+
+	  item.on('click', function () {
+		  if (!$(this).hasClass('is-active')) {
+		  	item.find(imgContainer).fadeOut();
+			  item.filter('.is-active').removeClass('is-active');
+			  $(this).find(imgContainer).fadeIn();
+			  $(this).addClass('is-active');
+		  }
+	  });
+  })();
+
+	(function () {
+		var tables = $('.js-tables'),
+			last = tables.find('.js-tables-last'),
+			toggle = $('.js-tables-more');
+
+		toggle.on('click', function () {
+			$(this).toggleClass('is-active');
+			$(this).text(function(i, text) {
+				return text === 'Развернуть всю таблицу' ? 'Свернуть таблицу': 'Развернуть всю таблицу';
+			});
+			last.toggleClass('is-last');
+		});
+	})();
+
+	(function () {
+		var navBtn = $('.js-nav');
+
+		navBtn.on('click', function(e){
+			e.preventDefault();
+			console.log('click');
+			var $href = $(this).attr('href');
+			var $anchor = $('#' + $href).offset();
+			$('body, html').animate({scrollTop: $anchor.top - 70}, 800);
+			console.log('click');
+			return false;
+		});
+	})();
 
 });
