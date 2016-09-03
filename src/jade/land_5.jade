@@ -8,7 +8,7 @@ block content
 		.screen__content.container
 			a.screen__link(href='#') Продвижение сайтов
 			.screen__title.title.title_h2.title_white Продвижение по трафику
-			.screen__center
+			.screen__center.js-screen-text
 				p.screen__center-text Позиции ключевых фраз - самый проверенный способ отслеживать результаты оптимизации и продвижения сайта. Цель - нахождение запроса на первой странице поиска. Мы дадим рекомендации и откорректируем список ключевых фраз, а при необходимости поможем собрать его.
 				p.screen__center-text Мы рекомендуем продвижение по запросам, как универсальный способ оптимизации сайтов любых тематик. Простой и понятный, как валенок.
 		.screen__controls
@@ -31,159 +31,165 @@ block content
 
 	//begin rates
 	.rates#rates
-		.container.section
+		.rates__container.container.section
 			.title.title_h2 тарифы
-			//begin tables
-			table.rates__table.tables.js-tables
-				//begin row
-				tr.tables__tr.tables__tr_header
-					td.tables__td(colspan='1')
-						.tables__rate Тариф 1
-						.tables__cost 35 000 руб.
-					td.tables__td(colspan='1')
-						.tables__rate Тариф 2
-						.tables__cost 65 000 руб.
-					td.tables__td(colspan='1')
-						.tables__rate Тариф 3
-						.tables__cost 85 000 руб.
-					td.tables__td(colspan='1')
-						.tables__rate Тариф 4
-						.tables__cost Цена по запросу
-				//begin row
-				tr.tables__tr.tables__tr_title
-					td.tables__td.tables__td_title(colspan='4') Количество ключевых фраз
-						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
-							+i('question')
-				//begin row
-				tr.tables__tr.tables__tr_content
-					td.tables__td(colspan='1') 100
-					td.tables__td(colspan='1') 150
-					td.tables__td(colspan='1') 250
-					td.tables__td(colspan='1') По запросу
-				//begin row
-				tr.tables__tr.tables__tr_title
-					td.tables__td.tables__td_title(colspan='4') анализ ключевых фраз
-						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
-							+i('question')
-				//begin row
-				tr.tables__tr.tables__tr_content
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1') По запросу
-				//begin row
-				tr.tables__tr.tables__tr_title
-					td.tables__td.tables__td_title(colspan='4') комплексный аудит сайта
-						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
-							+i('question')
-				//begin row
-				tr.tables__tr.tables__tr_content
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1') По запросу
-				//begin row
-				tr.tables__tr.tables__tr_title
-					td.tables__td.tables__td_title(colspan='4') Составление и заполнение META (title+description)
-						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
-							+i('question')
-				//begin row
-				tr.tables__tr.tables__tr_content
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1') По запросу
-				//begin row
-				tr.tables__tr.tables__tr_title
-					td.tables__td.tables__td_title(colspan='4') Оптимизация файла Robots.txt
-						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
-							+i('question')
-				//begin row
-				tr.tables__tr.tables__tr_content
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1') По запросу
-				//begin row
-				tr.tables__tr.tables__tr_title
-					td.tables__td.tables__td_title(colspan='4') Ежеквартальное написание нового контента (копирайтинг)
-						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
-							+i('question')
-				//begin row
-				tr.tables__tr.tables__tr_content
-					td.tables__td(colspan='1') 10000 символов без пробелов
-					td.tables__td(colspan='1') 15000 символов без пробелов
-					td.tables__td(colspan='1') 25000 символов без пробелов
-					td.tables__td(colspan='1') По запросу
-				//begin row
-				tr.tables__tr.tables__tr_title
-					td.tables__td.tables__td_title(colspan='4') Отслеживание звонков (Call Tracking)
-						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
-							+i('question')
-				//begin row
-				tr.tables__tr.tables__tr_content.is-last.js-tables-last
-					td.tables__td(colspan='1')
-						span.tables__minus
-					td.tables__td(colspan='1')
-						span.tables__minus
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1') По запросу
-				//begin row
-				tr.tables__tr.tables__tr_title
-					td.tables__td.tables__td_title(colspan='4') Ежеквартальное написание нового контента (копирайтинг)
-						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
-							+i('question')
-				//begin row
-				tr.tables__tr.tables__tr_content
-					td.tables__td(colspan='1') 10000 символов без пробелов
-					td.tables__td(colspan='1') 15000 символов без пробелов
-					td.tables__td(colspan='1') 25000 символов без пробелов
-					td.tables__td(colspan='1') По запросу
-				//begin row
-				tr.tables__tr.tables__tr_title
-					td.tables__td.tables__td_title(colspan='4') Отслеживание звонков (Call Tracking)
-						span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
-							+i('question')
-				//begin row
-				tr.tables__tr.tables__tr_content
-					td.tables__td(colspan='1')
-						span.tables__minus
-					td.tables__td(colspan='1')
-						span.tables__minus
-					td.tables__td(colspan='1')
-						span.tables__mark
-							+i('mark')
-					td.tables__td(colspan='1') По запросу
+			.rates__tables-wrapper.js-wrapper-tables
+				.rates__nav.js-tables-nav
+					.rates__nav-left.js-tables-prev
+						+i('new-arrow-left')
+					.rates__nav-right.js-tables-next
+						+i('new-arrow-right')
+				//begin tables
+				table.rates__tables.tables.js-tables
+					//begin row
+					tr.tables__tr.tables__tr_header
+						td.tables__td(colspan='1')
+							.tables__rate Тариф 1
+							.tables__cost 35 000 руб.
+						td.tables__td(colspan='1')
+							.tables__rate Тариф 2
+							.tables__cost 65 000 руб.
+						td.tables__td(colspan='1')
+							.tables__rate Тариф 3
+							.tables__cost 85 000 руб.
+						td.tables__td(colspan='1')
+							.tables__rate Тариф 4
+							.tables__cost Цена по запросу
+					//begin row
+					tr.tables__tr.tables__tr_title
+						td.tables__td.tables__td_title.js-tables-title(colspan='4').js-tables-counter Количество ключевых фраз
+							span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+								+i('question')
+					//begin row
+					tr.tables__tr.tables__tr_content
+						td.tables__td(colspan='1') 100
+						td.tables__td(colspan='1') 150
+						td.tables__td(colspan='1') 250
+						td.tables__td(colspan='1') По запросу
+					//begin row
+					tr.tables__tr.tables__tr_title
+						td.tables__td.tables__td_title.js-tables-title(colspan='4') анализ ключевых фраз
+							span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+								+i('question')
+					//begin row
+					tr.tables__tr.tables__tr_content
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1') По запросу
+					//begin row
+					tr.tables__tr.tables__tr_title
+						td.tables__td.tables__td_title.js-tables-title(colspan='4') комплексный аудит сайта
+							span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+								+i('question')
+					//begin row
+					tr.tables__tr.tables__tr_content
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1') По запросу
+					//begin row
+					tr.tables__tr.tables__tr_title
+						td.tables__td.tables__td_title.js-tables-title(colspan='4') Составление и заполнение META (title+description)
+							span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+								+i('question')
+					//begin row
+					tr.tables__tr.tables__tr_content
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1') По запросу
+					//begin row
+					tr.tables__tr.tables__tr_title
+						td.tables__td.tables__td_title.js-tables-title(colspan='4') Оптимизация файла Robots.txt
+							span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+								+i('question')
+					//begin row
+					tr.tables__tr.tables__tr_content
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1') По запросу
+					//begin row
+					tr.tables__tr.tables__tr_title
+						td.tables__td.tables__td_title.js-tables-title(colspan='4') Ежеквартальное написание нового контента (копирайтинг)
+							span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+								+i('question')
+					//begin row
+					tr.tables__tr.tables__tr_content
+						td.tables__td(colspan='1') 10000 символов без пробелов
+						td.tables__td(colspan='1') 15000 символов без пробелов
+						td.tables__td(colspan='1') 25000 символов без пробелов
+						td.tables__td(colspan='1') По запросу
+					//begin row
+					tr.tables__tr.tables__tr_title
+						td.tables__td.tables__td_title.js-tables-title(colspan='4') Отслеживание звонков (Call Tracking)
+							span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+								+i('question')
+					//begin row
+					tr.tables__tr.tables__tr_content.is-last.js-tables-last
+						td.tables__td(colspan='1')
+							span.tables__minus
+						td.tables__td(colspan='1')
+							span.tables__minus
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1') По запросу
+					//begin row
+					tr.tables__tr.tables__tr_title
+						td.tables__td.tables__td_title.js-tables-title(colspan='4') Ежеквартальное написание нового контента (копирайтинг)
+							span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+								+i('question')
+					//begin row
+					tr.tables__tr.tables__tr_content
+						td.tables__td(colspan='1') 10000 символов без пробелов
+						td.tables__td(colspan='1') 15000 символов без пробелов
+						td.tables__td(colspan='1') 25000 символов без пробелов
+						td.tables__td(colspan='1') По запросу
+					//begin row
+					tr.tables__tr.tables__tr_title
+						td.tables__td.tables__td_title.js-tables-title(colspan='4') Отслеживание звонков (Call Tracking)
+							span.tables__tooltip.tooltip(title='Наряду  с внут­рен­ней опти­ми­за­цией сайта, нема­ло­важ­ное зна­че­ние для про­дви­же­ния имеет под­бор клю­че­вых слов.')
+								+i('question')
+					//begin row
+					tr.tables__tr.tables__tr_content
+						td.tables__td(colspan='1')
+							span.tables__minus
+						td.tables__td(colspan='1')
+							span.tables__minus
+						td.tables__td(colspan='1')
+							span.tables__mark
+								+i('mark')
+						td.tables__td(colspan='1') По запросу
 			//end tables
 			.text-center
 				button.btn-more.js-tables-more(type='button') Развернуть всю таблицу
-			.rates__controls
+			.rates__controls.js-tables-controls
 				.rates__controls-col
 					button.rates__btn.btn(type='button') выбрать тариф 1
 				.rates__controls-col
@@ -250,25 +256,32 @@ block content
 			.title.title_h2.title_white вопрос/ответ
 			ul.faq__accordion.accordion
 				li.accordion__item
-					.accordion__visible.js-accordion-title Нам не нужно продвигать 100 запросов. Мы хотим только один – «пластиковые окна», а остальное нам не нужно
+					.accordion__visible Нам не нужно продвигать 100 запросов. Мы хотим только один – «пластиковые окна», а остальное нам не нужно
+						.accordion__toggle.js-accordion-title
 					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может. Зависит не только от качества проделанных работ, деталей (качество сайта, скорость выполнения рекомендаций, возраст сайта, УТП и т.д.) но и от самой работы Поисковых Систем. Отвечать за третью сторону в наших взаимоотношениях очень сложно. Но своё экспертное мнение мы обязательно озвучим.
 				li.accordion__item
-					.accordion__visible.js-accordion-title Через сколько вы продвинете запросы в ТОП?
+					.accordion__visible Через сколько вы продвинете запросы в ТОП?
+						.accordion__toggle.js-accordion-title
 					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
 				li.accordion__item
-					.accordion__visible.js-accordion-title Какие гарантии вы даете?
+					.accordion__visible Какие гарантии вы даете?
+						.accordion__toggle.js-accordion-title
 					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
 				li.accordion__item
-					.accordion__visible.js-accordion-title Сколько лет вы на рыке и чем вы можете похвастаться?
+					.accordion__visible Сколько лет вы на рыке и чем вы можете похвастаться?
+						.accordion__toggle.js-accordion-title
 					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
 				li.accordion__item
-					.accordion__visible.js-accordion-title Какие условия оплаты? И сколько размер предоплаты?
+					.accordion__visible Какие условия оплаты? И сколько размер предоплаты?
+						.accordion__toggle.js-accordion-title
 					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
 				li.accordion__item
-					.accordion__visible.js-accordion-title Какие минимальные сроки продвижения товара по 1 запросу?
+					.accordion__visible Какие минимальные сроки продвижения товара по 1 запросу?
+						.accordion__toggle.js-accordion-title
 					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
 				li.accordion__item
-					.accordion__visible.js-accordion-title Готовы ли вы к долгосрочному сотрудничеству?
+					.accordion__visible Готовы ли вы к долгосрочному сотрудничеству?
+						.accordion__toggle.js-accordion-title
 					.accordion__hidden.js-accordion-inner Прогнозивать с точностью 100% результаты никто не может.
 	//end faq
 
@@ -285,21 +298,68 @@ block content
 	//end starter
 
 	//begin review
-	.review.review_solution.container.section
-		.review__title.title.title_h2 отзыв клиента
-		.review__row
-			.review__col
-				img.review__cert(src='img/content/review-1.jpg' alt='image')
-			.review__col
-				.review__user
-					.review__avatar
-						img.review__img(src='img/content/avatar.jpg' alt='image')
-					.review__info
-						.review__name Елена Букреева
-						.review__vacancy Маркетолог
-						.review__inc ООО "ВелоксСтройКонсалтинг"
-						a.review__site(href='#') veloxstroyconsulting.ru
-				.review__text «Мы очень довольны работой менеджера – получаем подробные отчеты, консультации по всем возникающим вопросам, видим, как быстро выполняются поставленные задачи. Результат нас устраивает. В ТОПе почти 80% целевых запросов, во много раз с момента старта продвижения увеличился трафик из поисковых систем, сайт приносит доход! Все просто супер, рекомендуем!»
+	.review.review_solution.review_grey.section
+		.container
+			.review__title.title.title_h2 отзыв клиента
+		.review__slider.js-review
+			.review__row
+				.container
+					.review__col
+						img.review__cert(src='img/content/review-1.jpg' alt='image')
+					.review__col
+						.review__user
+							.review__avatar
+								img.review__img(src='img/content/avatar.jpg' alt='image')
+							.review__info
+								.review__name Елена Букреева
+								.review__vacancy Маркетолог
+								.review__inc ООО "ВелоксСтройКонсалтинг"
+								a.review__site(href='#') veloxstroyconsulting.ru
+						.review__text «Мы очень довольны работой менеджера – получаем подробные отчеты, консультации по всем возникающим вопросам, видим, как быстро выполняются поставленные задачи. Результат нас устраивает. В ТОПе почти 80% целевых запросов, во много раз с момента старта продвижения увеличился трафик из поисковых систем, сайт приносит доход! Все просто супер, рекомендуем!»
+			.review__row
+				.container
+					.review__col
+						img.review__cert(src='img/content/review-1.jpg' alt='image')
+					.review__col
+						.review__user
+							.review__avatar
+								img.review__img(src='img/content/avatar.jpg' alt='image')
+							.review__info
+								.review__name Елена Букреева
+								.review__vacancy Маркетолог
+								.review__inc ООО "ВелоксСтройКонсалтинг"
+								a.review__site(href='#') veloxstroyconsulting.ru
+						.review__text «Мы очень довольны работой менеджера – получаем подробные отчеты, консультации по всем возникающим вопросам, видим, как быстро выполняются поставленные задачи. Результат нас устраивает. В ТОПе почти 80% целевых запросов, во много раз с момента старта продвижения увеличился трафик из поисковых систем, сайт приносит доход! Все просто супер, рекомендуем! Все просто супер, рекомендуем! Все просто супер, рекомендуем! Все просто супер, рекомендуем! Все просто супер, рекомендуем!»
+			.review__row
+				.container
+					.review__col
+						img.review__cert(src='img/content/review-1.jpg' alt='image')
+					.review__col
+						.review__user
+							.review__avatar
+								img.review__img(src='img/content/avatar.jpg' alt='image')
+							.review__info
+								.review__name Елена Букреева
+								.review__vacancy Маркетолог
+								.review__inc ООО "ВелоксСтройКонсалтинг"
+								a.review__site(href='#') veloxstroyconsulting.ru
+						.review__text «Мы очень довольны работой менеджера – получаем подробные отчеты, консультации по всем возникающим вопросам, видим, как быстро выполняются поставленные задачи. Результат нас устраивает. В ТОПе почти 80% целевых запросов, во много раз с момента старта продвижения увеличился трафик из поисковых систем, сайт приносит доход! Все просто супер, рекомендуем!»
+			.review__row
+				.container
+					.review__col
+						img.review__cert(src='img/content/review-1.jpg' alt='image')
+					.review__col
+						.review__user
+							.review__avatar
+								img.review__img(src='img/content/avatar.jpg' alt='image')
+							.review__info
+								.review__name Елена Букреева
+								.review__vacancy Маркетолог
+								.review__inc ООО "ВелоксСтройКонсалтинг"
+								a.review__site(href='#') veloxstroyconsulting.ru
+						.review__text «Мы очень довольны работой менеджера – получаем подробные отчеты, консультации по всем возникающим вопросам, видим, как быстро выполняются поставленные задачи. Результат нас устраивает. В ТОПе почти 80% целевых запросов, во много раз с момента старта продвижения увеличился трафик из поисковых систем, сайт приносит доход! Все просто супер, рекомендуем!»
+		.review__navigations.navigations.container.js-navigations
+			.navigations__info.js-navigations-info
 	//end review
 
 	//begin pf

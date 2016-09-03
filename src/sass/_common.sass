@@ -54,12 +54,24 @@ body
 	z-index: 1
 	background-color: #ffffff
 	transition: all 0.5s
+	&:before
+		content: ''
+		position: absolute
+		z-index: -1
+		left: 0
+		right: 0
+		background-color: #ffffff
+		height: 100vh
+		top: 100%
 	+r(1023)
-		padding-top: 0
+		padding-top: 53px
 
 
 /* Helpers
 	----------------------------------- */
+*
+	-webkit-tap-highlight-color: transparent
+	
 h1,
 h2,
 h3,
@@ -171,11 +183,10 @@ video
 	right: 0
 	top: 0
 	z-index: 11
-	+r(1023)
-		position: relative
-		z-index: 0
+	transform: translate3d(0,0,0)
 	&__container
 		position: relative
+		transform: translate3d(0,0,0)
 		+r(1023)
 			width: 100%
 			margin: 0
@@ -184,6 +195,8 @@ video
 	&__footer
 		transform: translateY(0)
 		transition: all 0.2s
+		+r(1023)
+			transition: all 0.5s
 	&__top
 		position: relative
 		z-index: 1
@@ -191,6 +204,7 @@ video
 		padding-top: 23px
 		padding-bottom: 19px
 		background-color: #ffffff
+		transform: translate3d(0,0,0)
 		transition: transform 0.5s, background-color 0.2s
 		+r(1023)
 			padding-top: 8px
@@ -308,7 +322,6 @@ video
 		padding-top: 10px
 		padding-bottom: 10px
 		background-color: #ff7b38
-		transform: translate3d(0,0,0)
 	&.is-scroll &__footer
 		pointer-events: auto
 		z-index: 0
@@ -628,13 +641,14 @@ video
 		flex-wrap: nowrap
 		flex-direction: column
 		align-items: flex-start
-		overflow-y: scroll
+		overflow-y: auto
 		position: fixed
-		z-index: 0
+		z-index: 2
 		top: 0
-		left: 0
+		left: -260px
 		bottom: 0
 		width: 260px
+		height: 100vh
 		background-color: #f6f6f6
 		padding: 26px 0
 	&__row
@@ -1045,7 +1059,7 @@ video
 	&__table
 		overflow-y: auto
 		+pre(1)
-		+gutter()
+		padding-left: 10px
 		+r(1023)
 			+pre(0)
 			padding-left: 0
@@ -1248,29 +1262,50 @@ video
 		font-size: 15px
 		color: #ffffff
 		line-height: 26px
+		+r(767)
+			font-size: 14px
 		& + &
 			margin-top: 20px
+	&__toggle
+		cursor: pointer
+		position: absolute
+		z-index: 3
+		top: 7px
+		right: 20px
+		font-family: 'PT Sans', $default-fonts
+		width: 32px
+		height: 32px
+		font-size: 23px
+		color: $orange
+		line-height: 36px
+		text-align: center
+		transition: all 0.2s
 		&:before
 			content: '+'
 			position: absolute
-			top: 15px
-			right: 25px
-			font-family: 'PT Sans', $default-fonts
-			width: 13px
-			height: 13px
-			font-size: 23px
-			color: $orange
-			line-height: 1
-		&.is-active
-			&:before
-				content: '\2013'
-				top: 13px
-				right: 27px
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+		+r(767)
+			top: auto
+			right: 0
+			bottom: 0
+			color: #ffffff
+			border-top: 2px solid #ffffff
+			border-left: 2px solid #ffffff
+			background-color: #ff8400
+			text-align: center
+	&__item.is-active &__toggle
+		background-color: transparent
+		&:before
+			content: '\2013'
+			top: -1px
+			right: 0
 	&__visible
 		overflow: hidden
 		position: relative
 		z-index: 2
-		cursor: pointer
 		padding: 14px 65px 9px 20px
 		&:before
 			content: ''
@@ -1292,7 +1327,6 @@ video
 	&__item.is-active &__visible
 		&:before
 			bottom: 0
-		
 		
 .table
 	display: table
@@ -2137,7 +2171,7 @@ video
 		bottom: 30px
 		+pie-clearfix
 		+r(767)
-			bottom: 60px
+			bottom: 30px
 		.slick-prev
 			position: relative
 			float: left
@@ -2267,8 +2301,16 @@ video
 		background-color: #f6f6f6
 	&_solution
 		background-color: transparent
-	&_promotion
+		+r(767)
+			background-color: #f6f6f6
+	&_grey
 		background-color: #f6f6f6
+	&__navigations
+		position: relative
+		top: 10px
+		display: block
+		padding-left: 10px
+		padding-right: 10px
 	&__title
 		+pre(1)
 		+gutter
@@ -2278,8 +2320,7 @@ video
 			+span(9)
 			padding-left: 0
 			padding-right: 0
-	&_solution &__title,
-	&_promotion &__title
+	&_solution &__title
 		+pre(0)
 		padding-left: 0
 		padding-right: 0
@@ -2300,8 +2341,7 @@ video
 				+span(8)
 				padding-left: 0
 				padding-right: 20px
-	&_solution &__col,
-	&_promotion &__col
+	&_solution &__col
 		+pre(0)
 	&__cert
 		width: 100%
@@ -2688,6 +2728,8 @@ video
 			padding-bottom: 0
 	&_promotion &__container
 		padding-bottom: 130px
+		+r(1023)
+			padding-bottom: 0
 	&__bg
 		display: none
 		position: absolute
@@ -3057,6 +3099,8 @@ video
 	&__center
 		margin-top: 130px
 		+pie-clearfix
+		+r(767)
+			display: none
 		&-text
 			margin-top: 15px
 			+pre(2)
@@ -3065,6 +3109,29 @@ video
 			font-size: 13px
 			color: #ffffff
 			line-height: 28px
+			+r(1023)
+				+pre(0)
+				+span(11)
+				+post(1)
+				padding-left: 0
+				padding-right: 0
+		&.is-clone
+			display: none
+			margin-top: 10px
+			padding-left: 10px
+			padding-right: 10px
+			+r(767)
+				display: block
+		&.is-clone &-text
+			margin-left: 0
+			margin-right: 0
+			padding-left: 0
+			padding-right: 0
+			float: none
+			width: 100%
+			font-size: 14px
+			color: $dimgrey
+			line-height: 26px
 	&__controls
 		position: absolute
 		right: 50%
@@ -3072,10 +3139,20 @@ video
 		bottom: 40px
 		+r(1199)
 			right: 10px
-			margin-left: 0
+			margin-right: 0
+		+r(639)
+			left: 10px
+			bottom: 30px
 		&-btn
+			+r(639)
+				position: absolute
+				left: 0
+				bottom: 65px
 			& + &
 				margin-left: 20px
+				+r(639)
+					margin-left: 0
+					bottom: 0
 
 /* Result
 	----------------------------------- */
@@ -3119,6 +3196,10 @@ video
 		position: relative
 		margin-top: 50px
 		+pie-clearfix
+		+r(1023)
+			margin-top: 20px
+			margin-left: -10px
+			margin-right: -10px
 		&-image
 			display: none
 			pointer-events: none
@@ -3126,10 +3207,22 @@ video
 			z-index: 1
 			left: 40%
 			top: -15px
-			transform: translate3d(0,0,0)
+			+r(1023)
+				margin-top: 20px
+				overflow-y: auto
+				position: relative
+				pointer-events: auto
+				display: block
+				width: 100%
+				top: 0
+				left: auto
+				text-align: center
 		&-img
 			width: auto
 			height: auto
+			+r(1023)
+				margin-left: auto
+				margin-right: auto
 		&-item
 			pointer-events: none
 			display: block
@@ -3138,9 +3231,20 @@ video
 			cursor: pointer
 			& + &
 				margin-top: 20px
+				+r(1023)
+					margin-top: 0
+			+r(1023)
+				text-align: center
+				padding-right: 0
 		&-inner
 			pointer-events: auto
 			display: table
+			+r(1023)
+				display: inline-block
+				padding: 0 30px
+				text-align: center
+			+r(374)
+				display: block
 		&-icon
 			display: table-cell
 			width: 60px
@@ -3150,6 +3254,8 @@ video
 			border: 3px solid $orange
 			transition: all 0.2s
 			+vertical
+			+r(374)
+				display: inline-block
 			.icon
 				font-size: 26px
 				color: $orange
@@ -3159,10 +3265,16 @@ video
 			z-index: 2
 			display: table-cell
 			padding-left: 15px
-			vertical-align: middle
+			+museo
 			font-size: 16px
 			color: $grey-text
 			line-height: 22px
+			text-align: left
+			vertical-align: middle
+			+r(374)
+				display: block
+				padding-left: 0
+				text-align: center
 			&:before
 				content: ''
 				position: absolute
@@ -3175,22 +3287,80 @@ video
 				width: 0
 				background-color: #ff8400
 				transition: all 0.2s
+				+r(1199)
+					content: none
+					display: none
 		&-item.is-active &-text
 			&:before
 				width: calc(440px - 100%)
 		&-item:hover &-icon,
 		&-item.is-active &-icon
 			background-color: $orange
+			+r(1023)
+				background-color: transparent
 			.icon
 				color: #ffffff
+				+r(1023)
+					color: $orange
+	.slick-disabled.slick-arrow
+		opacity: 0.3
+	.slick-prev
+		position: absolute
+		z-index: 1
+		top: 18px
+		left: 10px
+	.slick-next
+		position: absolute
+		z-index: 1
+		top: 18px
+		right: 10px
 
 /* Rates
 	----------------------------------- */
 .rates
 	background-color: #ebebeb
-	&__table
+	&__nav
+		display: none
+		pointer-events: none
+		position: absolute
+		z-index: 3
+		padding: 0 10px
+		top: 34px
+		left: 0
+		right: 0
+		+pie-clearfix
+		+r(1023)
+			display: block
+		&-left
+			pointer-events: auto
+			float: left
+			padding-top: 10px
+			width: 50px
+			height: 50px
+			font-size: 0
+			vertical-align: middle
+		&-right
+			pointer-events: auto
+			float: right
+			padding-top: 10px
+			width: 50px
+			height: 50px
+			font-size: 0
+			text-align: right
+			vertical-align: middle
+		&-left.is-disabled,
+		&-right.is-disabled
+			opacity: 0.3
+		.icon
+			font-size: 21px
+			color: #ffffff
+			vertical-align: middle
+	&__tables
 		margin-top: 20px
 		margin-bottom: 20px
+		&-wrapper
+			position: relative
+			overflow: hidden
 	&__desc
 		margin-top: 25px
 		margin-left: 12%
@@ -3199,6 +3369,9 @@ video
 		color: #5e5e5e
 		font-style: italic
 		text-align: center
+		+r(479)
+			margin-left: 5%
+			margin-right: 5%
 	&__controls
 		margin-top: 20px
 		font-size: 0
@@ -3207,6 +3380,11 @@ video
 			font-size: 0
 			width: 25%
 			text-align: center
+			+r(1023)
+				display: none
+				width: 100%
+				&:nth-child(1)
+					display: block
 	&__btn
 		display: inline-block
 		padding-top: 17px
@@ -3245,6 +3423,8 @@ video
 	color: #545454
 	line-height: 24px
 	text-align: center
+	+r(1023)
+		width: 400%
 	&__tr
 		&_header
 			font-size: 18px
@@ -3254,12 +3434,26 @@ video
 	&__td
 		padding-top: 20px
 		padding-bottom: 20px
+		+r(1023)
+			padding-top: 12px
+			padding-bottom: 11px
 		&_title
+			position: relative
 			+museo-b
 			font-size: 15px
 			color: $black
 			text-transform: uppercase
 			background-color: #ffffff
+			+r(1023)
+				display: block
+			&:before
+				content: ''
+				position: absolute
+				z-index: 1
+				left: 50%
+				margin-left: -23px
+				bottom: -6px
+				+arr(47,7,#ffffff,b)
 	&__tr_header &__td
 		&:nth-child(1)
 			background-color: #ff7b38

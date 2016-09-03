@@ -283,6 +283,16 @@
     </title>
     <path d="M6.008 17.5l19.446 19.445-6.01 6.01L-.002 23.51z"/>
     <path d="M13.498 36.948L50.445.002l6.01 6.01L19.509 42.96z"/>
+</symbol><symbol id="icon-new-arrow-left" viewBox="0 0 11.64 19.25">
+    <title>
+        new-arrow-left
+    </title>
+    <path d="M.38 10.68l9 8.21c1.23 1.13 3.07-.7 1.83-1.83l-8-7.31 8-7.56c1.22-1.15-.62-3-1.83-1.83l-9 8.49a1.3 1.3 0 0 0 0 1.83z"/>
+</symbol><symbol id="icon-new-arrow-right" viewBox="0 0 11.64 19.25">
+    <title>
+        new-arrow-right
+    </title>
+    <path d="M11.24 8.56l-9-8.21C1.01-.78-.83 1.05.41 2.18l8 7.31-8 7.56c-1.22 1.15.62 3 1.83 1.83l9-8.49a1.3 1.3 0 0 0 0-1.83z"/>
 </symbol><symbol id="icon-od" viewBox="0 0 26 25">
     <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAZCAMAAAAYAM5SAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUAAAD/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/jCr/olL/xpX/sG3/1K//////6df/kzf/+PL/t3r/27z/v4j/4sr/qV//mkX/zKH/8eQAAAB7GEaVAAAARnRSTlMAF2mmz93JnVsPI6X89Y8UAW727FCa/nODZ1P5MAzndUvZryYGMX2HWn9VYTcvCuO7hBXxBGtCnrWVkHE9xrEpM4rI7+q/fiel7gAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAEOSURBVCjPZZJnf4JADMbTobVTuqiVDq3U7r2nnQcSBUTb7/9RepYkgDyvntz/dxmXAyCNjU9MFgrFqdI0ZDUzO6dI8wvlFDAWl1RKyysJWVVZmWuMKiqn9ZhUzTyyNoZkc4tjx20LKxoabXPkIWKny1FNozrfQT8I0WW0A9BgH2BPdTGS8Wwose9jx3HRk2q70BQf6Vr+QMIq7JEb+JHn/YQ6K2kfDiRfLMl4CEdse/4/ke6P4USSZ+eyTsE4I+8i/mrG6FyPfEE+1FcCxKQLgMsrarGtk/UdIvXr4fve5B9embfxVu7yqEKrtO9HyYPBa7YfM9u0ntI/6vklKfPaGvlub+8fn0p9fTcbfPIHDJGGLitdZJQAAAAASUVORK5CYII=" width="26" height="25"/>
 </symbol><symbol id="icon-phone" viewBox="0 0 378.49 379.04">
