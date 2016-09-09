@@ -16,7 +16,9 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="loader"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.7 37.63" class="loader__svg"><title>logo</title><path stroke="#ffffff" stroke-width="0.5" d="M23.89 19.98a6 6 0 0 0 .5-2.38v-.89a11 11 0 0 0-5.62-9.61C17.88 3.88 16 0 13.35 0S8.82 3.88 7.93 7.1a11 11 0 0 0-5.62 9.61v.89a6 6 0 0 0 .5 2.38 6.13 6.13 0 0 0 3.33 11.33h14.42a6.13 6.13 0 0 0 3.33-11.33zM6.14 29.15a4 4 0 0 1-2.16-7.41 6 6 0 0 0 4.28 1.85h10.1a6 6 0 0 0 4.32-1.85 4 4 0 0 1-2.16 7.41H6.14zM4.43 17.6v-.89a8.89 8.89 0 0 1 2.92-6.59v.44a3.15 3.15 0 0 0 .62 2 7.09 7.09 0 0 0-1.41 4.26 2.49 2.49 0 0 0 2.46 2.49h3.24v2.12h-4a3.84 3.84 0 0 1-1.64-.37 3.89 3.89 0 0 1-1.91-2 3.85 3.85 0 0 1-.28-1.46zm6-11.54c.79-2.1 1.92-3.94 2.89-3.94s2.1 1.85 2.89 3.94c.15.41.29.82.42 1.24s.24.87.33 1.28a9.7 9.7 0 0 1 .26 2 2.27 2.27 0 0 1-.05.53.49.49 0 0 1-.06.16 1 1 0 0 1-.46.06 11.5 11.5 0 0 1-1.21-.1l-.68-.07c-.43 0-.89-.08-1.38-.08a15 15 0 0 0-1.56.09l-.51.06a12.35 12.35 0 0 1-1.25.1c-.37 0-.53 0-.59-.2a2 2 0 0 1 0-.55 9.7 9.7 0 0 1 .26-2c.09-.42.2-.85.33-1.28s.2-.84.4-1.24zm11.83 10.65v.89a3.87 3.87 0 0 1-.93 2.51 3.89 3.89 0 0 1-1.3 1 3.84 3.84 0 0 1-1.64.37h-4v-2.17h3.27a2.49 2.49 0 0 0 2.48-2.48v-.12a6.76 6.76 0 0 0-1.39-4.11 3.12 3.12 0 0 0 .61-2v-.44a8.89 8.89 0 0 1 2.9 6.55zm-12.19-3.27a13.66 13.66 0 0 0 1.49-.12 16.22 16.22 0 0 1 1.83-.14 15.82 15.82 0 0 1 1.87.13 13.13 13.13 0 0 0 1.45.11 4.67 4.67 0 0 1 1.34 3.27v.17a.36.36 0 0 1-.36.36H9.02a.36.36 0 0 1-.36-.36 5 5 0 0 1 1.39-3.44z" class="loader__1"></path><path stroke-width="0.5" stroke="#ffffff" d="M20.43 24.53H6.26a1.06 1.06 0 0 0 0 2.12h14.17a1.06 1.06 0 0 0 0-2.12z" class="loader__2"></path><ellipse cx="13.33" cy="36.84" rx="6.85" ry=".79" fill="#4b2f27" opacity="0.25" class="loader__3"></ellipse></svg></div>
+  <div
+    class="wrapper">
     <header class="header js-head">
       <div class="header__top js-header">
         <div class="container">
@@ -31,7 +33,7 @@
             <!-- begin logo-->
             <div class="header__logo logo">
               <a href="index.html" class="logo__link">
-                <div class="logo__img"><svg class="icon icon-logo"><use xlink:href="img/sprite.svg#icon-logo"></use></svg></div>
+                <div class="logo__img"><svg class="icon icon-logo-original"><use xlink:href="img/sprite.svg#icon-logo-original"></use></svg><svg class="icon icon-logo-white-original"><use xlink:href="img/sprite.svg#icon-logo-white-original"></use></svg></div>
                 <div class="logo__text"><svg class="icon icon-logo-text"><use xlink:href="img/sprite.svg#icon-logo-text"></use></svg></div>
               </a>
             </div>
@@ -74,10 +76,10 @@
           <div style="background-image: url(img/content/promotion-1.jpg)" class="promotion__img"></div>
           <div class="promotion__row"><a href="#" class="promotion__prev"><svg class="icon icon-prev"><use xlink:href="img/sprite.svg#icon-prev"></use></svg></a></div>
           <div class="promotion__topic">Тематика: строительство</div>
-          <div class="promotion__title">продвижениЕ сайта <br>veloxstroyconsulting.ru</div>
+          <h1 class="promotion__title">продвижениЕ сайта <br>veloxstroyconsulting.ru</h1>
           <!--begin project-->
           <div class="promotion__project project">
-            <div class="project__title">задачи проекта</div>
+            <h2 class="project__title">задачи проекта</h2>
             <!--begin list-->
             <ul class="project__list list list_mark">
               <li class="list__item">Увеличить целевую посещаемость сайта минимум в 2 раза</li>
@@ -93,12 +95,12 @@
       <!--begin solution-->
       <div class="solution container section">
         <div class="solution__col">
-          <div class="solution__title">проблемы</div>
+          <h2 class="solution__title">проблемы</h2>
           <p class="solution__text">С точки зрения SEO сайт на старте был вообще не подготовлен: неуникальный контент, пустые страницы, одинаковые title по всему сайту, отсутствие заголовков H1. Кроме того, сайту было всего 2 (!) месяца, и в Яндексе он даже не был толком проиндексирован.
             В общем работы было очень много.</p>
         </div>
         <div class="solution__col">
-          <div class="solution__title">решение</div>
+          <h2 class="solution__title">решение</h2>
           <p class="solution__text">Это оказался очень правильный клиент: понимая, что у сайта много проблем, а для их решения у нас мало времени, маркетолог ООО “ВСК” всегда старалась быть на связи. Быстро утверждались тексты. оперативно вносились изменения на сайт, исправно
             оплачивались счета. После напряжённой работы с проектом так приятно наблюдать, как клиент растёт и развивается!</p>
         </div>
@@ -127,9 +129,9 @@
             </div>
           </div>
           <div class="process__item">
-            <div style="background-image: url(img/content/process-1.jpg)" class="process__img"></div>
+            <div style="background-image: url(img/content/about-2.jpg)" class="process__img"></div>
             <div class="process__container container section">
-              <div class="process__title title title_h2">процесс</div>
+              <div class="process__title title title_h2">аудитория</div>
               <div class="process__row">
                 <div class="process__col">
                   <p class="process__text">Наша команда работает в digital и непосредственно в SEO с 2009 года. Мы специализируемся на 1ой поисковой системе России – Яндекс. Почему? Ответ прост - большая аудитория пользователей Яндекса по сравнению с другими поисковыми системами,
@@ -148,9 +150,9 @@
             </div>
           </div>
           <div class="process__item">
-            <div style="background-image: url(img/content/process-1.jpg)" class="process__img"></div>
+            <div style="background-image: url(img/content/land-3.jpg)" class="process__img"></div>
             <div class="process__container container section">
-              <div class="process__title title title_h2">процесс</div>
+              <div class="process__title title title_h2">специалисты</div>
               <div class="process__row">
                 <div class="process__col">
                   <p class="process__text">Наша команда работает в digital и непосредственно в SEO с 2009 года. Мы специализируемся на 1ой поисковой системе России – Яндекс. Почему? Ответ прост - большая аудитория пользователей Яндекса по сравнению с другими поисковыми системами,
@@ -167,9 +169,9 @@
             </div>
           </div>
           <div class="process__item">
-            <div style="background-image: url(img/content/process-1.jpg)" class="process__img"></div>
+            <div style="background-image: url(img/content/land-6.jpg)" class="process__img"></div>
             <div class="process__container container section">
-              <div class="process__title title title_h2">процесс</div>
+              <div class="process__title title title_h2">комплекс выполняемых работ</div>
               <div class="process__row">
                 <div class="process__col">
                   <p class="process__text">Наша команда работает в digital и непосредственно в SEO с 2009 года. Мы специализируемся на 1ой поисковой системе России – Яндекс. Почему? Ответ прост - большая аудитория пользователей Яндекса по сравнению с другими поисковыми системами,
@@ -201,7 +203,7 @@
             <div class="results__text">На момент составления кейса (ноябрь 2015г.) в ТОП-1 ПС Яндекс сайт находится по следующим запросам: дома из velox, дома велокс, дома из велокса, велокс цена дома, велокс цена, технология велокс цена, дома велокс отзывы, технология velox отзывы,
               технология велокс отзывы, проект дома по технологии velox, велокс проекты домов, проекты домов из велокса, velox проекты домов, несъемная опалубка velox цена, опалубка велокс купить, velox опалубка цена, несъемная опалубка velox купить,
               несъемная опалубка velox, несъемная опалубка velox велокс, несъемная опалубка велокс цена.</div>
-            <div class="results__subtitle">Рост трафика на&nbsp;<span class="results__subtitle-orange">400 %</span></div>
+            <h3 class="results__subtitle">Рост трафика на&nbsp;<span class="results__subtitle-orange">400 %</span></h3>
             <div class="results__image"><img src="img/content/graph-1.png" alt="image" class="results__graph"></div>
           </div>
           <div class="results__col">
@@ -218,7 +220,9 @@
         <div class="review__slider js-review">
           <div class="review__row">
             <div class="container">
-              <div class="review__col"><img src="img/content/review-1.jpg" alt="image" class="review__cert"></div>
+              <div class="review__col">
+                <a href="img/content/review-1.jpg" title="Отзыв" class="review__doc js-img-popup"><img src="img/content/review-1.jpg" alt="image" class="review__cert"></a>
+              </div>
               <div class="review__col">
                 <div class="review__user">
                   <div class="review__avatar"><img src="img/content/avatar.jpg" alt="image" class="review__img"></div>
@@ -234,7 +238,9 @@
           </div>
           <div class="review__row">
             <div class="container">
-              <div class="review__col"><img src="img/content/review-1.jpg" alt="image" class="review__cert"></div>
+              <div class="review__col">
+                <a href="img/content/review-2.jpg" title="Отзыв" class="review__doc js-img-popup"><img src="img/content/review-2.jpg" alt="image" class="review__cert"></a>
+              </div>
               <div class="review__col">
                 <div class="review__user">
                   <div class="review__avatar"><img src="img/content/avatar.jpg" alt="image" class="review__img"></div>
@@ -250,7 +256,9 @@
           </div>
           <div class="review__row">
             <div class="container">
-              <div class="review__col"><img src="img/content/review-1.jpg" alt="image" class="review__cert"></div>
+              <div class="review__col">
+                <a href="img/content/review-2.jpg" title="Отзыв" class="review__doc js-img-popup"><img src="img/content/review-2.jpg" alt="image" class="review__cert"></a>
+              </div>
               <div class="review__col">
                 <div class="review__user">
                   <div class="review__avatar"><img src="img/content/avatar.jpg" alt="image" class="review__img"></div>
@@ -266,7 +274,9 @@
           </div>
           <div class="review__row">
             <div class="container">
-              <div class="review__col"><img src="img/content/review-1.jpg" alt="image" class="review__cert"></div>
+              <div class="review__col">
+                <a href="img/content/review-1.jpg" title="Отзыв" class="review__doc js-img-popup"><img src="img/content/review-1.jpg" alt="image" class="review__cert"></a>
+              </div>
               <div class="review__col">
                 <div class="review__user">
                   <div class="review__avatar"><img src="img/content/avatar.jpg" alt="image" class="review__img"></div>
@@ -337,16 +347,19 @@
       </div>
       <!--end inform-->
     </main>
-  </div>
-  <footer class="footer js-footer">
-    <div class="footer__container container"><span class="footer__copy">&copy; 2016, MadMonks</span>
-      <nav class="footer-nav"><a href="#" class="footer-nav__link"><svg class="icon icon-vk-original"><use xlink:href="img/sprite.svg#icon-vk-original"></use></svg></a><a href="#" class="footer-nav__link"><svg class="icon icon-tw-original"><use xlink:href="img/sprite.svg#icon-tw-original"></use></svg></a>
-        <a
-          href="#" class="footer-nav__link"><svg class="icon icon-fb-original"><use xlink:href="img/sprite.svg#icon-fb-original"></use></svg></a>
-      </nav>
     </div>
-  </footer>
-  <script src="js/app.js"></script>
+    <footer class="footer js-footer">
+      <div class="footer__container container"><span class="footer__copy">&copy; 2016, MadMonks</span>
+        <nav class="footer-nav"><a href="#" class="footer-nav__link"><svg class="icon icon-vk-original"><use xlink:href="img/sprite.svg#icon-vk-original"></use></svg></a><a href="#" class="footer-nav__link"><svg class="icon icon-tw-original"><use xlink:href="img/sprite.svg#icon-tw-original"></use></svg></a>
+          <a
+            href="#" class="footer-nav__link"><svg class="icon icon-fb-original"><use xlink:href="img/sprite.svg#icon-fb-original"></use></svg></a>
+        </nav>
+      </div>
+    </footer>
+    <!--begin top-->
+    <div class="scrolling js-to-top"><svg class="icon icon-top-original"><use xlink:href="img/sprite.svg#icon-top-original"></use></svg></div>
+    <!--end top-->
+    <script src="js/app.js"></script>
 </body>
 
 </html>

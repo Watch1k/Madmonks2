@@ -3,16 +3,17 @@ block title
 	title Reviews
 block content
 	.container.section
-		.title.title_h2 клиенты и отзывы
+		h1.title.title_h2 клиенты и отзывы
 		//begin reviews
 		.reviews.js-reviews
 			.reviews__item
 				.reviews__col
 					.reviews__image(style='background-image: url(img/content/reviews-1.jpg)')
 					a.reviews__watch(href='#') смотреть проект
-					.reviews__scan скан отзыва
+					a.reviews__scan.js-img-popup(href='img/content/review-2.jpg' title='Отзыв') скан отзыва
+						img.reviews__scan-img(src='img/content/review-2.jpg' title='image')
 				.reviews__col
-					.reviews__title продвижениЕ сайта <br>sportbox.ru
+					h3.reviews__title продвижениЕ сайта <br>sportbox.ru
 					.reviews__text «Мы очень довольны работой менеджера – получаем подробные отчеты, консультации по всем возникающим вопросам, видим, как быстро выполняются поставленные задачи. Результат нас устраивает. В ТОПе почти 80% целевых запросов, во много раз с момента старта продвижения увеличился трафик из поисковых систем, сайт приносит доход! Все просто супер, рекомендуем!»
 					.reviews__info
 						.reviews__column
@@ -25,7 +26,7 @@ block content
 							img.reviews__logo(src='img/content/reviews-logo-1.png' alt='image')
 			.reviews__item
 				.reviews__col
-					.reviews__title продвижениЕ сайта <br>cian.ru
+					h3.reviews__title продвижениЕ сайта <br>cian.ru
 					.reviews__text «Действительно классный проект и кейс, которым хочется похвастаться! Работы выполнялись в срок, закрытые задачи тут же отражались на росте трафика. Клиент быстро реагировал на наши запросы по утверждению нового контента, работать было легко и приятно»
 					.reviews__info
 						.reviews__column
@@ -39,14 +40,16 @@ block content
 				.reviews__col
 					.reviews__image(style='background-image: url(img/content/reviews-2.jpg)')
 					a.reviews__watch(href='#') смотреть проект
-					.reviews__scan скан отзыва
+					a.reviews__scan.js-img-popup(href='img/content/review-1.jpg' title='Отзыв') скан отзыва
+						img.reviews__scan-img(src='img/content/review-1.jpg' title='image')
 			.reviews__item
 				.reviews__col
 					.reviews__image(style='background-image: url(img/content/reviews-3.jpg)')
 					a.reviews__watch(href='#') смотреть проект
-					.reviews__scan скан отзыва
+					a.reviews__scan.js-img-popup(href='img/content/review-2.jpg' title='Скан отзыва') скан отзыва
+						img.reviews__scan-img(src='img/content/review-2.jpg' title='image')
 				.reviews__col
-					.reviews__title продвижениЕ сайта <br>adidas.ru
+					h3.reviews__title продвижениЕ сайта <br>adidas.ru
 					.reviews__text «Мы очень довольны работой менеджера – получаем подробные отчеты, консультации по всем возникающим вопросам, видим, как быстро выполняются поставленные задачи. Результат нас устраивает. В ТОПе почти 80% целевых запросов, во много раз с момента старта продвижения увеличился трафик из поисковых систем, сайт приносит доход! Все просто супер, рекомендуем!»
 					.reviews__info
 						.reviews__column
@@ -59,7 +62,7 @@ block content
 							img.reviews__logo(src='img/content/reviews-logo-3.png' alt='image')
 			.reviews__item
 				.reviews__col
-					.reviews__title продвижениЕ сайта <br>sotovikam.ru
+					h3.reviews__title продвижениЕ сайта <br>sotovikam.ru
 					.reviews__text «Действительно классный проект и кейс, которым хочется похвастаться! Работы выполнялись в срок, закрытые задачи тут же отражались на росте трафика. Клиент быстро реагировал на наши запросы по утверждению нового контента, работать было легко и приятно»
 					.reviews__info
 						.reviews__column
@@ -73,7 +76,8 @@ block content
 				.reviews__col
 					.reviews__image(style='background-image: url(img/content/reviews-4.jpg)')
 					a.reviews__watch(href='#') смотреть проект
-					.reviews__scan скан отзыва
+					a.reviews__scan.js-img-popup(href='img/content/review-1.jpg' title='Отзыв') скан отзыва
+						img.reviews__scan-img(src='img/content/review-1.jpg' title='image')
 		//end reviews
 		.navigations.js-navigations
 			.navigations__info.js-navigations-info

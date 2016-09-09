@@ -8,7 +8,7 @@ block content
 			video.screen__video.js-video(autoplay muted loop poster="img/video/land.jpg")
 				source(src="img/video/land.mp4" type="video/mp4")
 		.screen__content.container
-			.screen__title.title.title_h2.title_white Отраслевые решения
+			h1.screen__title.title.title_h2.title_white Отраслевые решения
 	//end screen
 
 	//begin presentation
@@ -27,14 +27,14 @@ block content
 			.seo__text Поисковая оптимизация возникла одновременно с появлением поисковиков в начале 1990-х годов. Тогда поисковые машины ориентировались в основном на контент размещенный на страницах веб-ресурсов, ключевые слова в мета-тегах, и еще некоторые внутренние факторы. Это привело к тому, что владельцы сайтов легко могли изменять свой сайт под поисковики так, что он занимал первые места в рейтинге. Таким образом, на первых местах начали появляться сайты недостойные внимания, и большинство поисковых систем пришли в упадок.
 			.seo__row
 				.seo__col
-					.seo__col-title Основные задачи:
+					h2.seo__col-title Основные задачи:
 					ul.seo__list.list.list_mark
 						li.list__item Поиск и охват потенциальной аудитории
 						li.list__item Улучшение видимости сайта в поисковых системах
 						li.list__item Увеличение притока посетителей на сайт
 						li.list__item Улучшение сайта, как для пользователей, так и для поисковых систем
 				.seo__col
-					.seo__col-title Косвенные задачи:
+					h2.seo__col-title Косвенные задачи:
 					ul.seo__list.list.list_mark
 						li.list__item Рост обращений от покупателей
 						li.list__item Продвижение бренда в сети Интернет
@@ -103,7 +103,7 @@ block content
 							a.for__btn(href='#') Подробнее
 				li.for__item
 					.for__img
-						+i('for-5')
+						+i('for-5-original')
 					.for__text
 						.for__title Продвижение юридических компаний
 						.for__hidden.js-for-hidden
@@ -151,7 +151,7 @@ block content
 							a.for__btn(href='#') Подробнее
 				li.for__item
 					.for__img
-						+i('for-11')
+						+i('for-11-original')
 					.for__text
 						.for__title Продвижение сайтов такси
 						.for__hidden.js-for-hidden
@@ -169,7 +169,8 @@ block content
 			.review__row
 				.container
 					.review__col
-						img.review__cert(src='img/content/review-1.jpg' alt='image')
+						a.review__doc.js-img-popup(href='img/content/review-1.jpg' title='Отзыв')
+							img.review__cert(src='img/content/review-1.jpg' alt='image')
 					.review__col
 						.review__user
 							.review__avatar
@@ -183,7 +184,8 @@ block content
 			.review__row
 				.container
 					.review__col
-						img.review__cert(src='img/content/review-1.jpg' alt='image')
+						a.review__doc.js-img-popup(href='img/content/review-2.jpg' title='Отзыв')
+							img.review__cert(src='img/content/review-2.jpg' alt='image')
 					.review__col
 						.review__user
 							.review__avatar
@@ -197,7 +199,8 @@ block content
 			.review__row
 				.container
 					.review__col
-						img.review__cert(src='img/content/review-1.jpg' alt='image')
+						a.review__doc.js-img-popup(href='img/content/review-2.jpg' title='Отзыв')
+							img.review__cert(src='img/content/review-2.jpg' alt='image')
 					.review__col
 						.review__user
 							.review__avatar
@@ -211,7 +214,8 @@ block content
 			.review__row
 				.container
 					.review__col
-						img.review__cert(src='img/content/review-1.jpg' alt='image')
+						a.review__doc.js-img-popup(href='img/content/review-1.jpg' title='Отзыв')
+							img.review__cert(src='img/content/review-1.jpg' alt='image')
 					.review__col
 						.review__user
 							.review__avatar
@@ -236,37 +240,37 @@ block content
 						img.pf__img(src='img/content/pf-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Недвижимость
-							.pf__title продвижениЕ сайта <br>cian.ru
+							h3.pf__title продвижениЕ сайта <br>cian.ru
 				.pf__item
 					a.pf__el(href='#')
 						img.pf__img(src='img/content/inform-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Спорт
-							.pf__title продвижениЕ сайта <br>spotbox.ru
+							h3.pf__title продвижениЕ сайта <br>spotbox.ru
 				.pf__item
 					a.pf__el(href='#')
 						img.pf__img(src='img/content/inform-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Недвижимость
-							.pf__title продвижениЕ сайта <br>cian.ru
+							h3.pf__title продвижениЕ сайта <br>cian.ru
 				.pf__item
 					a.pf__el(href='#')
 						img.pf__img(src='img/content/inform-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Спорт
-							.pf__title продвижениЕ сайта <br>spotbox.ru
+							h3.pf__title продвижениЕ сайта <br>spotbox.ru
 				.pf__item
 					a.pf__el(href='#')
 						img.pf__img(src='img/content/inform-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Недвижимость
-							.pf__title продвижениЕ сайта <br>cian.ru
+							h3.pf__title продвижениЕ сайта <br>cian.ru
 				.pf__item
 					a.pf__el(href='#')
 						img.pf__img(src='img/content/inform-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Спорт
-							.pf__title продвижениЕ сайта <br>spotbox.ru
+							h3.pf__title продвижениЕ сайта <br>spotbox.ru
 			.pf__navigations.navigations.js-navigations
 				.navigations__info.js-navigations-info
 	//end pf

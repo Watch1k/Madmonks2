@@ -1,6 +1,10 @@
 /* Common JS */
 $(document).ready(function () {
 
+	$(window).load(function () {
+		$('.loader').fadeOut('slow');
+	});
+
 	//for IE9
 	svg4everybody();
 
@@ -12,6 +16,10 @@ $(document).ready(function () {
 
 		$('.tooltip').jBox('Tooltip', options);
 	})();
+
+	$.validate({
+		scrollToTopOnError: true
+	});
 
 	// Clear placeholder
 	(function () {
@@ -324,8 +332,9 @@ $(document).ready(function () {
 				$('.js-for-hidden').hide();
 			});
 
-			$('.js-bg-list li').on('tap', function (event) {
-				event.preventDefault();
+			$('.js-bg-list li').on('touchstart', function (event) {
+				$('.js-bg-list li').unbind('mouseenter');
+				$('.js-bg-list li').unbind('mouseleave');
 				$('.js-bg-list li').removeClass('is-active').css('z-index', '1');
 				$('.js-for-hidden').hide();
 				if (!$(this).hasClass('is-active')) {
@@ -432,19 +441,18 @@ $(document).ready(function () {
 	})();
 
 	(function () {
-		var allButtons = $('.js-accordion-title'),
+		var title = $('.js-accordion-title'),
 			allPanels = $('.js-accordion-inner');
 
-		allButtons.click(function () {
-			if (!$(this).parent().parent().hasClass('is-active')) {
-				allPanels.slideUp();
-				allButtons.parent().parent().removeClass('is-active');
-				$(this).parent().parent().addClass('is-active').children().last().slideDown();
+		title.parent().click(function () {
+			if (!$(this).parent().hasClass('is-active')) {
+				$(this).parent().addClass('is-active').children().last().slideDown();
 				return false;
 			} else {
-				$(this).parent().parent().removeClass('is-active').children().last().slideUp();
+				$(this).parent().removeClass('is-active').children().last().slideUp();
 			}
 		});
+
 	})();
 
 

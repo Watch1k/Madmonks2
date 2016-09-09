@@ -7,9 +7,9 @@ block content
 		.screen__cover(style='background-image: url(img/video/land.jpg)')
 		.screen__block
 			.screen__block-title быстрее пули в топ.
-			.screnn__block-subtitle Кто лучше нас сделаю работу? да никто! Мы лучшие в своем деле. <br>Мы сеошники!
+			.screen__block-subtitle Кто лучше нас сделаю работу? да никто! Мы лучшие в своем деле. <br>Мы сеошники!
 		.screen__content.container
-			.screen__title.title.title_h2.title_white продвижение сайтов
+			h1.screen__title.title.title_h2.title_white продвижение сайтов
 	//end screen
 
 	//begin presentation
@@ -28,14 +28,14 @@ block content
 			.seo__text Поисковая оптимизация возникла одновременно с появлением поисковиков в начале 1990-х годов. Тогда поисковые машины ориентировались в основном на контент размещенный на страницах веб-ресурсов, ключевые слова в мета-тегах, и еще некоторые внутренние факторы. Это привело к тому, что владельцы сайтов легко могли изменять свой сайт под поисковики так, что он занимал первые места в рейтинге. Таким образом, на первых местах начали появляться сайты недостойные внимания, и большинство поисковых систем пришли в упадок.
 			.seo__row
 				.seo__col
-					.seo__col-title Основные задачи:
+					h2.seo__col-title Основные задачи:
 					ul.seo__list.list.list_mark
 						li.list__item Поиск и охват потенциальной аудитории
 						li.list__item Улучшение видимости сайта в поисковых системах
 						li.list__item Увеличение притока посетителей на сайт
 						li.list__item Улучшение сайта, как для пользователей, так и для поисковых систем
 				.seo__col
-					.seo__col-title Косвенные задачи:
+					h2.seo__col-title Косвенные задачи:
 					ul.seo__list.list.list_mark
 						li.list__item Рост обращений от покупателей
 						li.list__item Продвижение бренда в сети Интернет
@@ -77,7 +77,7 @@ block content
 						.for__title Продвижение по позициям
 						.for__hidden.js-for-hidden
 							.for__desc Самый устоявшийся и "устаревший" показатель оценки результатов. НО, как бы это смешно не звучало, позиции, являются основным и самым популярным KPI. Что бы не происходило в работе Поисковых Систем, позиции никуда не денутся.
-							//a.for__btn(href='#') Подробнее
+							a.for__btn(href='land_3.html') Подробнее
 				li.for__item
 					.for__img
 						+i('service-2')
@@ -85,7 +85,7 @@ block content
 						.for__title Продвижение по трафику
 						.for__hidden.js-for-hidden
 							.for__desc Одна из основных целей продвижения - увеличение посещаемости сайта. Всё логично - чем больше оптимизировано страниц на сайте, тем больше посещаемость.
-							//a.for__btn(href='#') Подробнее
+							a.for__btn(href='land_5.html') Подробнее
 				li.for__item
 					.for__img
 						+i('service-3')
@@ -93,7 +93,7 @@ block content
 						.for__title Оплата целевых действий
 						.for__hidden.js-for-hidden
 							.for__desc Мы определяемся с совершенными целями, действиями пользователей (заявки/лиды, просмотры определенных страниц, телефонным звонками и т.д.) на сайте и берем за это деньги. Или отнимаем.
-							//a.for__btn(href='#') Подробнее
+							a.for__btn(href='land_1.html') Подробнее
 				li.for__item
 					.for__img
 						+i('service-4')
@@ -101,7 +101,7 @@ block content
 						.for__title Продвижение новых сайтов
 						.for__hidden.js-for-hidden
 							.for__desc Работы предстоит много. Вложений в развитие сайта много. Порой долго. Но, нужно же когда-нибудь начинать?
-							//a.for__btn(href='#') Подробнее
+							a.for__btn(href='land_2.html') Подробнее
 				li.for__item
 					.for__img
 						+i('service-5')
@@ -109,7 +109,7 @@ block content
 						.for__title Продвижение региональных сайтов
 						.for__hidden.js-for-hidden
 							.for__desc Москва и другие города – разные планеты. С радостью захватим ТОП в вашем регионе
-							//a.for__btn(href='#') Подробнее
+							a.for__btn(href='land_4.html') Подробнее
 				li.for__item
 					.for__img
 						+i('service-6')
@@ -117,7 +117,7 @@ block content
 						.for__title Белое SEO (White Hat Seo)
 						.for__hidden.js-for-hidden
 							.for__desc Что за хрень, спросите вы? До этого было черное SEO?  - Нет. Главное отличие - продвижение без единой покупки обратных ссылок. Но удовольствие дорогое.
-							//a.for__btn(href='#') Подробнее
+							a.for__btn(href='land_6.html') Подробнее
 			.whom__navigations.navigations.navigations_white.js-navigations
 				.navigations__info.js-navigations-info
 	//end whom
@@ -142,7 +142,8 @@ block content
 			.review__row
 				.container
 					.review__col
-						img.review__cert(src='img/content/review-1.jpg' alt='image')
+						a.review__doc.js-img-popup(href='img/content/review-1.jpg' title='Отзыв')
+							img.review__cert(src='img/content/review-1.jpg' alt='image')
 					.review__col
 						.review__user
 							.review__avatar
@@ -156,7 +157,8 @@ block content
 			.review__row
 				.container
 					.review__col
-						img.review__cert(src='img/content/review-1.jpg' alt='image')
+						a.review__doc.js-img-popup(href='img/content/review-2.jpg' title='Отзыв')
+							img.review__cert(src='img/content/review-2.jpg' alt='image')
 					.review__col
 						.review__user
 							.review__avatar
@@ -170,7 +172,8 @@ block content
 			.review__row
 				.container
 					.review__col
-						img.review__cert(src='img/content/review-1.jpg' alt='image')
+						a.review__doc.js-img-popup(href='img/content/review-2.jpg' title='Отзыв')
+							img.review__cert(src='img/content/review-2.jpg' alt='image')
 					.review__col
 						.review__user
 							.review__avatar
@@ -184,7 +187,8 @@ block content
 			.review__row
 				.container
 					.review__col
-						img.review__cert(src='img/content/review-1.jpg' alt='image')
+						a.review__doc.js-img-popup(href='img/content/review-2.jpg' title='Отзыв')
+							img.review__cert(src='img/content/review-2.jpg' alt='image')
 					.review__col
 						.review__user
 							.review__avatar
@@ -209,37 +213,37 @@ block content
 						img.pf__img(src='img/content/pf-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Недвижимость
-							.pf__title продвижениЕ сайта <br>cian.ru
+							h3.pf__title продвижениЕ сайта <br>cian.ru
 				.pf__item
 					a.pf__el(href='#')
 						img.pf__img(src='img/content/inform-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Спорт
-							.pf__title продвижениЕ сайта <br>spotbox.ru
+							h3.pf__title продвижениЕ сайта <br>spotbox.ru
 				.pf__item
 					a.pf__el(href='#')
 						img.pf__img(src='img/content/inform-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Недвижимость
-							.pf__title продвижениЕ сайта <br>cian.ru
+							h3.pf__title продвижениЕ сайта <br>cian.ru
 				.pf__item
 					a.pf__el(href='#')
 						img.pf__img(src='img/content/inform-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Спорт
-							.pf__title продвижениЕ сайта <br>spotbox.ru
+							h3.pf__title продвижениЕ сайта <br>spotbox.ru
 				.pf__item
 					a.pf__el(href='#')
 						img.pf__img(src='img/content/inform-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Недвижимость
-							.pf__title продвижениЕ сайта <br>cian.ru
+							h3.pf__title продвижениЕ сайта <br>cian.ru
 				.pf__item
 					a.pf__el(href='#')
 						img.pf__img(src='img/content/inform-1.jpg' alt='image')
 						.pf__text
 							.pf__topic Спорт
-							.pf__title продвижениЕ сайта <br>spotbox.ru
+							h3.pf__title продвижениЕ сайта <br>spotbox.ru
 			.pf__navigations.navigations.js-navigations
 				.navigations__info.js-navigations-info
 	//end pf

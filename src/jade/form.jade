@@ -5,29 +5,36 @@ block content
 	//begin feedback
 	.feedback
 		.container.section
-			.feedback__title мы поможем вам с продвижением вашего товара или услуги
-			.feedback__subtitle Заполните форму ниже и мы свяжемся с вами
+			h1.feedback__title мы поможем вам с продвижением вашего товара или услуги
+			h2.feedback__subtitle Заполните форму ниже и мы свяжемся с вами
 			//begin form
 			form.feedback__form.form(action='#')
 				.form__field
 					.form__desc Ссылка на ваш сайт
-					input.form__input(type='text' placeholder='')
+						span.form__desc-red *
+					input.form__input(type='text' placeholder='' data-validation="url" data-validation-error-msg='некорректный url')
 				.form__field
 					.form__desc Имя
-					input.form__input(type='text' placeholder='')
+						span.form__desc-red *
+					input.form__input(type='text' placeholder='' data-validation="length" data-validation-length="min2" data-validation-error-msg='обязательное поле')
 				.form__field
 					.form__desc Название компании
-					input.form__input(type='text' placeholder='')
+						span.form__desc-red *
+					input.form__input(type='text' placeholder='' data-validation="length" data-validation-length="min2" data-validation-error-msg='обязательное поле')
 				.form__field
 					.form__desc Эл. адрес
-					input.form__input(type='text' placeholder='')
+						span.form__desc-red *
+					input.form__input(type='email' placeholder='' data-validation="email" data-validation-error-msg='введите почту')
 				.form__field
 					.form__desc Телефон
-					input.form__input(type='text' placeholder='')
+						span.form__desc-red *
+					input.form__input(type='text' placeholder='' data-validation="required" data-validation-error-msg='обязательное поле')
 				.form__field
 					.form__desc.form__desc_lg Каков ваш прогнозируемый бюджет для этого проекта
+						span.form__desc-red *
 					.form__select-style
-						select.form__select
+						select.form__select(data-validation="required" data-validation-error-msg='выберите один из вариантов')
+							option(disabled value='' selected) Бюджет
 							option(value='15000 - 25000 руб. / мес.') 15000 - 25000 руб. / мес.
 							option(value='15000 - 25000 руб. / мес.') 25000 - 35000 руб. / мес.
 							option(value='15000 - 25000 руб. / мес.') 35000 - 45000 руб. / мес.

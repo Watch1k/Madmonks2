@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     postcss = require('gulp-postcss'),
     concat = require('gulp-concat'),
@@ -67,7 +67,6 @@ gulp.task('jade', function() {
         .pipe(gulp.dest('build/'));
 });
 
-
 // sass
 gulp.task('sass', function() {
     var processors = [
@@ -79,22 +78,17 @@ gulp.task('sass', function() {
     ];
 
     return streamqueue({ objectMode: true },
-        sass('src/sass/*.sass', {
-            sourcemap: true,
-            style: 'nested'
-        })
-            .on('error', function(err) {
-                console.error('Error', err.message);
-            })
-            .pipe(postcss(processors))
-            .pipe(rigger())
-            .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest('build/css/')),
-        gulp.src(src.root + '/css/*.css')
+      gulp.src('src/sass/*.sass')
+        .pipe(sass({sourcemap: true}).on('error', sass.logError))
+        .pipe(postcss(processors))
+        .pipe(rigger())
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('build/css/')),
+      gulp.src(src.root + '/css/*.css')
     )
-        .pipe(concat('screen.css'))
-        // .pipe(cssmin())
-        .pipe(gulp.dest('build/css'))
+      .pipe(concat('screen.css'))
+      // .pipe(cssmin())
+      .pipe(gulp.dest('build/css'));
 });
 
 // sprite
@@ -204,7 +198,7 @@ gulp.task('html', function() {
 gulp.task('js', function() {
     gulp.src('src/js/**/*.js')
         .pipe(include())
-        .pipe(rigger())
+        // .pipe(rigger())
         .pipe(gulp.dest('build/js/'))
         .pipe(reload({
             stream: true
@@ -257,9 +251,11 @@ gulp.task('browser-sync', function() {
     });
 });
 
+// jade watch
+gulp.task('jade-watch', ['jade'], reload);
+
 // watch
 gulp.task('watch', function() {
-    gulp.watch('src/jade/**/*.jade', ['jade']);
     gulp.watch(src.sass + '/**/*', ['sass']);
     gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch('src/img/**/*', ['sprite', 'copy']);
@@ -271,6 +267,7 @@ gulp.task('watch', function() {
 
 // 'gulp' task
 gulp.task('default', ['watch' , 'browser-sync'], function() {
+    gulp.watch('src/jade/**/*.jade', ['jade-watch']);
     gulp.src(dest.root).pipe(notify("Sync"));
 });
 

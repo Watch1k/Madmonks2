@@ -71,23 +71,23 @@
       <!--begin feedback-->
       <div class="feedback">
         <div class="container section">
-          <div class="feedback__title">мы поможем вам с продвижением вашего товара или услуги</div>
-          <div class="feedback__subtitle">Заполните форму ниже и мы свяжемся с вами</div>
+          <h1 class="feedback__title">мы поможем вам с продвижением вашего товара или услуги</h1>
+          <h2 class="feedback__subtitle">Заполните форму ниже и мы свяжемся с вами</h2>
           <!--begin form-->
           <form action="#" class="feedback__form form">
             <div class="form__field">
-              <div class="form__desc">Ссылка на ваш сайт</div><input type="text" placeholder="" class="form__input"></div>
+              <div class="form__desc">Ссылка на ваш сайт<span class="form__desc-red">*</span></div><input type="text" placeholder="" data-validation="url" data-validation-error-msg="некорректный url" class="form__input"></div>
             <div class="form__field">
-              <div class="form__desc">Имя</div><input type="text" placeholder="" class="form__input"></div>
+              <div class="form__desc">Имя<span class="form__desc-red">*</span></div><input type="text" placeholder="" data-validation="length" data-validation-length="min2" data-validation-error-msg="обязательное поле" class="form__input"></div>
             <div class="form__field">
-              <div class="form__desc">Название компании</div><input type="text" placeholder="" class="form__input"></div>
+              <div class="form__desc">Название компании<span class="form__desc-red">*</span></div><input type="text" placeholder="" data-validation="length" data-validation-length="min2" data-validation-error-msg="обязательное поле" class="form__input"></div>
             <div class="form__field">
-              <div class="form__desc">Эл. адрес</div><input type="text" placeholder="" class="form__input"></div>
+              <div class="form__desc">Эл. адрес<span class="form__desc-red">*</span></div><input type="email" placeholder="" data-validation="email" data-validation-error-msg="введите почту" class="form__input"></div>
             <div class="form__field">
-              <div class="form__desc">Телефон</div><input type="text" placeholder="" class="form__input"></div>
+              <div class="form__desc">Телефон<span class="form__desc-red">*</span></div><input type="text" placeholder="" data-validation="required" data-validation-error-msg="обязательное поле" class="form__input"></div>
             <div class="form__field">
-              <div class="form__desc form__desc_lg">Каков ваш прогнозируемый бюджет для этого проекта</div>
-              <div class="form__select-style"><select class="form__select"><option value="15000 - 25000 руб. / мес.">15000 - 25000 руб. / мес.</option><option value="15000 - 25000 руб. / мес.">25000 - 35000 руб. / мес.</option><option value="15000 - 25000 руб. / мес.">35000 - 45000 руб. / мес.</option></select></div>
+              <div class="form__desc form__desc_lg">Каков ваш прогнозируемый бюджет для этого проекта<span class="form__desc-red">*</span></div>
+              <div class="form__select-style"><select data-validation="required" data-validation-error-msg="выберите один из вариантов" class="form__select"><option disabled value="" selected>Бюджет</option><option value="15000 - 25000 руб. / мес.">15000 - 25000 руб. / мес.</option><option value="15000 - 25000 руб. / мес.">25000 - 35000 руб. / мес.</option><option value="15000 - 25000 руб. / мес.">35000 - 45000 руб. / мес.</option></select></div>
             </div>
             <div class="form__field">
               <div class="form__desc form__desc_lg">Работали ли вы с агентствами/фрилансерами ранее?</div>
