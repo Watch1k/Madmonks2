@@ -3456,9 +3456,26 @@ img {
     line-height: 35px; }
     .results__subtitle-orange {
       color: #ff7b38; }
-  @media only screen and (max-width: 767px) {
-    .results__image {
-      overflow-y: auto; } }
+  .results__image {
+    position: relative; }
+    @media only screen and (max-width: 767px) {
+      .results__image {
+        overflow-y: auto; } }
+  .results__label {
+    font-size: 14px;
+    color: #343434;
+    line-height: 1;
+    position: absolute;
+    left: -60px;
+    top: 40%;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    font-weight: normal;
+    z-index: 1;
+    pointer-events: none; }
   .results__graph {
     margin-left: -35px;
     max-width: 100%;

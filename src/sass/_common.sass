@@ -2295,8 +2295,20 @@ video
 		&-orange
 			color: #ff7b38
 	&__image
+		position: relative
 		+r(767)
 			overflow-y: auto
+	&__label
+		font-size: 14px
+		color: #343434
+		line-height: 1
+		position: absolute
+		left: -60px
+		top: 40%
+		transform: rotate(-90deg)
+		font-weight: normal
+		z-index: 1
+		pointer-events: none
 	&__graph
 		margin-left: -35px
 		max-width: 100%
