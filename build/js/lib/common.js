@@ -35,8 +35,8 @@ $(document).ready(function () {
 
 	(function () {
 		var scrollBtn = $('.js-to-top');
-		if (scrollBtn.length) {
-			if (scrollBtn.is(':visible')) {
+		if ($(window).width() >= 1440) {
+			if (scrollBtn.length) {
 				$(window).scroll(function () {
 					if ($(this).scrollTop() > 300) {
 						scrollBtn.fadeIn();
@@ -44,12 +44,12 @@ $(document).ready(function () {
 						scrollBtn.fadeOut();
 					}
 				});
-			}
 
-			scrollBtn.on('click', function () {
-				$('html, body').animate({scrollTop: 0}, 800);
-				return false;
-			})
+				scrollBtn.on('click', function () {
+					$('html, body').animate({scrollTop: 0}, 800);
+					return false;
+				})
+			}
 		}
 	})();
 
@@ -225,6 +225,7 @@ $(document).ready(function () {
 		}
 
 		if ($(window).width() < 1023) {
+			menu.children().filter(sideParentBtn).removeClass('is-active');
 			hamburger.on('click', function () {
 
 				$(this).toggleClass('is-active');
@@ -454,6 +455,78 @@ $(document).ready(function () {
 		});
 
 	})();
+
+	var graph = $('.js-graph');
+
+	if (graph.length) {
+		var ctx= $('.js-graph');
+		Chart.defaults.global.legend.display = false;
+		Chart.defaults.global.responsive             = true;
+		Chart.defaults.global.title.display = true;
+		Chart.defaults.global.title.position = 'bottom';
+		Chart.defaults.global.title.text = 'Месяц продвижения';
+		var data = {
+			labels: ["1", "2", "3", "4", "5", "6", "7"],
+			datasets: [
+				{
+					fill: false,
+					lineTension: 0.1,
+					borderCapStyle: 'butt',
+					borderDash: [],
+					borderWidth: 2,
+					borderColor: '#ff8400',
+					borderDashOffset: 0.0,
+					borderJoinStyle: 'miter',
+					pointBorderColor: "transparent",
+					pointBackgroundColor: "#ff8400",
+					pointBorderWidth: 1,
+					pointHoverRadius: 7,
+					pointHoverBackgroundColor: "#ff8400",
+					pointHoverBorderColor: "transparent",
+					pointHoverBorderWidth: 2,
+					pointRadius: 5,
+					pointHitRadius: 10,
+					data: [144, 244, 300, 424, 250, 513, 690],
+					spanGaps: false
+				}
+			]
+		};
+		var myLineChart = new Chart(ctx, {
+			type: 'line',
+			data: data,
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							min: 0,
+							max: 800,
+							stepSize: 200,
+							beginAtZero: false
+						}
+					}]
+				},
+				title: {
+					fontSize: 14,
+					color: '#343434',
+					fontStyle: 'normal'
+				},
+				tooltips: {
+					enabled: true,
+					caretSize: 0,
+					mode: 'single',
+					callbacks: {
+						title: function(tooltipItems, data) {
+							return false;
+						},
+						label: function(tooltipItems, data) {
+							return 'Количество визитов: ' + tooltipItems.yLabel;
+						}
+					},
+					bodyFontSize: 13
+				}
+			}
+		});
+	}
 
 
 	(function () {

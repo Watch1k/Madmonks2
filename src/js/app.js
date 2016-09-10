@@ -4,5 +4,6 @@
 //=include lib/jquery.magnific-popup.min.js
 //=include lib/slick.min.js
 //=include lib/jBox.min.js
+//=include lib/Chart.min.js
 //=include lib/jquery.form-validator.min.js
 //=include lib/common.js

@@ -11,7 +11,8 @@ header.header.header_form.js-head
 				.header__logo.logo
 					a.logo__link(href="index.html")
 						.logo__img
-							+i('logo')
+							+i('logo-original')
+							+i('logo-white-original')
 						.logo__text
 							+i('logo-text')
 				// end logo
@@ -37,7 +38,7 @@ header.header.header_form.js-head
 					a.menu__link(data-index='4' href='#') Другие услуги
 					a.menu__link(data-index='5' href='#') Портфолио
 					a.menu__link(data-index='7' href='#') Контакты
-					a.menu__link.is-active(data-index='8' href='#') Блог
+					a.menu__link(data-index='8' href='#') Блог
 				//end menu
 				//begin menus
 				.menus.js-menus(data-child='2')

@@ -2,13 +2,15 @@ extend includes/_layout
 block title
 	title 404
 block content
-	block mainw
+	block main
+		block loader
 		main.main.none.js-main
-			a.none__logo(href='#')
-				+i('logo')
+			a.none__logo(href='index.html')
+				+i('logo-original')
 			.none__404 404
 			.none__text К сожалению, запрашиваемой Вами страницы не существует на нашем сайте
 			.none__footer Если ты не видишь чего-то, то это не значит, что этого нет.
 block header
+block scroll
 block js
 block footer

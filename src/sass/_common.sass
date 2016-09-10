@@ -449,9 +449,9 @@ video
 			color: #3f2120
 		
 .menu
-	//display: flex
-	//flex-direction: row
-	//justify-content: space-around
+	display: flex
+	flex-direction: row
+	justify-content: space-around
 	padding-top: 20px
 	padding-bottom: 18px
 	font-size: 16px
@@ -462,7 +462,7 @@ video
 		text-align: left
 	&__link
 		position: relative
-		//flex: 1 1 auto
+		flex: 1 1 auto
 		margin-left: 38px
 		margin-right: 38px
 		+r(1199)
@@ -643,10 +643,10 @@ video
 		
 .side
 	+r(1023)
-		//display: flex
-		//flex-wrap: nowrap
-		//flex-direction: column
-		//align-items: flex-start
+		display: flex
+		flex-wrap: nowrap
+		flex-direction: column
+		align-items: flex-start
 		overflow-y: auto
 		position: fixed
 		z-index: 2
@@ -668,8 +668,8 @@ video
 		display: none
 		+r(1023)
 			display: block
-			//flex: auto 0 0
-			//align-self: stretch
+			flex: auto 0 0
+			align-self: stretch
 			margin: auto 36px 26px 26px
 			padding: 13px 0 10px
 			text-align: center
@@ -687,8 +687,8 @@ video
 				width: auto
 	&__cont
 		+r(1023)
-			//flex: auto 0 0
-			//align-self: stretch
+			flex: auto 0 0
+			align-self: stretch
 			margin-left: 26px
 	&__back
 		display: none
@@ -815,6 +815,7 @@ video
 	 Main
 	 =================================== */
 .scrolling
+	display: none
 	cursor: pointer
 	position: fixed
 	z-index: 10
@@ -2387,6 +2388,28 @@ video
 				padding-right: 20px
 	&_solution &__col
 		+pre(0)
+	&__doc
+		overflow: hidden
+		display: block
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			pointer-events: none
+			top: 0
+			right: 0
+			left: 0
+			bottom: 0
+			background-color: transparent
+			background-image: url('../img/png/add.png')
+			background-position: -32px 50%
+			background-repeat: no-repeat
+			background-size: 32px 32px
+			transition: all 0.2s
+		&:hover
+			&:before
+				background-color: rgba(0, 0, 0, .3)
+				background-position: center center
 	&__cert
 		width: 100%
 		height: auto
@@ -2557,6 +2580,27 @@ video
 		width: 580px
 		color: #ffffff
 		background-color: #f26924
+		&_white
+			color: #555555
+			background-color: #ffffff
+		&_green
+			background-color: #008000
+		&_violet
+			background-color: #ee82ee
+		&_br
+			bottom: 40px
+		&_tl
+			top: 40px
+			bottom: auto
+			margin-right: auto
+			margin-left: -590px
+		&_tr
+			top: 40px
+			bottom: auto
+		&_bl
+			margin-right: auto
+			bottom: 40px
+			margin-left: -590px
 		+r(1199)
 			right: 0
 			margin-right: 0
@@ -2565,6 +2609,29 @@ video
 			width: 100%
 		+r(639)
 			padding: 30px 10px
+		&_tl,
+		&_tr,
+		&_bl,
+		&_br
+			+r(1199)
+				width: auto
+				top: auto
+				left: 40px
+				right: 40px
+				bottom: 40px
+				margin-left: auto
+				margin-right: auto
+			+r(767)
+				left: 20px
+				right: 20px
+				bottom: 20px
+				padding-left: 20px
+				padding-right: 20px
+			+r(479)
+				left: 10px
+				right: 10px
+				bottom: 10px
+				padding: 15px 10px
 		&-title
 			+museo-b
 			font-size: 35px
@@ -2593,6 +2660,10 @@ video
 			+ratio-in
 			z-index: 2
 			background-color: rgba(85, 85, 85, .7)
+		&_clear
+			&:before
+				content: none
+				display: none
 	&__video
 		+ratio-in
 		z-index: 1
@@ -3604,7 +3675,7 @@ video
 	left: 0
 	right: 0
 	bottom: 0
-	background-color: $orange
+	background-color: #e36f34
 	+vertical
 	text-align: center
 	&__svg
@@ -3629,16 +3700,16 @@ video
 		
 @keyframes animate-svg
 	0%
-		transform: translateY(0)
+		transform: translateY(0) translateZ(0)
 	100%
-		transform: translateY(-10px)
+		transform: translateY(-10px) translateZ(0)
 		
 @keyframes animate2-svg
 	0%
 		opacity: 0.3
-		transform: translateY(0) scale(1.1)
+		transform: translateY(0) scale(1.1) translateZ(0)
 	100%
 		opacity: 0.1
-		transform: translateY(3px) scale(0.85)
+		transform: translateY(3px) scale(0.85) translateZ(0)
 	
 		

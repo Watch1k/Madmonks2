@@ -1,4 +1,6 @@
 extend includes/_layout
+block navToggle
+	-var navToggle = 'Портфолио'
 block title
 	title Portfolio Inner
 block content
@@ -94,7 +96,7 @@ block content
 					| Рост трафика на&nbsp;
 					span.results__subtitle-orange 400 %
 				.results__image
-					img.results__graph(src='img/content/graph-1.png' alt='image')
+					canvas.results__graph.js-graph
 			.results__col
 				a.results__doc.js-img-popup(href='img/content/doc-1.jpg' title='MadMonks Document')
 					img.results__img(src='img/content/doc-1.jpg' alt='image')
