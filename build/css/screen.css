@@ -1256,10 +1256,13 @@ img {
 
 @media only screen and (max-width: 1023px) {
   .side__inner {
+    width: 100%;
     margin-bottom: 50px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -moz-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -1270,15 +1273,7 @@ img {
   @media only screen and (max-width: 1023px) {
     .side__btn {
       display: block;
-      -webkit-box-flex: 1;
-      -webkit-flex: auto 0 0;
-      -moz-box-flex: 1;
-      -ms-flex: auto 0 0;
-      flex: auto 0 0;
-      -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-      align-self: stretch;
-      margin: auto 36px 26px 26px;
+      margin: 0 36px 26px 26px;
       padding: 13px 0 10px;
       text-align: center;
       font-family: "Museo Sans Black", Arial, sans-serif;
@@ -1296,14 +1291,7 @@ img {
 
 @media only screen and (max-width: 1023px) {
   .side__cont {
-    -webkit-box-flex: 1;
-    -webkit-flex: auto 0 0;
-    -moz-box-flex: 1;
-    -ms-flex: auto 0 0;
-    flex: auto 0 0;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
+    width: 100%;
     margin-left: 26px; } }
 
 .side__back {
